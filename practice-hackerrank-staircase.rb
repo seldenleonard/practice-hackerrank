@@ -32,17 +32,49 @@
 #   end
 # end
 
+# def staircase(n)
+#   single_floor = ""
+#   i = 1
+#   while i <= n
+#     i.times do
+#       single_floor << "# "
+#     end
+#     p single_floor
+#     i += 1
+#   end
+# end
+
+# def staircase(n)
+#   single_floor = []
+#   i = n - 1
+#   while i >= 0
+#     i.times do
+#       single_floor << " "
+#     end
+#     (n - i).times do
+#       single_floor << "#"
+#     end
+#     i -= 1
+#     single_floor
+#   end
+# end
+
+
 def staircase(n)
-  single_floor = ""
-  i = 1
-  while i <= n
+  single_floor = []
+  i = n - 1
+  until i < 0
     i.times do
-      single_floor << "# "
+      single_floor << " "
     end
-    p single_floor
-    i += 1
+    (n - i).times do
+      single_floor << "#"
+    end
+    p single_floor.join
+    single_floor = []
+    i -= 1
   end
 end
 
 
-staircase(4)
+staircase(6)
