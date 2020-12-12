@@ -70,7 +70,7 @@ def staircase(n)
     (n - i).times do
       single_floor << "#"
     end
-    p single_floor.join
+    puts single_floor.join
     single_floor = []
     i -= 1
   end
