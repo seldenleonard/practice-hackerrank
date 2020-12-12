@@ -27,20 +27,52 @@
 #   p tallest_candle, tallest_candle_count
 # end
 
+# def birthdayCakeCandles(candles)
+#   i = 0
+#   tallest_candle = candles[0]
+#   tallest_candle_count = 0
+#   while i < candles.length
+#     if tallest_candle < candles[i]
+#       tallest_candle = candles[i]
+#       tallest_candle_count = 1
+#     elsif tallest_candle == candles[i]
+#       tallest_candle_count += 1
+#     end
+#     i += 1
+#   end
+#   p tallest_candle, tallest_candle_count
+# end
+
+# def birthdayCakeCandles(candles)
+#   i = 0
+#   tallest_candle = 0
+#   tallest_candle_count = 1
+#   while i < candles.length
+#     if tallest_candle < candles[i]
+#       tallest_candle = candles[i]
+#       tallest_candle_count = 1
+#     elsif tallest_candle == candles[i]
+#       tallest_candle_count += 1
+#     end
+#     i += 1
+#   end
+#   p tallest_candle, tallest_candle_count
+# end
+
 def birthdayCakeCandles(candles)
   i = 1
   tallest_candle = candles[0]
-  tallest_candle_count = 0
+  tallest_candle_count = 1
   while i < candles.length
     if tallest_candle < candles[i]
       tallest_candle = candles[i]
-      # tallest_candle_count = 1
-    elsif tallest_candle = candles[i] 
+      tallest_candle_count = 1
+    elsif tallest_candle == candles[i]
       tallest_candle_count += 1
     end
     i += 1
   end
-  p tallest_candle, tallest_candle_count
+  p tallest_candle_count
 end
 
 birthdayCakeCandles([3, 2, 1, 3])
