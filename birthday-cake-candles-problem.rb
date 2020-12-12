@@ -11,53 +11,6 @@
 
 # Idea to make code my DRY - instead of looping through a 2nd time, count during the first loop, and add a conditional where if the "tallest_candle" value changes, reset count to 1.
 
-# def birthdayCakeCandles(candles)
-#   i = 0
-#   # tallest_candle = candles[0]
-#   tallest_candle_count = 0
-#   while i < candles.length - 1
-#     if candles[i] > candles[i + 1]
-#       tallest_candle = candles[i]
-#       tallest_candle_count += 1
-#     elsif
-#       tallest_candle = candles[i + 1]
-#     end
-#     i += 1
-#   end
-#   p tallest_candle, tallest_candle_count
-# end
-
-# def birthdayCakeCandles(candles)
-#   i = 0
-#   tallest_candle = candles[0]
-#   tallest_candle_count = 0
-#   while i < candles.length
-#     if tallest_candle < candles[i]
-#       tallest_candle = candles[i]
-#       tallest_candle_count = 1
-#     elsif tallest_candle == candles[i]
-#       tallest_candle_count += 1
-#     end
-#     i += 1
-#   end
-#   p tallest_candle, tallest_candle_count
-# end
-
-# def birthdayCakeCandles(candles)
-#   i = 0
-#   tallest_candle = 0
-#   tallest_candle_count = 1
-#   while i < candles.length
-#     if tallest_candle < candles[i]
-#       tallest_candle = candles[i]
-#       tallest_candle_count = 1
-#     elsif tallest_candle == candles[i]
-#       tallest_candle_count += 1
-#     end
-#     i += 1
-#   end
-#   p tallest_candle, tallest_candle_count
-# end
 
 def birthdayCakeCandles(candles)
   i = 1
