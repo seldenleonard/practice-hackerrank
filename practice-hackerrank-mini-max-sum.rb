@@ -16,7 +16,7 @@ def minimaxsum(arr)
     end
     i += 1
   end
-  p min_sum, max_sum
+  print min_sum," ", max_sum
 end
 
 minimaxsum([1, 2, 3, 4, 5])
