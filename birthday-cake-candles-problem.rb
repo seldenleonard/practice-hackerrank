@@ -12,7 +12,7 @@
 # Idea to make code my DRY - instead of looping through a 2nd time, count during the first loop, and add a conditional where if the "tallest_candle" value changes, reset count to 1.
 
 
-def birthdayCakeCandles(candles)
+def birthday_cake_candles(candles)
   i = 1
   tallest_candle = candles[0]
   tallest_candle_count = 1
@@ -28,4 +28,4 @@ def birthdayCakeCandles(candles)
   p tallest_candle_count
 end
 
-birthdayCakeCandles([3, 2, 1, 3])
+birthday_cake_candles([3, 2, 1, 3])

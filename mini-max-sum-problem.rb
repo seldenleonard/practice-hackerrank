@@ -1,7 +1,7 @@
 # Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
 
-def minimaxsum(arr)
+def mini_max_sum(arr)
   i = 0
   total_sum = arr.sum
   max_sum = arr[0]
@@ -19,4 +19,4 @@ def minimaxsum(arr)
   print min_sum," ", max_sum
 end
 
-minimaxsum([1, 2, 3, 4, 5])
+mini_max_sum([1, 2, 3, 4, 5])
