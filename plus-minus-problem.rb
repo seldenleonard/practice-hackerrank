@@ -4,8 +4,8 @@
 # STEPS
 # Create method that takes in an array
 # Set a variable called "denominator" to length of the array
-# Set a variable called "negative_numerator" equal to zero
 # Set a variable called "positive_numerator" equal to zero
+# Set a variable called "negative_numerator" equal to zero
 # Set a variable called "zero_numerator" equal to zero
 # Create an index
 # Loop through the array and at each value evaluate whether it is positive, negative, or zero (use "if" "elsif" "else"). Add 1 to the whichever of the three numerator variables the array value falls under.
@@ -13,10 +13,21 @@
 
 def plus_minus(arr)
   denominator = arr.length
-  negative_numerator = 0
   positive_numerator = 0
+  negative_numerator = 0
   zero_numerator = 0
   i = 0
+  while i < arr.length
+    if arr[i] > 0
+      positive_numerator += 1
+    elsif arr[i] < 0
+      negative_numerator += 1
+    else # Consider that maybe something other than zero is possible so may want to make this into an elsif
+      zero_numerator =+ 1
+    end
+    i += 1
+  end
+  pp (positive_numerator/denominator).to_f, (negative_numerator/denominator).to_f, (zero_numerator/denominator).to_f
 end
 
 plus_minus([-4, 3, -9, 0, 4, 1])
