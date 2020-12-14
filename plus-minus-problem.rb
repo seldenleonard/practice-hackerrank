@@ -22,13 +22,13 @@ def plus_minus(arr)
       positive_numerator += 1
     elsif arr[i] < 0
       negative_numerator += 1
-    else # Consider that maybe something other than zero is possible so may want to make this into an elsif
-      zero_numerator =+ 1
+    elsif arr[i] == 0
+      zero_numerator += 1
     end
     i += 1
   end
-  p positive_numerator, negative_numerator, zero_numerator
   pp (positive_numerator.to_f/denominator), (negative_numerator.to_f/denominator), (zero_numerator.to_f/denominator)
 end
 
 plus_minus([-4, 3, -9, 0, 4, 1])
+plus_minus([1, 2, 3, -1, -2, -3, 0, 0])
