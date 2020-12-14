@@ -12,7 +12,7 @@
 # return each of the three numerator variable each divided by the denominator variable. (could also not even have a denominator variable at all and just use array.length)
 
 def plus_minus(arr)
-  denominator = arr.length
+  denominator = arr.length.to_f
   positive_numerator = 0
   negative_numerator = 0
   zero_numerator = 0
@@ -27,7 +27,8 @@ def plus_minus(arr)
     end
     i += 1
   end
-  pp (positive_numerator/denominator).to_f, (negative_numerator/denominator).to_f, (zero_numerator/denominator).to_f
+  p positive_numerator, negative_numerator, zero_numerator
+  pp (positive_numerator.to_f/denominator), (negative_numerator.to_f/denominator), (zero_numerator.to_f/denominator)
 end
 
 plus_minus([-4, 3, -9, 0, 4, 1])
