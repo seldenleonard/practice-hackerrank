@@ -17,3 +17,16 @@
 # s: an array of integers, the numbers on each of the squares of chocolate
 # d: an integer, Ron's birth day
 # m: an integer, Ron's birth month
+
+# Input Format
+
+# The first line contains an integer , the number of squares in the chocolate bar.
+# The second line contains  space-separated integers , the numbers on the chocolate squares where .
+# The third line contains two space-separated integers,  and , Ron's birth day and his birth month.
+
+
+# STEPS
+
+# Loop that prints each number in the array
+# Loop through and add two numbers at a time using index and index + 1
+# Conditional that says if index and index + 1 is equal to the day, add 1 to a counter
