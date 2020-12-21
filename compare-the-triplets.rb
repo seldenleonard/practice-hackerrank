@@ -10,3 +10,22 @@
 # Comparison points is the total points a person earned.
 
 # Given a and b, determine their respective comparison points.
+
+# STEPS
+
+
+def compareTriplets(a, b)
+  a_score = 0
+  b_score = 0
+  index = 0
+  while index < a.length
+      if a[index] > b[index]
+          a_score += 1
+      elsif a[index] < b[index]
+          b_score += 1
+      end
+      index += 1
+  end
+  score_array = [a_score, b_score]
+end
+p compareTriplets()
