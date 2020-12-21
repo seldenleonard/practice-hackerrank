@@ -18,8 +18,7 @@ def diagonal_difference(arr)
     i += 1
     i2 -= 1    
   end
-  p sum1
-  p sum2
+  p (sum1 - sum2).abs
 end
 
 diagonal_difference([[11, 2, 4], [4, 5, 6], [10, 8, -12]])
