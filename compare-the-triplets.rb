@@ -19,13 +19,14 @@ def compareTriplets(a, b)
   b_score = 0
   index = 0
   while index < a.length
-      if a[index] > b[index]
-          a_score += 1
-      elsif a[index] < b[index]
-          b_score += 1
-      end
+    if a[index] > b[index]
+      a_score += 1
+    elsif a[index] < b[index]
+      b_score += 1
+    end
       index += 1
   end
   score_array = [a_score, b_score]
+  score_array
 end
-p compareTriplets()
+p compareTriplets([5, 6, 7], [3, 6, 10])
