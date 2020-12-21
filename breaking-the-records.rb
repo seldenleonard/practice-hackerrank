@@ -20,7 +20,7 @@
 # Set max and min variables based on the first number
 # Loop through and compare each integer to the max and min, add 1 to min counter if game score is lower than min number and set min number to new lowest game score. Do the same for max counter
 
-def breakingRecords(scores)
+def breaking_records(scores)
   max_score = scores[0]
   min_score = scores[0]
   max_counter = 0
@@ -39,4 +39,4 @@ def breakingRecords(scores)
   min_and_max << min_counter
   p min_and_max
 end
-breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42])
+breaking_records([3, 4, 21, 36, 10, 28, 35, 5, 24, 42])

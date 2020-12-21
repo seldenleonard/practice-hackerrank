@@ -5,7 +5,7 @@
 # map through the new apple array and if the new number is between the range of the house, add a number to the counter
 # map through the new orange array and if the new number is between the range of the house, add a number to the counter
 
-def countApplesAndOranges(s, t, a, b, apples, oranges)
+def count_apples_and_oranges(s, t, a, b, apples, oranges)
   apples_on_house = 0
   oranges_on_house = 0
   apples.map! do |apple|
@@ -27,4 +27,4 @@ def countApplesAndOranges(s, t, a, b, apples, oranges)
   p apples_on_house
   p oranges_on_house
 end
-countApplesAndOranges(7, 11, 5, 5, [-2, 2, 1], [5, -6])
+count_apples_and_oranges(7, 11, 5, 5, [-2, 2, 1], [5, -6])

@@ -16,7 +16,7 @@
 # conditional statement that if you add 1 to the grade and modulo is 0, add 1 to the number to round it
 # conditional statement that says if you add 2 to the grade and modulo is 0, add 2 to the number to round it
 
-def gradingStudents(grades)
+def grading_students(grades)
   rounded_grades = []
   grades.each do |grade|
     if grade < 38
@@ -33,4 +33,4 @@ def gradingStudents(grades)
   end
   rounded_grades
 end
-p gradingStudents([73, 67, 38, 33])
+p grading_students([73, 67, 38, 33])

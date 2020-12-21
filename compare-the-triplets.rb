@@ -13,7 +13,7 @@
 
 # STEPS
 
-def compareTriplets(a, b)
+def compare_triplets(a, b)
   a_score = 0
   b_score = 0
   index = 0
@@ -27,4 +27,4 @@ def compareTriplets(a, b)
   end
   score_array = [a_score, b_score]
 end
-p compareTriplets([5, 6, 7], [3, 6, 10])
+p compare_triplets([5, 6, 7], [3, 6, 10])
