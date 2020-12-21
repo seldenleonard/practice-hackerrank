@@ -7,10 +7,19 @@
 # To get sum of the second diagonal, set index to length of any one of the input arrays, then add up the value of each array at the index value, and have the index decrease by one each for array it evaluates.
 # Store the two sums in variables, then subtract the smaller value from the larger value
 
-def diagonal_difference(arr1, arr2, arr3)
+def diagonal_difference(arr)
   i = 0
-  array_of_arrays = 
-
+  i2 = arr.length - 1
+  sum1 = 0
+  sum2 = 0
+  while i < arr.length
+    sum1 += arr[i][i]
+    sum2 += arr[i][i2]
+    i += 1
+    i2 -= 1    
+  end
+  p sum1
+  p sum2
 end
 
-diagonal_difference([11, 2, 4], [4, 5, 6], [10, 8, -12])
+diagonal_difference([[11, 2, 4], [4, 5, 6], [10, 8, -12]])
