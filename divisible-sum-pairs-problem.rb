@@ -1,20 +1,20 @@
 # https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
 
 # STEPS
-# Will need a nested loop with two indexes to ensre 1 is ahead of the other
-# Build a counter to keep the numbers of pairs divisible by ‘k’
-# sort the array first form lowest to highest (.sort)
-# index 1 starts at zero
-# Create a while loop index 1 < length - 1
-# index 2 start at index1 + 1
-  # loop and print each integer
-  # create 2d loop index2 <= length
-    # add integer at index1 to intger at index2
-    # print sum
-    # conditional if the sum / k % 0 then we add one to the established ‘counter’
-    # add one to index 2
+# Create a nested loop with two indexes to ensure that while one of the indexes is at each specific value, the other index iterates through all following array values 
+# Create a counter to keep the numbers of pairs divisible by 'k'
+# Sort the array first from lowest to highest (using .sort method)
+# The first index (index1) starts at zero
+# Create a 'while' loop: index 1 < length - 1
+# The second index (index2) starts at index1 + 1
+  # Use index1 to loop through and test it is functioning properly by printing each integer (then remove printing each integer from final solution)
+  # Create 2nd 'while' loop: index2 <= length
+    # Add integer at index1 to integer at index2
+    # Print sum to test if it is functioning properly (then remove printing sum from final solution)
+    # Create conditional: if the sum / k % 0 then we add one to the established ‘counter’
+    # Add one to index2
 # index1 + 1
-#  p counter
+# p counter
 # n = integer length of array
 # ar = array of integers
 # k = integer
