@@ -18,3 +18,24 @@
 # n = integer length of array
 # ar = array of integers
 # k = integer
+
+def divisibleSumPairs(n, k, ar)
+  ar.sort!
+  index1 = 0
+  counter = 0
+  while index1 < n - 1
+    index2 = index1 + 1
+    sum = 0
+    while index2 < n
+      sum = ar[index1] + ar[index2]
+      if sum % k == 0
+        counter += 1
+      end
+      index2 += 1
+    end
+    index1 += 1
+  end
+  p counter
+end
+
+divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
