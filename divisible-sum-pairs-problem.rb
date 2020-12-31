@@ -8,13 +8,15 @@
 # Create a 'while' loop: index 1 < length - 1
 # The second index (index2) starts at index1 + 1
   # Use index1 to loop through and test it is functioning properly by printing each integer (then remove printing each integer from final solution)
-  # Create 2nd 'while' loop: index2 <= length
+  # Nested within the first loop, create a 2nd 'while' loop: index2 <= length
     # Add integer at index1 to integer at index2
     # Print sum to test if it is functioning properly (then remove printing sum from final solution)
-    # Create conditional: if the sum / k % 0 then we add one to the established ‘counter’
+    # Create 'if' statement conditional: if the sum / k % 0, then we add one to the established ‘counter’
     # Add one to index2
 # index1 + 1
 # p counter
+
+# Hackerrank Supplied Variables:
 # n = integer length of array
 # ar = array of integers
 # k = integer
