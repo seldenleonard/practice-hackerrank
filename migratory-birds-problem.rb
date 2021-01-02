@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/migratory-birds/problem
+
 # STEPS
 # Loop through array and print integers and set up counters
 # Write conditionals to add to counters for each bird id
