@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/staircase/problem
+
 # PROBLEM - Staircase
 
 # input is a single integer 'n'
