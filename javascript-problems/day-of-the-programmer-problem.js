@@ -29,4 +29,5 @@ function dayOfProgrammer(year) {
     return `26.09.${year}`;
   }
 }
+
 dayOfProgrammer(1918);
