@@ -8,6 +8,7 @@
 // if not, subtract what anna ate divided by 2 from what she paid and print number
 
 
+// CORRECT SOLUTION
 function bonAppetit(bill, k, b) {
   let i = 0;
   let annaTotal = 0;
@@ -25,3 +26,23 @@ function bonAppetit(bill, k, b) {
 }
 
 console.log(bonAppetit([3, 10, 2, 9], 1, 7));
+
+// SOLUTION DESIRED BY HACKERRANK (CHANGES "return" to "console.log()")
+
+// function bonAppetit(bill, k, b) {
+//   let i = 0;
+//   let annaTotal = 0;
+//   while (i < bill.length) {
+//     if (i !== k) {
+//       annaTotal += bill[i];
+//     }
+//     i += 1;
+//   }
+//   if (annaTotal / 2 === b) {
+//     console.log("Bon Appetit");
+//   } else {
+//     console.log(b - (annaTotal / 2));
+//   }
+// }
+
+// console.log(bonAppetit([3, 10, 2, 9], 1, 7));
