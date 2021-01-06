@@ -19,9 +19,9 @@ function bonAppetit(bill, k, b) {
   }
   if (annaTotal / 2 === b) {
     return "Bon Appetit";
-  }
-  else {
+  } else {
     return b - (annaTotal / 2);
   }
 }
+
 console.log(bonAppetit([3, 10, 2, 9], 1, 7));
