@@ -2,8 +2,8 @@
 
 // STEPS
 // Loop and print
-// set sea level variable to keep track of above or below zero
-// loop through and add or subract one based off of D or U
+// Set sea level variable to keep track of above or below zero
+// Loop through and add or subract one based off of D or U
 
 function countingValleys(steps, path) {
   var i = 0;
