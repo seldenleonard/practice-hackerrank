@@ -14,16 +14,14 @@ function countingValleys(steps, path) {
       console.log(`valley counter ${valleyCounter += 1}`);
       console.log(`sea level counter ${seaLevel -= 1}`);
       i += 1;
-    }
-    else if (path[i] === "U") {
+    } else if (path[i] === "U") {
       console.log(`sea level counter ${seaLevel += 1}`);
       i += 1;
     }
     while (i < steps) {
       if (path[i] === "D") {
         console.log(`sea level counter in D ${seaLevel -= 1}`);
-      }
-      else if (path[i] === "U") {
+      } else if (path[i] === "U") {
         console.log(`sea level counter in U ${seaLevel += 1}`);
       }
       if (seaLevel === 0 && path[i + 1] === "D") {
