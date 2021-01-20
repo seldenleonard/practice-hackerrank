@@ -33,3 +33,5 @@ function countingValleys(steps, path) {
   }
 }
 console.log(countingValleys(8, "UDDDUDUU"));
+
+console.log(countingValleys(100, "UDUDDUUUDUDUDUUDUUDDDDDUDUDDDDUUDDUDDUUUUDUUDUDDDDUDUDUUUDDDUUUDUDDUUDDDUUDDUDDDUDUUDUUDUUDUDDDUUUUU"));
