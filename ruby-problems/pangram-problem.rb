@@ -9,9 +9,12 @@
 # If all values in alphabet array match values in from the input, then return "pangram". If not, return "not pangram"
 
 def pangrams(s)
+  alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   s = s.gsub(/\s+/, "").downcase.split("")
   # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
-  
+  index1 = 0
+  index2 = 0
+  p alphabet
   p s
 end
 
