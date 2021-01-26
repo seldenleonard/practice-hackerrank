@@ -10,14 +10,14 @@
 
 def pangrams(s)
   alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  s = s.gsub(/\s+/, "").downcase.split("")
+  s = s.gsub(/\s+/, "").downcase.split("").uniq
   # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
   index1 = 0
   index2 = 0
   while index1 < alphabet.length
       while index2 < s.length
         if s[index2] = alphabet[index1]
-          p "hello"
+          p "match"
         end
         index2 += 1
       end
