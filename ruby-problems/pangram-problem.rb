@@ -33,6 +33,7 @@
 
 # Note: the problem parameters say s can only include letters and spaces, but if we were to have to account for punctuation as well, we would use "a.gsub!(/[!@%&"]/,'')"
 
+# ----------------------------------
 
 # ATTEMPT 2
 
@@ -41,6 +42,8 @@
 # Set alphabet as an array with all the letters of the alphabet
 # Turn s (the input string) into an array, delete all spaces, and delete all non-unique letters, then sort alphabetically.
 # If s is equal to 26 (the length of the alphabet), then return "pangram". If not, return "not pangram"
+
+
 def pangrams(s)
   s = s.gsub(/\s+/, "").downcase.split("").uniq.sort()
   if s.length === 26
@@ -50,4 +53,9 @@ def pangrams(s)
   end
 end
 
-pangrams("We promptly xjudged antique ivory buckles for the prize")
+
+# Test - Input is not a Pangram
+pangrams("We promptly judged antique ivory buckles for the prize")
+
+# Test - Input is a Pangram
+pangrams("We promptly judged antique ivory buckles for the next prize")
