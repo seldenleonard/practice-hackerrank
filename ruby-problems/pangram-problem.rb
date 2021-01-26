@@ -9,5 +9,9 @@
 # If all values in alphabet array match values in from the input, then return "pangram". If not, return "not pangram"
 
 def pangrams(s)
-  
+  s = s.gsub(/\s+/, "")
+  # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
+  p s
 end
+
+p pangrams("Hi im Selden")
