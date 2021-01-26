@@ -9,24 +9,34 @@
 # Compare the current alphabet[index] to each value in the input
 # If all values in alphabet array match values in from the input, then return "pangram". If not, return "not pangram"
 
+# def pangrams(s)
+#   alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+#   s = s.gsub(/\s+/, "").downcase.split("").uniq.sort()
+#   # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
+#   index1 = 0
+#   index2 = 0
+#   while index1 < alphabet.length
+#       while index2 < s.length
+#         if s[index2] === alphabet[index1]
+#           p "match"
+#         end
+#         p s
+#         index2 += 1
+#       end
+#     index1 += 1
+#   end
+#   # p alphabet
+#   # p s
+# end
+
+
 def pangrams(s)
-  alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   s = s.gsub(/\s+/, "").downcase.split("").uniq.sort()
-  # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
-  index1 = 0
-  index2 = 0
-  while index1 < alphabet.length
-      # while index2 < s.length
-      #   if s[index2] == alphabet[index1]
-      #     p "match"
-      #   end
-      #   p s
-      #   index2 += 1
-      # end
-    index1 += 1
+  if s.length == 24
+    p "pangram"
+  else
+    p "not pangram"
   end
-  # p alphabet
-  # p s
 end
 
 pangrams("Hi im Selden")
