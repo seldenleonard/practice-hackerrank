@@ -15,3 +15,7 @@ def pangrams(s)
 end
 
 p pangrams("Hi im Selden")
+
+
+
+# Note: the problem parameters say s can only include letters and spaces, but if we were to have to account for punctuation as well, we would use "a.gsub!(/[!@%&"]/,'')"
