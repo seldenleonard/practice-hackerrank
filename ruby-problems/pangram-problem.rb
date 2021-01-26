@@ -3,6 +3,6 @@
 # STEPS
 # Create a method that takes in a string and searches for every letter of the alphabet it in it
 
-def pangram?(str)
+def pangrams(s)
   
 end
