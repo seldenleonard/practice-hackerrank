@@ -14,6 +14,15 @@ def pangrams(s)
   # Note: the forward slashes denotes a "regular expression", and the "\s+" refers to a space. Then the empty quotes tell us that we want to replace the space with nothing.
   index1 = 0
   index2 = 0
+  while index1 < alphabet.length
+      while index2 < s.length
+        if s[index2] = alphabet[index1]
+          p "hello"
+        end
+        index2 += 1
+      end
+    index1 += 1
+  end
   p alphabet
   p s
 end
