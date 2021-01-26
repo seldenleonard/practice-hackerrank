@@ -32,14 +32,15 @@
 
 def pangrams(s)
   s = s.gsub(/\s+/, "").downcase.split("").uniq.sort()
-  if s.length == 24
+  if s.length === 26
     p "pangram"
   else
     p "not pangram"
   end
+  p s
 end
 
-pangrams("Hi im Selden")
+pangrams("We promptly xjudged antique ivory buckles for the prize")
 
 
 
