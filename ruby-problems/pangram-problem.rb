@@ -1,5 +1,7 @@
 # A pangram is a string that contains every letter of the alphabet. Given a sentence determine whether it is a pangram in the English alphabet. Ignore case. Return either pangram or not pangram as appropriate.
 
+# ----------------------------------
+
 # ATTEMPT 1 - Unsuccessful/Unfinished
 
 # STEPS
@@ -35,7 +37,7 @@
 
 # ----------------------------------
 
-# ATTEMPT 2
+# ATTEMPT 2 - Successful
 
 # STEPS
 # Create a method that takes in a string
