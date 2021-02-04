@@ -39,6 +39,7 @@
 //   });
 // }
 
+// Third Attempt - Unsuccessful --> Output = 2
 function utopianTree(n) {
   var h = 1;
   for (let i = 0; i < n.length; i++) {
