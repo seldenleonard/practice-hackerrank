@@ -26,17 +26,31 @@
 // }
 
 // Second Attempt - Unsuccessful --> Output = undefined
+// function utopianTree(n) {
+//   var index = 0;
+//   var h = 1;
+//   n.forEach(season => {
+//     if (season % 2 !== 0) {
+//       h *= 2;
+//     } else {
+//       h += 1;
+//     }
+//     return h;
+//   });
+// }
+
 function utopianTree(n) {
-  var index = 0;
   var h = 1;
-  n.forEach(season => {
-    if (season % 2 !== 0) {
+  for (let i = 0; i < n.length; i++) {
+    const time = n[i];
+    if (time % 2 !== 0) {
       h *= 2;
+      return h;
     } else {
       h += 1;
+      return h;
     }
-    return h;
-  });
+  }
 }
 
 console.log(utopianTree([0, 1, 4]));
