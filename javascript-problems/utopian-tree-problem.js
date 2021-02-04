@@ -9,20 +9,34 @@
 // Return "h" for each value in array "n"
 
 
+// function utopianTree(n) {
+//   var index = 0;
+//   var h = 1;
+//   while (index < n.length) {
+//     if (n[index] % 2 !== 0) {
+//       h *= 2;
+//       index += 1;
+//       return h;
+//     } else {
+//       h += 1;
+//       index += 1;
+//       return h;
+//     }
+//   }
+// }
+
+
 function utopianTree(n) {
   var index = 0;
   var h = 1;
-  while (index < n.length) {
-    if (n[index] % 2 !== 0) {
+  n.forEach(season => {
+    if (season % 2 !== 0) {
       h *= 2;
-      index += 1;
-      return h;
     } else {
       h += 1;
-      index += 1;
-      return h;
     }
-  }
+    return h;
+  });
 }
 
 console.log(utopianTree([0, 1, 4]));
