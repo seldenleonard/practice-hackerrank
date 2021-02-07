@@ -39,7 +39,7 @@
 //   });
 // }
 
-// THIS WORKS BUT HACKERRANK DOESNT LIKE IT
+// Third Attempt - Successful (but HackerRank Doesnt Like It)
 function utopianTree(n) {
   var h = 1;
   for (let i = 0; i < n.length; i++) {
