@@ -11,16 +11,17 @@
 def getTotalX(a, b)
   indexA = 0
   indexB = 0
-  while indexA <= a.length
-    while indexB <= b.length
-      if b[indexB] % a[indexA] !== 0
-        a.delete_at a.index indexA
+  while indexA < a.length
+    while indexB < b.length
+      if b[indexB] % a[indexA] != 0
+        
       end
-      indexA += 1
+      p b[indexB]
+      indexB += 1
     end
-    indexB += 1
+    indexA += 1
   end
   a
 end
 
-getTotalX([2, 6], [24, 36])
+p getTotalX([2, 6, 40], [24, 36])
