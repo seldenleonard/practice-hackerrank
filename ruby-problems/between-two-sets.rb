@@ -17,11 +17,13 @@ def getTotalX(a, b)
         
       end
       p b[indexB]
+      p a[indexA]
       indexB += 1
     end
+    indexB = 0
     indexA += 1
   end
   a
 end
 
-p getTotalX([2, 6, 40], [24, 36])
+p getTotalX([2, 6], [24, 36])
