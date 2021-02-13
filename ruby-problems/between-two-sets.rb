@@ -11,10 +11,12 @@
 def getTotalX(a, b)
   indexA = 0
   indexB = 0
+  counter = 0
+  factors = []
   while indexA < a.length
     while indexB < b.length
-      if b[indexB] % a[indexA] != 0
-        
+      if b[indexB] % a[indexA] == 0
+        factors << a[indexA]
       end
       p b[indexB]
       p a[indexA]
