@@ -20,12 +20,15 @@ def getTotalX(a, b)
       end
       p b[indexB]
       p a[indexA]
+      p factors
       indexB += 1
     end
     indexB = 0
     indexA += 1
   end
-  a
+  counter = factors.uniq.count
+  p counter
+  factors
 end
 
 p getTotalX([2, 6], [24, 36])
