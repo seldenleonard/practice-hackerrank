@@ -8,27 +8,36 @@
 #   Within this loop, create another loop that iterates through the second array and uses the modulo operator to determine if the integer being evaluated in the first array factors evenly into each value in the second array
 # If the first array value does factor into each value in the second array, keep it, otherwise remove it from the first array -- so we are left with only the values in the first array that factor into all values of the secodn array 
 
-def getTotalX(a, b)
-  indexA = 0
-  indexB = 0
-  counter = 0
-  factors = []
-  while indexA < a.length
-    while indexB < b.length
-      if b[indexB] % a[indexA] == 0
-        factors << a[indexA]
-      end
-      p b[indexB]
-      p a[indexA]
-      p factors
-      indexB += 1
-    end
-    indexB = 0
-    indexA += 1
-  end
-  counter = factors.uniq.count
-  p counter
-  factors
-end
+# def getTotalX(a, b)
+#   indexA = 0
+#   indexB = 0
+#   counter = 0
+#   factors = []
+#   while indexA < a.length
+#     while indexB < b.length
+#       if b[indexB] % a[indexA] == 0
+#         factors << a[indexA]
+#       end
+#       p b[indexB]
+#       p a[indexA]
+#       p factors
+#       indexB += 1
+#     end
+#     indexB = 0
+#     indexA += 1
+#   end
+#   counter = factors.uniq.count
+#   p counter
+#   factors
+# end
 
-p getTotalX([2, 6], [24, 36])
+# p getTotalX([2, 6], [24, 36])
+
+
+# ATTEMPT 2
+
+# NEW STEPS
+# Loop through the values of the second array
+# For each value in the second array, evaluate whether ALL values from the first array factor into it evenly (using modulo operator)
+#   If they do, then loop through each value in the first array and divide the value from the second array by the value from the first array
+#   If they do not, move on
