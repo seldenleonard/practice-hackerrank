@@ -80,6 +80,30 @@
 #   end
 # end
 
+# def getTotalX(a, b)
+#   indexB = 0
+#   indexPF = 0
+#   potentialFactors = []
+#   testValue = 0
+#   if a[1] % a[0] == 0
+#     until testValue >= b[0] * 0.5
+#       testValue += a[1]
+#       potentialFactors << testValue
+#     end
+#     while indexB < b.length
+#       while indexPF < potentialFactors.length
+#         if b[indexB] % potentialFactors[indexPF] != 0
+
+#         end
+#         indexPF += 1
+#       end
+#       indexB += 1
+#     end
+#     potentialFactors
+#   end
+# end
+
+
 def getTotalX(a, b)
   indexB = 0
   indexPF = 0
@@ -91,11 +115,10 @@ def getTotalX(a, b)
       potentialFactors << testValue
     end
     while indexB < b.length
-      while indexPF < potentialFactors.length
-        if b[indexB] % potentialFactors[indexPF] != 0
-          
+      potentialFactors.each do |potentialFactor|
+        if b[indexB] % potentialFactor != 0
+          potentialFactors.delete(potentialFactor)
         end
-        indexPF += 1
       end
       indexB += 1
     end
@@ -103,4 +126,4 @@ def getTotalX(a, b)
   end
 end
 
-p getTotalX([2, 6], [24, 36])
+p getTotalX([2, 6], [24, 36, 50])
