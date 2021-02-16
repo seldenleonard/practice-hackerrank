@@ -8,6 +8,7 @@
 #   Within this loop, create another loop that iterates through the second array and uses the modulo operator to determine if the integer being evaluated in the first array factors evenly into each value in the second array
 # If the first array value does factor into each value in the second array, keep it, otherwise remove it from the first array -- so we are left with only the values in the first array that factor into all values of the secodn array 
 
+# FIRST ATTEMPT - Incomplete
 # def getTotalX(a, b)
 #   indexA = 0
 #   indexB = 0
@@ -35,7 +36,7 @@
 
 
 
-# ATTEMPT 2
+# SECOND ATTEMPT - Incomplete
 
 # NEW STEPS
 # Set indexA = 0
@@ -79,6 +80,8 @@
 #     indexB += 1
 #   end
 # end
+
+# THIRD ATTEMPT - Works and almost fully accurate
 
 # def getTotalX(a, b)
 #   indexB = 0
