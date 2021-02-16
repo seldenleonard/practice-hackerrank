@@ -48,3 +48,20 @@
 #   If they do not, move on
 # Once the loop completes, take all values that occur in the potentialFactors array the amount of times that is equal to the length of the second array, and therefore meet the first criteria.
 # Now take these for the are the values which will then be used to find new integers
+
+def getTotalX(a, b)
+  indexA = 0
+  indexB = 0
+  potentialFactors = []
+  while indexB < b.length
+    if b[indexB] % a[indexA] == 0 && b[indexB] % a[indexA + 1] == 0
+      potentialFactors << a[indexA]
+      potentialFactors << a[indexA + 1]
+    end
+    indexB += 1
+  end
+  potentialFactors
+end
+
+
+p getTotalX([2, 6], [24, 36])
