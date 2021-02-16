@@ -34,10 +34,17 @@
 # p getTotalX([2, 6], [24, 36])
 
 
+
 # ATTEMPT 2
 
 # NEW STEPS
+# Set indexA = 0
+# Set indexB = 0
+# Create empty array called potentialFactors
+# Create empty array called definiteFactors
 # Loop through the values of the second array
 # For each value in the second array, evaluate whether ALL values from the first array factor into it evenly (using modulo operator)
-#   If they do, then loop through each value in the first array and divide the value from the second array by the value from the first array
+#   If they do, add both a[indexA] and a[indexA + 1] to potentialFactors array
 #   If they do not, move on
+# Once the loop completes, take all values that occur in the potentialFactors array the amount of times that is equal to the length of the second array, and therefore meet the first criteria.
+# Now take these for the are the values which will then be used to find new integers
