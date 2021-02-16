@@ -83,15 +83,21 @@
 def getTotalX(a, b)
   indexB = 0
   indexPF = 0
+  potentialFactors = []
+  testValue = 0
   if a[1] % a[0] == 0
-    potentialFactors = []
-    testValue = 0
     until testValue >= b[0] * 0.5
       testValue += a[1]
       potentialFactors << testValue
     end
     while indexB < b.length
-      testValue[indexPF] = a[1] + 
+      while indexPF < potentialFactors.length
+        if b[indexB] % potentialFactors[indexPF] != 0
+          
+        end
+        indexPF += 1
+      end
+      indexB += 1
     end
     potentialFactors
   end
