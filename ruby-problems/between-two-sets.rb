@@ -81,7 +81,7 @@
 #   end
 # end
 
-# THIRD ATTEMPT - Works and almost fully accurate
+# THIRD ATTEMPT - Incomplete
 
 # def getTotalX(a, b)
 #   indexB = 0
@@ -106,6 +106,8 @@
 #   end
 # end
 
+
+# FOURTH ATTEMPT - Works and almost fully accurate
 
 def getTotalX(a, b)
   indexB = 0
