@@ -111,7 +111,7 @@
 
 def getTotalX(a, b)
   indexB = 0
-  indexPF = 0
+  # indexPF = 0
   potentialFactors = []
   testValue = 0
   if a[1] % a[0] == 0
