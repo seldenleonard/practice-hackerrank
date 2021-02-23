@@ -131,4 +131,5 @@ def getTotalX(a, b)
   end
 end
 
-p getTotalX([2, 6], [24, 36, 50])
+# p getTotalX([2, 6], [24, 36, 50])
+p getTotalX([2, 12], [24, 48, 50])
