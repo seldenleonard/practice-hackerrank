@@ -22,7 +22,7 @@ def catAndMouse(x, y, z)
     p distanceCatB
   elsif distanceCatA < distanceCatB
     p distanceCatA
-  elsif distanceCatA == distanceCatB
+  else
     p distanceMouseC
   end
 end
