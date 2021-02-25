@@ -18,10 +18,10 @@ def catAndMouse(x, y, z)
   else
     distanceCatB = y - z
   end
-  if distanceCatA > distanceCatB
-    p "Cat B"
-  elsif distanceCatA < distanceCatB
+  if distanceCatA < distanceCatB
     p "Cat A"
+  elsif distanceCatA > distanceCatB
+    p "Cat B"
   else
     p "Mouse C"
   end
