@@ -26,3 +26,6 @@ def catAndMouse(x, y, z)
     p "Mouse C"
   end
 end
+
+
+catAndMouse(1, 2, 3)
