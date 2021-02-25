@@ -6,3 +6,9 @@
 # If the absolute value of the difference between x and z is smaller than the difference between y and z, Cat A catches the mouse first, so print Cat A.
 # If the absolute value of the difference between y and z is smaller than the difference between x and z, Cat A catches the mouse first, so print Cat A.
 # If the absolute value of the difference between y and z is equal to the difference between x and z, Mouse C escapes, so print Mouse C.
+
+
+def catAndMouse(x, y, z)
+
+
+end
