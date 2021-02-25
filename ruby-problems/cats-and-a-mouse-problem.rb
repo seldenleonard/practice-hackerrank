@@ -27,5 +27,4 @@ def catAndMouse(x, y, z)
   end
 end
 
-
 catAndMouse(1, 2, 3)
