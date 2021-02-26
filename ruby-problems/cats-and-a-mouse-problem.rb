@@ -31,8 +31,8 @@
 
 
 def catAndMouse(x, y, z)
-    distanceCatA = (z - x)
-    distanceCatB = (z - y)
+    distanceCatA = (z - x).abs
+    distanceCatB = (z - y).abs
   if distanceCatA < distanceCatB
     p "Cat A"
   elsif distanceCatA > distanceCatB
