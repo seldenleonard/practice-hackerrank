@@ -29,4 +29,5 @@ def count_apples_and_oranges(s, t, a, b, apples, oranges)
   p apples_on_house
   p oranges_on_house
 end
+
 count_apples_and_oranges(7, 11, 5, 5, [-2, 2, 1], [5, -6])
