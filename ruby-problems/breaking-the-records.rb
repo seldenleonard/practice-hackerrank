@@ -39,4 +39,5 @@ def breaking_records(scores)
   min_and_max << min_counter
   p min_and_max
 end
+
 breaking_records([3, 4, 21, 36, 10, 28, 35, 5, 24, 42])
