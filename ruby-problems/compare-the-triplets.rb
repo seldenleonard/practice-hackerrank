@@ -29,4 +29,5 @@ def compare_triplets(a, b)
   end
   score_array = [a_score, b_score]
 end
+
 p compare_triplets([5, 6, 7], [3, 6, 10])
