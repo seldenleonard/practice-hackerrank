@@ -23,4 +23,5 @@ def migratoryBirds(arr)
   end
   p type
 end
+
 migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
