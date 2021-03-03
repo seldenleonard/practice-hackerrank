@@ -10,3 +10,9 @@
 # Then iterate one value forward in the letters array.
 # Write an if statement, where if the string 's' index value reaches the length of string 's' before the letters array index reaches the length of the letters array, then return no. if vice versa, return yes.
 # NOTE: Never reset either index. The index associated with string 's' can move several steps per each one step taken by the index associated with the letters array.
+
+def hackerrankInString(s)
+  letters = ["h", "a", "c", "k", "e", "r", "r", "a", "n", "k"]
+  lettersIndex = 0
+  stringIndex = 0
+end
