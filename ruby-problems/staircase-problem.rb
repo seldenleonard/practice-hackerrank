@@ -78,5 +78,4 @@ def staircase(n)
   end
 end
 
-
 staircase(6)
