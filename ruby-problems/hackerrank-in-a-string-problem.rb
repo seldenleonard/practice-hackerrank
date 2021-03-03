@@ -6,3 +6,6 @@
 # Set a variable equal to an array containing each letter of the word 'hackerrank', in order
 # Set two indexes equal to zero (one for string 's', and one for the letters array)
 # Create two loops to iterate through string 's' and the letter array. Nest the loop using the index associated with string 's' inside of the loop using the index associated with the letter array.
+# At each value in the letters array, iterate through string 's' until you find the matching letter.
+# Then iterate one value forward in the letters array.
+
