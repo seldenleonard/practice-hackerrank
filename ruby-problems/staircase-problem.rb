@@ -2,8 +2,12 @@
 
 # PROBLEM - Staircase
 
+# STEPS
 # input is a single integer 'n'
 # print n lines with n number of #s for the first, then n=n-1 for each line after that until n=0
+
+
+# WORK
 
 # def staircase(n)
 #   n.times do
@@ -60,6 +64,7 @@
 #     single_floor
 #   end
 # end
+
 
 # FINAL VERSION -- Successful
 
