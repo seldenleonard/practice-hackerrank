@@ -16,13 +16,16 @@ def hackerrankInString(s)
   lettersIndex = 0
   stringIndex = 0
     while lettersIndex > letters.length
-      if stringIndex == letters.length - 1
-        return "NO"
-      else
-        while stringIndex > s.length
-        
-        stringIndex += 1
+      while stringIndex > s.length
+        if stringIndex == letters.length - 1
+          return "NO"
+        elsif lettersIndex == letters.length - 1
+          return "YES"
+        else
+          
+          stringIndex += 1
+        end
+        lettersIndex += 1
       end
-      lettersIndex += 1
     end
 end
