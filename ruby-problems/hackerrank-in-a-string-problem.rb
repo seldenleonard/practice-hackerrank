@@ -15,11 +15,13 @@ def hackerrankInString(s)
   letters = ["h", "a", "c", "k", "e", "r", "r", "a", "n", "k"]
   lettersIndex = 0
   stringIndex = 0
-  while lettersIndex > letters.length
-    while stringIndex > s.length
-      
-      stringIndex += 1
+  if stringIndex > letters.length
+    while lettersIndex > letters.length
+      while stringIndex > s.length
+        
+        stringIndex += 1
+      end
+      lettersIndex += 1
     end
-    lettersIndex += 1
   end
 end
