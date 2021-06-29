@@ -9,7 +9,23 @@
 // Create an index ("i") to iterate through the array, and set it to 1, which will correspond to the second value of the array, height[1]
 // Iterate through the array and if maxHeight is less than any value in the array, set maxHeight equal to that value
 // Define the variable "doses" as maxHeight - k
-// Create an if statement where if k is greater than or equal to maxHeight, return zero. If k is less than maxHeight, then return the value of "doses"
+// Create an if statement where if k is greater than or equal to maxHeight, set "doses" equal to zero
+// Return the value of "doses"
+
+// function hurdleRace(k, height) {
+//   let maxHeight = height[0];
+//   let i = 1;
+//   let doses = maxHeight - k;
+//   while (i < height.length) {
+//     maxHeight = height[i];
+//     i += 1;
+//   }
+//   if (k >= maxHeight) {
+//     return 0;
+//   } else {
+//     return doses;
+//   }
+// }
 
 function hurdleRace(k, height) {
   let maxHeight = height[0];
@@ -20,10 +36,9 @@ function hurdleRace(k, height) {
     i += 1;
   }
   if (k >= maxHeight) {
-    return 0;
-  } else {
-    return doses;
+    doses = 0;
   }
+  return doses;
 }
 
 console.log(hurdleRace(4, [1, 6, 3, 5, 2]));
