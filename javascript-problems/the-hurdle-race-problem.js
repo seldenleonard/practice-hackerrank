@@ -17,10 +17,10 @@ function hurdleRace(k, height) {
   let doses = maxHeight - k;
   while (i < height.length) {
     if (maxHeight - k >= maxHeight) {
-      return 0;
+      0;
     } else {
-      return doses;
+      doses;
     }
+    i += 1;
   }
-  i += 1;
 }
