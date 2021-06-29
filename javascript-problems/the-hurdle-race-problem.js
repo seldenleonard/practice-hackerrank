@@ -19,7 +19,7 @@ function hurdleRace(k, height) {
     maxHeight = height[i];
     i += 1;
   }
-  if (maxHeight - k >= maxHeight) {
+  if (k >= maxHeight) {
     return 0;
   } else {
     return doses;
