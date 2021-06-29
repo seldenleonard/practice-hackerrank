@@ -29,3 +29,4 @@ def hurdleRace(height, k)
 end
 
 hurdleRace([1, 6, 3, 5, 2], 4)
+hurdleRace([9, 10, 7, 3, 8], 12)
