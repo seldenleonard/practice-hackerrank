@@ -44,3 +44,4 @@ function hurdleRace(k, height) {
 }
 
 console.log(hurdleRace(4, [1, 6, 3, 5, 2]));
+console.log(hurdleRace(12, [9, 10, 7, 3, 8]));
