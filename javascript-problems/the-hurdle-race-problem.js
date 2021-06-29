@@ -20,9 +20,10 @@ function hurdleRace(k, height) {
     i += 1;
   }
   if (maxHeight - k >= maxHeight) {
-    0;
+    return 0;
   } else {
-    doses;
+    return doses;
   }
 }
 
+console.log(hurdleRace(4, [1, 6, 3, 5, 2]));
