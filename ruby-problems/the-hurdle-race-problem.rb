@@ -7,7 +7,7 @@
 # Define a "max_height" variable, which will be the largest integer in the array
 # Set max_height initially, to the first value in the array
 # Create an index ("i") to iterate through the array, and set it to 1, which will correspond to the second value of the array, height[1]
-# Iterate throught the array and if max_height is less than any value in the array, set max_height equal to that value
+# Iterate through the array and if max_height is less than any value in the array, set max_height equal to that value
 # Define the variable "doses" as max_height - k
 # Create an if statement where if k is greater than or equal to max_height, return zero. If k is less than max_height, then return the value of "doses"
 
