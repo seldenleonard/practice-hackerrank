@@ -20,5 +20,10 @@ def hurdleRace(height, k)
     end
     i += 1
   end
-  
+  doses = k - max_height
+  if k >= max_height
+    return 0
+  else
+    return doses
+  end
 end
