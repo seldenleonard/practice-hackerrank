@@ -4,8 +4,12 @@
 
 # STEPS
 # Create a function that accepts an integer ("height") and an array ("k")
-# Define a "maxHeight" variable, which will be the largest integer in the array
-# Set maxHeight to the first value in the array
-# Iterate throught the array and if maxHeight is less than any value in the array, set maxHeight equal to that value
-# Define the variable "doses" as k - maxHeight
-# Create an if statement where if k is greater than or equal to maxHeight, return zero. If k is less than maxHeight, then return the value of "doses"
+# Define a "max_height" variable, which will be the largest integer in the array
+# Set max_height to the first value in the array
+# Iterate throught the array and if max_height is less than any value in the array, set max_height equal to that value
+# Define the variable "doses" as k - max_height
+# Create an if statement where if k is greater than or equal to max_height, return zero. If k is less than max_height, then return the value of "doses"
+
+def hurdleRace
+  
+end
