@@ -30,11 +30,13 @@
 function hurdleRace(k, height) {
   let maxHeight = height[0];
   let i = 1;
-  let doses = maxHeight - k;
   while (i < height.length) {
-    maxHeight = height[i];
+    if (maxHeight < height[i]) {
+      maxHeight = height[i];
+    }
     i += 1;
   }
+  let doses = maxHeight - k;
   if (k >= maxHeight) {
     doses = 0;
   }
