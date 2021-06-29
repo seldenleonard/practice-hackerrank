@@ -12,20 +12,6 @@
 // Create an if statement where if k is greater than or equal to maxHeight, set "doses" equal to zero
 // Return the value of "doses"
 
-// function hurdleRace(k, height) {
-//   let maxHeight = height[0];
-//   let i = 1;
-//   let doses = maxHeight - k;
-//   while (i < height.length) {
-//     maxHeight = height[i];
-//     i += 1;
-//   }
-//   if (k >= maxHeight) {
-//     return 0;
-//   } else {
-//     return doses;
-//   }
-// }
 
 function hurdleRace(k, height) {
   let maxHeight = height[0];
