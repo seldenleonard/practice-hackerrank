@@ -9,3 +9,7 @@
 # Iterate throught the array and if maxHeight is less than any value in the array, set maxHeight equal to that value
 # Define the variable "doses" as k - maxHeight
 # Create an if statement where if k is greater than or equal to maxHeight, return zero. If k is less than maxHeight, then return the value of "doses"
+
+def hurdleRace
+  
+end
