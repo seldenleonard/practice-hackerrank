@@ -47,7 +47,7 @@ def designerPdfViewer(h, word)
   max_letter_height = 0
   while i < word.length
     if letter_location.fetch(:"#{word[i]}") > max_letter_height
-      max_letter_height = letter_location.fetch(:"#{word[i]}")
+      max_letter_height = h[letter_location.fetch(:"#{word[i]}")]
     end
     i += 1
   end
