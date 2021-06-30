@@ -8,52 +8,6 @@
 # Evaluate each letter in the input string, use letter_location to find the index value, then take that index value and retrieve the corresponding integer within the input array
 # Multiply this integer by the length of the string, and that is the output
 
-# def designerPdfViewer(h, word)
-#   letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
-#   i = 0
-#   max_letter_height = 0
-#   while i < word.length
-#     if letter_location[word[i]] > max_letter_height
-#       max_letter_height = letter_location[word[i]]
-#     end
-#   end
-#   puts max_letter_height * word.length
-# end
-
-# def designerPdfViewer(h, word)
-  # letter_location = { "a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5, "g": 6, "h": 7, "i": 8, "j": 9, "k": 10, "l": 11, "m": 12, "n": 13, "o": 14, "p": 15, "q": 16, "r": 17, "s": 18, "t": 19, "u": 20, "v": 21, "w": 22, "x": 23, "y": 24, "z": 25 }
-  # letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
-  # i = 0
-  # max_letter_height = 0
-  # puts designerPdfViewer.find{|k, v| v[word[i]]}
-  # puts letter_location.fetch(:a)
-  # puts letter_location.fetch(:"#{word[i]}")
-  # puts letter_location.key(4)
-  # puts letter_location[0]
-  # puts letter_location["a"]
-  # puts word[i]
-  # puts letter_location[word[i]]
-  # while i < word.length
-  #   if letter_location[word[i]] > max_letter_height
-  #     max_letter_height = letter_location[word[i]]
-  #   end
-  # end
-  # puts max_letter_height * word.length
-# end
-
-# ALMOST WORKING VERSION - Passed 2/7 Test Cases
-# def designerPdfViewer(h, word)
-#   letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
-#   i = 0
-#   max_letter_height = 0
-#   while i < word.length
-#     if letter_location.fetch(:"#{word[i]}") > max_letter_height
-#       max_letter_height = h[letter_location.fetch(:"#{word[i]}")]
-#     end
-#     i += 1
-#   end
-#   p max_letter_height * word.length
-# end
 
 def designerPdfViewer(h, word)
   letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
@@ -70,19 +24,4 @@ end
 
 # designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba")
 
-# designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "abcdefghijklmnopqrstuvwxyz")
-
-# designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "tehwrcxhnq")
-
 designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "tehwrcxhnq")
-
-# t - 4 - 4
-# e - 1 - 1
-# h - 7 - 7
-# w - 7 - 7
-# r - 2 - 2
-# c - 6 - 6
-# x - 6 - 6
-# h - 7 - 7
-# n - 4 - 4
-# q - 4 - 4
