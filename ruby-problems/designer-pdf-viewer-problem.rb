@@ -41,12 +41,26 @@
   # puts max_letter_height * word.length
 # end
 
+# ALMOST WORKING VERSION - Passed 2/7 Test Cases
+# def designerPdfViewer(h, word)
+#   letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
+#   i = 0
+#   max_letter_height = 0
+#   while i < word.length
+#     if letter_location.fetch(:"#{word[i]}") > max_letter_height
+#       max_letter_height = h[letter_location.fetch(:"#{word[i]}")]
+#     end
+#     i += 1
+#   end
+#   p max_letter_height * word.length
+# end
+
 def designerPdfViewer(h, word)
   letter_location = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, g: 6, h: 7, i: 8, j: 9, k: 10, l: 11, m: 12, n: 13, o: 14, p: 15, q: 16, r: 17, s: 18, t: 19, u: 20, v: 21, w: 22, x: 23, y: 24, z: 25 }
   i = 0
   max_letter_height = 0
   while i < word.length
-    if letter_location.fetch(:"#{word[i]}") > max_letter_height
+    if h[letter_location.fetch(:"#{word[i]}")] > max_letter_height
       max_letter_height = h[letter_location.fetch(:"#{word[i]}")]
     end
     i += 1
@@ -54,4 +68,21 @@ def designerPdfViewer(h, word)
   p max_letter_height * word.length
 end
 
-designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba")
+# designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba")
+
+# designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "abcdefghijklmnopqrstuvwxyz")
+
+# designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "tehwrcxhnq")
+
+designerPdfViewer([6, 3, 6, 3, 1, 7, 3, 7, 1, 6, 7, 4, 7, 4, 3, 2, 4, 2, 5, 4, 3, 6, 7, 6, 2, 5], "tehwrcxhnq")
+
+# t - 4 - 4
+# e - 1 - 1
+# h - 7 - 7
+# w - 7 - 7
+# r - 2 - 2
+# c - 6 - 6
+# x - 6 - 6
+# h - 7 - 7
+# n - 4 - 4
+# q - 4 - 4
