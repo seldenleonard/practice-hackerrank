@@ -8,3 +8,6 @@
 # Evaluate each letter in the input string, use letter_location to find the index value, then take that index value and retrieve the corresponding integer within the input array
 # Multiply this integer by the length of the string, and that is the output
 
+def designerPdfViewer(h, word)
+  
+end
