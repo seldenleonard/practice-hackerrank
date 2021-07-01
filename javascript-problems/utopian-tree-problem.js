@@ -72,6 +72,25 @@
 // }
 
 // Fifth Attempt
+// function utopianTree(n) {
+//   var h = 1;
+//   var output = [];
+//   for (let i = 0; i < n.length; i++) {
+//     const time = n[i];
+//     if (time === 0) {
+//       output.push(h);
+//     } else if (time % 2 !== 0) {
+//       h *= 2;
+//       output.push(h);
+//     } else {
+//       h += 1;
+//       output.push(h);
+//     }
+//   }
+//   return output;
+// }
+
+// Sixth Attempt
 function utopianTree(n) {
   var h = 1;
   var output = [];
@@ -79,12 +98,9 @@ function utopianTree(n) {
     const time = n[i];
     if (time === 0) {
       output.push(h);
-    } else if (time % 2 !== 0) {
-      h *= 2;
-      output.push(h);
     } else {
-      h += 1;
-      output.push(h);
+      // Need a loop that instead of determining whether the integer from array n that being evaluated is odd or even, will take that integer and count up from zero, and alternates between doubling the height when the integer is odd, and increasing the height by 1 when the integer is even -- then stops and outputs a final value for height when the counter reaches the value of the original integer that was input.        
+      }
     }
   }
   return output;
