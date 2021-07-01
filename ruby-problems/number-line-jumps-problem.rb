@@ -16,6 +16,7 @@
 # Create two variables called "roo1" and "roo2", which will track each kangaroos positions as they increase.
   # Alternate idea to this^ ==> instead of having roo1 correspond to x1 and v1, and roo2 correspond to x2 and v2, I could have "fast_roo" and "slow_roo", linking these variables to whichever kangaroo is faster, because it will make it easier to write an "until/or" statement.
 # Create an until/or loop, where UNTIL the two kangaroos are at the same position OR the faster kangaroo surpasses the position of the slower kangaroo, stop the method and return either "YES" or "NO"
+# NOTE: I will need to make sure the entire method is cascading, in that all my if statements and whatnot are nested, to that the method only returns one string as the output, even though there are several different if statements, each with several prongs, else's, and elsif's.
 
 # def kangaroo(x1, v1, x2, v2)
 #   if x1 > x2 && v1 > v2 || x2 > x1 and v2 > v1
@@ -32,13 +33,13 @@ def kangaroo(x1, v1, x2, v2)
   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 # -- edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so the last "or" statement accounts for that
     p "NO"
   end
-  if v1 > v2
+  if v1 == v2 && x1 == x2
+    p "YES"
+  elsif v1 > v2
     fast_roo = x1
     fast_roo_speed = v1
     slow_roo = x2
     slow_roo_speed = v2
-  elsif v1 == v2 && x1 == x2
-    p "YES"
   else
     slow_roo = x2
     fast_roo_speed = v2
