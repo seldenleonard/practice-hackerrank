@@ -99,12 +99,13 @@ function utopianTree(n) {
     if (time === 0) {
       output.push(h);
     } else {
-      // Need a loop that instead of determining whether the integer from array n that being evaluated is odd or even, will take that integer and count up from zero, and alternates between doubling the height when the integer is odd, and increasing the height by 1 when the integer is even -- then stops and outputs a final value for height when the counter reaches the value of the original integer that was input.        
-      }
+      // Need a loop that instead of determining whether the integer from array n that being evaluated is odd or even, will take that integer and count up from zero, and alternates between doubling the height when the integer is odd, and increasing the height by 1 when the integer is even -- then stops and outputs a final value for height when the counter reaches the value of the original integer that was input.
+        
     }
   }
   return output;
 }
+  
 
 console.log(utopianTree([0, 1, 4]));
 
