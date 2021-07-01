@@ -9,13 +9,41 @@
 # Write a series of if statements saying:
   # if x1 > x2 AND v1 > v2, return "NO"
   # if x2 > x1 AND v2 > v1, return "NO"
-  # if v2 > v1 THEN 
+  # Edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so need if statement to account for that
 # Basically the idea is that once the kangaroo moving fastest surpasses the slower kangaroo, return "NO".
-# Create two variables called "roo1" and "roo2", which will track each kangaroos positions as they increase. 
+# Create two variables called "roo1" and "roo2", which will track each kangaroos positions as they increase.
+  # Alternate idea to this^ ==> instead of having roo1 correspond to x1 and v1, and roo2 correspond to x2 and v2, I could have "fast_roo" and "slow_roo", linking these variables to whichever kangaroo is faster, because it will make it easier to write an "until/or" statement.
 # Create an until/or loop, where UNTIL the two kangaroos are at the same position OR the faster kangaroo surpasses the position of the slower kangaroo, stop the method and return either "YES" or "NO"
 
+# def kangaroo(x1, v1, x2, v2)
+#   if x1 > x2 && v1 > v2 || x2 > x1 and v2 > v1
+#     p "NO"
+#   end
+#   roo1 = x1
+#   roo2 = x2
+#   until roo1 == roo2 ||
+    
+#   end
+# end
+
 def kangaroo(x1, v1, x2, v2)
-  if x1 > x2 && v1 > v2 || x2 > x1 and v2 > v1
+  if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 !== x2 && v1 == v2 # -- edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so the last if statement accounts for that
+    p "NO"
+  end
+  if v1 > v2
+    fast_roo = x1
+    fast_roo_speed = v1
+  else
+    slow_roo = x2
+    fast_roo_speed = v2
+  end
+  until fast_roo == slow_roo || fast_roo > slow_roo
+    fast_roo += v1
+    slow_roo += v2
+  end
+  if fast_roo == slow_roo
+    p "YES"
+  elsif fast_roo > slow_roo
     p "NO"
   end
 end
