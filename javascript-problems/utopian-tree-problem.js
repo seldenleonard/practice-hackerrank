@@ -55,12 +55,31 @@
 // }
 
 // Fourth Attempt - Successful (but HackerRank Doesnt Like It)
+// function utopianTree(n) {
+//   var h = 1;
+//   var output = [];
+//   for (let i = 0; i < n.length; i++) {
+//     const time = n[i];
+//     if (time % 2 !== 0) {
+//       h *= 2;
+//       output.push(h);
+//     } else {
+//       h += 1;
+//       output.push(h);
+//     }
+//   }
+//   return output;
+// }
+
+// Fifth Attempt
 function utopianTree(n) {
   var h = 1;
   var output = [];
   for (let i = 0; i < n.length; i++) {
     const time = n[i];
-    if (time % 2 !== 0) {
+    if (time === 0) {
+      output.push(h);
+    } else if (time % 2 !== 0) {
       h *= 2;
       output.push(h);
     } else {
@@ -72,3 +91,5 @@ function utopianTree(n) {
 }
 
 console.log(utopianTree([0, 1, 4]));
+
+// console.log(utopianTree([2, 0, 1]));
