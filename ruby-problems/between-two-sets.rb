@@ -244,12 +244,29 @@ def getTotalX(a, b)
       potentialFactors << testValue
     end
   else
-    # until testValue >= b[0]
-      until testValue % a[0] == 0 && testValue % a[1] == 0
-        testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
+  #   until testValue >= b[0]
+  #     testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
+  #     until testValue % a[0] == 0 && testValue % a[1] == 0
+  #       potentialFactors << testValue
+  #       p testValue
+  #     end
+  #   end
+  # end
+  # while indexB < b.length
+  #   potentialFactors.each do |potentialFactor|
+  #     if b[indexB] % potentialFactor != 0
+  #       potentialFactors.delete(potentialFactor)
+  #     end
+  #   end
+  #   indexB += 1
+  # end
+    until testValue >= b[0]
+      testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
+      if testValue % a[0] == 0 && testValue % a[1] == 0
         potentialFactors << testValue
+        # p testValue
       end
-    # end
+    end
   end
   while indexB < b.length
     potentialFactors.each do |potentialFactor|
