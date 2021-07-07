@@ -85,6 +85,8 @@ def kangaroo(x1, v1, x2, v2)
   end
 end
 
-kangaroo(5, 2, 5, 3)
+kangaroo(0, 3, 4, 2)
 kangaroo(0, 2, 5, 3)
-kangaroo(3, 7, 1, 3)
+# kangaroo(5, 2, 5, 3)
+# kangaroo(0, 2, 5, 3)
+# kangaroo(3, 7, 1, 3)
