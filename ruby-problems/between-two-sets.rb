@@ -203,7 +203,36 @@
 #   end
 # end
 
-# SEVENTH ATTEMPT - See note on line 219 as to why my method is failing 6/9 test cases on HackerRank
+# # SEVENTH ATTEMPT - Refactors Attempt 6, but see note on line 219 as to why my method is failing 6/9 test cases on HackerRank
+
+# def getTotalX(a, b)
+#   indexB = 0
+#   potentialFactors = []
+#   testValue = 0
+#   if a[1] % a[0] == 0
+#     until testValue >= b[0]
+#       testValue += a[1]
+#       potentialFactors << testValue
+#     end
+#   else
+#     until testValue >= b[0]
+#       testValue += a[0] * a[1] # My issue is here -- for example, the input: "p getTotalX([20, 30], [60, 120])", yields an output of zero, because im multiplying 20 by 30, which blows way past 60, even though both 20 and 30 factor into 60 and 60 factors into both 60 and 120, meaning the correct output should be 1 (or maybe 2, if 120 is also a correct answer?) Anyway, the point is that this line right here is making it so my method only works for small integers in array a, because once the integers in array a are a bit larger, the multiplication causes my method to overshoot integers that they both factor into.
+#       potentialFactors << testValue
+#     end
+#   end
+#   while indexB < b.length
+#     potentialFactors.each do |potentialFactor|
+#       if b[indexB] % potentialFactor != 0
+#         potentialFactors.delete(potentialFactor)
+#       end
+#     end
+#     indexB += 1
+#   end
+#   potentialFactors.count
+# end
+
+
+# EIGHTH ATTEMPT
 
 def getTotalX(a, b)
   indexB = 0
@@ -215,10 +244,12 @@ def getTotalX(a, b)
       potentialFactors << testValue
     end
   else
-    until testValue >= b[0]
-      testValue += a[0] * a[1] # My issue is here -- for example, the input: "p getTotalX([20, 30], [60, 120])", yeilds an output of zero, because im multiplying 20 by 30, which blows way past 60, even though both 20 and 30 factor into 60 and 60 factors into both 60 and 120, meaning the correct output should be 1 (or maybe 2, if 120 is also a correct answer?) Anyway, the point is that this line right here is making it so my method only works for small integers in array a, because once the integers in array a are a bit larger, the multiplication causes my method to overshoot integers that they both factor into.
-      potentialFactors << testValue
-    end
+    # until testValue >= b[0]
+      until testValue % a[0] == 0 && testValue % a[1] == 0
+        testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
+        potentialFactors << testValue
+      end
+    # end
   end
   while indexB < b.length
     potentialFactors.each do |potentialFactor|
