@@ -18,45 +18,6 @@
 # Create an until/or loop, where UNTIL the two kangaroos are at the same position OR the faster kangaroo surpasses the position of the slower kangaroo, stop the method and return either "YES" or "NO"
 # NOTE: I will need to make sure the entire method is cascading, in that all my if statements and whatnot are nested, to that the method only returns one string as the output, even though there are several different if statements, each with several prongs, else's, and elsif's.
 
-# def kangaroo(x1, v1, x2, v2)
-#   if x1 > x2 && v1 > v2 || x2 > x1 and v2 > v1
-#     p "NO"
-#   end
-#   roo1 = x1
-#   roo2 = x2
-#   until roo1 == roo2 ||
-    
-#   end
-# end
-
-# def kangaroo(x1, v1, x2, v2)
-#   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 # -- edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so the last "or" statement accounts for that
-#     p "NO"
-#   end
-#   if v1 == v2 && x1 == x2
-#     p "YES"
-#   elsif v1 > v2
-#     fast_roo = x1
-#     fast_roo_speed = v1
-#     slow_roo = x2
-#     slow_roo_speed = v2
-#   else
-#     slow_roo = x2
-#     fast_roo_speed = v2
-#     slow_roo = x1
-#     slow_roo_speed = v1
-#   end
-#   until fast_roo.to_i >= slow_roo.to_i do
-#     fast_roo = fast_roo.to_i + fast_roo_speed.to_i
-#     slow_roo = slow_roo.to_i + slow_roo_speed.to_i
-#   end
-#   if fast_roo == slow_roo
-#     p "YES"
-#   elsif fast_roo.to_i > slow_roo.to_i
-#     p "NO"
-#   end
-# end
-
 
 def kangaroo(x1, v1, x2, v2)
   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 
@@ -85,8 +46,8 @@ def kangaroo(x1, v1, x2, v2)
   end
 end
 
-kangaroo(0, 3, 4, 2)
-kangaroo(0, 2, 5, 3)
-# kangaroo(5, 2, 5, 3)
-# kangaroo(0, 2, 5, 3)
-# kangaroo(3, 7, 1, 3)
+p kangaroo(0, 3, 4, 2)
+p kangaroo(0, 2, 5, 3)
+p kangaroo(5, 2, 5, 3)
+p kangaroo(0, 2, 5, 3)
+p kangaroo(3, 7, 1, 3)
