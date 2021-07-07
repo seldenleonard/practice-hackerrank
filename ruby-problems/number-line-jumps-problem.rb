@@ -29,11 +29,39 @@
 #   end
 # end
 
+# def kangaroo(x1, v1, x2, v2)
+#   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 # -- edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so the last "or" statement accounts for that
+#     p "NO"
+#   end
+#   if v1 == v2 && x1 == x2
+#     p "YES"
+#   elsif v1 > v2
+#     fast_roo = x1
+#     fast_roo_speed = v1
+#     slow_roo = x2
+#     slow_roo_speed = v2
+#   else
+#     slow_roo = x2
+#     fast_roo_speed = v2
+#     slow_roo = x1
+#     slow_roo_speed = v1
+#   end
+#   until fast_roo.to_i >= slow_roo.to_i do
+#     fast_roo = fast_roo.to_i + fast_roo_speed.to_i
+#     slow_roo = slow_roo.to_i + slow_roo_speed.to_i
+#   end
+#   if fast_roo == slow_roo
+#     p "YES"
+#   elsif fast_roo.to_i > slow_roo.to_i
+#     p "NO"
+#   end
+# end
+
+
 def kangaroo(x1, v1, x2, v2)
-  if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 # -- edgecase: if the speeds are equal but locations are not, then no kangaroo will ever pass the other, so the last "or" statement accounts for that
+  if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 
     p "NO"
-  end
-  if v1 == v2 && x1 == x2
+  elsif v1 == v2 && x1 == x2
     p "YES"
   elsif v1 > v2
     fast_roo = x1
@@ -49,13 +77,14 @@ def kangaroo(x1, v1, x2, v2)
   until fast_roo.to_i >= slow_roo.to_i do
     fast_roo = fast_roo.to_i + fast_roo_speed.to_i
     slow_roo = slow_roo.to_i + slow_roo_speed.to_i
-  end
-  if fast_roo == slow_roo
-    p "YES"
-  elsif fast_roo.to_i > slow_roo.to_i
-    p "NO"
+    if fast_roo == slow_roo
+      p "YES"
+    elsif fast_roo.to_i > slow_roo.to_i
+      p "NO"
+    end
   end
 end
 
+kangaroo(5, 2, 5, 3)
 kangaroo(0, 2, 5, 3)
 kangaroo(3, 7, 1, 3)
