@@ -60,9 +60,9 @@
 
 def kangaroo(x1, v1, x2, v2)
   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 
-    p "NO"
+    return "NO"
   elsif v1 == v2 && x1 == x2
-    p "YES"
+    return "YES"
   elsif v1 > v2
     fast_roo = x1
     fast_roo_speed = v1
@@ -78,9 +78,9 @@ def kangaroo(x1, v1, x2, v2)
     fast_roo = fast_roo.to_i + fast_roo_speed.to_i
     slow_roo = slow_roo.to_i + slow_roo_speed.to_i
     if fast_roo == slow_roo
-      p "YES"
+      return "YES"
     elsif fast_roo.to_i > slow_roo.to_i
-      p "NO"
+      return "NO"
     end
   end
 end
