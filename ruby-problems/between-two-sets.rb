@@ -132,7 +132,38 @@
 # end
 
 
-# FIFTH ATTEMPT - Works for 1 of 2 HackerRank Test Cases
+# # FIFTH ATTEMPT - Works for 1 of 2 HackerRank Test Cases
+
+# def getTotalX(a, b)
+#   indexB = 0
+#   # indexPF = 0
+#   potentialFactors = []
+#   testValue = 0
+#   if a[1] % a[0] == 0
+#     until testValue >= b[0]
+#       testValue += a[1]
+#       potentialFactors << testValue
+#     end
+#     p potentialFactors
+#     while indexB < b.length
+#       potentialFactors.each do |potentialFactor|
+#         if b[indexB] % potentialFactor != 0
+#           potentialFactors.delete(potentialFactor)
+#         end
+#       end
+#       indexB += 1
+#     end
+#     # potentialFactors.each do |potentialFactor|
+#     #   return potentialFactor
+#     potentialFactors.count
+#     # end
+#   end
+# end
+
+# MY ISSUE IN THE FIFTH ATTEMPT is: I do not have a path for the alorithm to folow if the two integers in array a do not factor into eachother (i.e. 2 factors into 4 but 2 does not factor into 5. So if array a was [2, 5], my method outputs nil)
+
+
+# SIXTH ATTEMPT
 
 def getTotalX(a, b)
   indexB = 0
