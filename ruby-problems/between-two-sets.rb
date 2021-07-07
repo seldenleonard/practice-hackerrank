@@ -131,6 +131,9 @@
 #   end
 # end
 
+
+# FIFTH ATTEMPT - Works for 1 of 2 HackerRank Test Cases
+
 def getTotalX(a, b)
   indexB = 0
   # indexPF = 0
