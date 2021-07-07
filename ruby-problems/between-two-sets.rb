@@ -163,11 +163,49 @@
 # MY ISSUE IN THE FIFTH ATTEMPT is: I do not have a path for the alorithm to folow if the two integers in array a do not factor into eachother (i.e. 2 factors into 4 but 2 does not factor into 5. So if array a was [2, 5], my method outputs nil)
 
 
-# SIXTH ATTEMPT
+# SIXTH ATTEMPT - Solves BOTH HackerRank Test Cases
+
+# def getTotalX(a, b)
+#   indexB = 0
+#   # indexPF = 0
+#   potentialFactors = []
+#   testValue = 0
+#   if a[1] % a[0] == 0
+#     until testValue >= b[0]
+#       testValue += a[1]
+#       potentialFactors << testValue
+#     end
+#     p potentialFactors
+#     while indexB < b.length
+#       potentialFactors.each do |potentialFactor|
+#         if b[indexB] % potentialFactor != 0
+#           potentialFactors.delete(potentialFactor)
+#         end
+#       end
+#       indexB += 1
+#     end
+#     potentialFactors.count
+#   else
+#     until testValue >= b[0]
+#       testValue += a[0] * a[1]
+#       potentialFactors << testValue
+#     end
+#     p potentialFactors
+#     while indexB < b.length
+#       potentialFactors.each do |potentialFactor|
+#         if b[indexB] % potentialFactor != 0
+#           potentialFactors.delete(potentialFactor)
+#         end
+#       end
+#       indexB += 1
+#     end
+#     potentialFactors.count
+#   end
+# end
+
 
 def getTotalX(a, b)
   indexB = 0
-  # indexPF = 0
   potentialFactors = []
   testValue = 0
   if a[1] % a[0] == 0
@@ -175,32 +213,21 @@ def getTotalX(a, b)
       testValue += a[1]
       potentialFactors << testValue
     end
-    p potentialFactors
-    while indexB < b.length
-      potentialFactors.each do |potentialFactor|
-        if b[indexB] % potentialFactor != 0
-          potentialFactors.delete(potentialFactor)
-        end
-      end
-      indexB += 1
-    end
-    potentialFactors.count
   else
     until testValue >= b[0]
       testValue += a[0] * a[1]
       potentialFactors << testValue
     end
-    p potentialFactors
-    while indexB < b.length
-      potentialFactors.each do |potentialFactor|
-        if b[indexB] % potentialFactor != 0
-          potentialFactors.delete(potentialFactor)
-        end
-      end
-      indexB += 1
-    end
-    potentialFactors.count
   end
+  while indexB < b.length
+    potentialFactors.each do |potentialFactor|
+      if b[indexB] % potentialFactor != 0
+        potentialFactors.delete(potentialFactor)
+      end
+    end
+    indexB += 1
+  end
+  potentialFactors.count
 end
 
 p getTotalX([2, 4], [16, 32, 96])
