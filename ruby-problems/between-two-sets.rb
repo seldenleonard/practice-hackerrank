@@ -184,10 +184,22 @@ def getTotalX(a, b)
       end
       indexB += 1
     end
-    # potentialFactors.each do |potentialFactor|
-    #   return potentialFactor
     potentialFactors.count
-    # end
+  else
+    until testValue >= b[0]
+      testValue += a[0] * a[1]
+      potentialFactors << testValue
+    end
+    p potentialFactors
+    while indexB < b.length
+      potentialFactors.each do |potentialFactor|
+        if b[indexB] % potentialFactor != 0
+          potentialFactors.delete(potentialFactor)
+        end
+      end
+      indexB += 1
+    end
+    potentialFactors.count
   end
 end
 
