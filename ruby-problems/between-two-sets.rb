@@ -137,10 +137,11 @@ def getTotalX(a, b)
   potentialFactors = []
   testValue = 0
   if a[1] % a[0] == 0
-    until testValue >= b[0] * 0.5
+    until testValue >= b[0]
       testValue += a[1]
       potentialFactors << testValue
     end
+    p potentialFactors
     while indexB < b.length
       potentialFactors.each do |potentialFactor|
         if b[indexB] % potentialFactor != 0
@@ -149,13 +150,14 @@ def getTotalX(a, b)
       end
       indexB += 1
     end
-    potentialFactors.each do |potentialFactor|
-      return potentialFactor
-    end
+    # potentialFactors.each do |potentialFactor|
+    #   return potentialFactor
+    potentialFactors.count
+    # end
   end
 end
 
 p getTotalX([2, 4], [16, 32, 96])
 p getTotalX([3, 4], [24, 48])
-# p getTotalX([2, 6], [24, 36, 50])
-# p getTotalX([2, 12], [24, 48, 50])
+p getTotalX([2, 6], [24, 36, 50])
+p getTotalX([2, 12], [24, 48, 50])
