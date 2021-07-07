@@ -203,6 +203,7 @@
 #   end
 # end
 
+# SEVENTH ATTEMPT - See note on line 219 as to why my method is failing 6/9 test cases on HackerRank
 
 def getTotalX(a, b)
   indexB = 0
@@ -215,7 +216,7 @@ def getTotalX(a, b)
     end
   else
     until testValue >= b[0]
-      testValue += a[0] * a[1]
+      testValue += a[0] * a[1] # My issue is here -- for example, the input: "p getTotalX([20, 30], [60, 120])", yeilds an output of zero, because im multiplying 20 by 30, which blows way past 60, even though both 20 and 30 factor into 60 and 60 factors into both 60 and 120, meaning the correct output should be 1 (or maybe 2, if 120 is also a correct answer?) Anyway, the point is that this line right here is making it so my method only works for small integers in array a, because once the integers in array a are a bit larger, the multiplication causes my method to overshoot integers that they both factor into.
       potentialFactors << testValue
     end
   end
@@ -232,5 +233,6 @@ end
 
 p getTotalX([2, 4], [16, 32, 96])
 p getTotalX([3, 4], [24, 48])
+p getTotalX([20, 30], [60, 120])
 p getTotalX([2, 6], [24, 36, 50])
 p getTotalX([2, 12], [24, 48, 50])
