@@ -14,7 +14,7 @@ function pageCount(n, p) {
   if (n % 2 !== 0 && n - 1 === p || p === 1) {
     counter = 0;
   } else if (n / 2 < p) {
-    //start from back
+    //Start From Back
     if (n % 2 !== 0) {
       startingPage = n - 1;
     } else {
@@ -25,7 +25,7 @@ function pageCount(n, p) {
       counter += 1;
     }
   } else if (n / 2 >= p) {
-    //start from front
+    //Start From Front
     startingPage = 1;
     while (startingPage < p) {
       startingPage += 2;
