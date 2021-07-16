@@ -256,7 +256,7 @@ def getTotalX(a, b)
   #   potentialFactors.each do |potentialFactor|
   #     if b[indexB] % potentialFactor != 0
   #       potentialFactors.delete(potentialFactor)
-  #     end
+  #     en
   #   end
   #   indexB += 1
   # end
