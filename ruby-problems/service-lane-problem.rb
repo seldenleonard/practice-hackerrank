@@ -25,11 +25,27 @@
 # end
 
 # ATTEMPT 2 - Outputs Correctly 3/5 Integers Expected
-def serviceLane(width, cases)
+# def serviceLane(width, cases)
+#   index1 = 0
+#   while index1 < cases.length
+#     index2 = cases[index1][0]
+#     smallest_width = index2
+#     while index2 <= cases[index1][1]
+#       if smallest_width > width[index2]
+#         smallest_width = width[index2]
+#       end
+#       index2 += 1
+#     end
+#     p smallest_width
+#     index1 += 1
+#   end
+# end
+
+# ATTEMPT 3 - Correct -- BUT HackerRank Doesnt Like It
   index1 = 0
   while index1 < cases.length
     index2 = cases[index1][0]
-    smallest_width = index2
+    smallest_width = width[index2]
     while index2 <= cases[index1][1]
       if smallest_width > width[index2]
         smallest_width = width[index2]
