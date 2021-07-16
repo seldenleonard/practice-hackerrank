@@ -60,23 +60,24 @@
 # end
 
 # ATTEMPT 4 -- Also correct, but HackerRank does not like it
-# def serviceLane(width, cases)
-#   index1 = 0
-#   smallest_width_array = []
-#   while index1 < cases.length
-#     index2 = cases[index1][0]
-#     smallest_width = width[index2]
-#     while index2 <= cases[index1][1]
-#       if smallest_width > width[index2]
-#         smallest_width = width[index2]
-#       end
-#       index2 += 1
-#     end
-#     smallest_width_array << smallest_width
-#     index1 += 1
-#   end
-#   puts smallest_width_array
-# end
+def serviceLane(width, cases)
+  index1 = 0
+  smallest_width_array = []
+  while index1 < cases.length
+    index2 = cases[index1][0]
+    smallest_width = width[index2]
+    while index2 <= cases[index1][1]
+      if smallest_width > width[index2]
+        smallest_width = width[index2]
+      end
+      index2 += 1
+    end
+    smallest_width_array << smallest_width
+    index1 += 1
+  end
+  puts smallest_width_array
+end
 
+# NOTE: After reading comments on this problem's HackerRank discussion board, it turns out that the problem itself is written with a bug, so widths are not passed -- hence, why my solution works properly at very least for the test case I am using, but HackerRank keeps returning compiling errors.
 
 serviceLane([2, 3, 1, 2, 3, 2, 3, 3], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]])
