@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/the-birthday-bar/problem
 
+# INSTRUCTIONS
 # Given a chocolate bar, two children, Lily and Ron, are determining how to share it. Each of the squares has an integer on it.
 
 # Lily decides to share a contiguous segment of the bar selected such that:
@@ -26,7 +27,6 @@
 
 
 # STEPS
-
 # Loop that prints each number in the array
 # Loop through and add two numbers at a time using index and index + 1
 # Conditional that says if index and index + 1 is equal to the day, add 1 to a counter
