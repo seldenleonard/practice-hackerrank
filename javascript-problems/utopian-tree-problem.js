@@ -1,6 +1,6 @@
 // https://www.hackerrank.com/challenges/utopian-tree/problem
 
-// STEPS:
+// STEPS
 // Create a function that accepts the array "n"
 // Set index to zero
 // Set a variable for height, "h", equal to 1
