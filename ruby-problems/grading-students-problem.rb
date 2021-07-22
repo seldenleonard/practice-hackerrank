@@ -11,7 +11,6 @@
 
 
 # STEPS
-
 # loop through and print out each number in the array
 # conditional statement to determine whether the grade is failing or passing (over or below 38)
 # conditional statement that determines whether the number is divisible by 5 or not
