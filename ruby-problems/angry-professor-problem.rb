@@ -10,6 +10,7 @@
 # Create an each or while loop that iterates through array a, and counts each student that is late, using an if statement
 # Write an if-statement, saying that if the number of students who are late exceeds the threshold, return "yes". Otherwise return "no".
 
+
 def angryProfessor(k, a)
   i = 0
   late = 0
@@ -26,3 +27,4 @@ def angryProfessor(k, a)
 end
 
 angryProfessor(3, [-2, -1, 0, 1, 2])
+angryProfessor(5, [-3, 2, 6, 5, 1, 0, 7, -2, 0])
