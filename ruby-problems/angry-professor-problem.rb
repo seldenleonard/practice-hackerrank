@@ -13,7 +13,7 @@
 def angryProfessor(k, a)
   i = 0
   late = 0
-  a.each |arrival| do
+  a.each do |arrival|
     if arrival > 0
       late += 1
     end
@@ -24,3 +24,5 @@ def angryProfessor(k, a)
     p "NO"
   end
 end
+
+angryProfessor(3, [-2, -1, 0, 1, 2])
