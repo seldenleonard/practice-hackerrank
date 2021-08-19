@@ -19,9 +19,9 @@ def angryProfessor(k, a)
     end
   end
   if a.length - late >= k
-    p "YES"
-  else
     p "NO"
+  else
+    p "YES"
   end
 end
 
