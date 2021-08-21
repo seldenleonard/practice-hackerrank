@@ -10,3 +10,7 @@
 # a.range? b, c
 # or
 # return a.range? b, c
+
+# STEPS
+# Write a method called 'range' that accepts 3 values -- a, b, and c
+# Write an if statement saying if a is less than b and greater than c, OR a is less than c and greater than b, then return true
