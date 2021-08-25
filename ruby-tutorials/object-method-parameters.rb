@@ -14,3 +14,9 @@
 # STEPS
 # Write a method called 'range' that accepts 3 values -- a, b, and c
 # Write an if statement saying if a is less than b and greater than c, OR a is less than c and greater than b, then return true
+
+def range(a, b, c)
+  if c < a < b || b < a < c
+    true
+  end
+end
