@@ -20,3 +20,5 @@ def range(a, b, c)
     true
   end
 end
+
+p range(10, 3, 40)
