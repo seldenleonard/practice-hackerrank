@@ -18,12 +18,26 @@
   # If the resulting value is a whole number integer, then add one to a counter of beautiful days, otherwise, do not add one to this counter and simply let the loop continue
 # Once the loop has ran its course, output the number of beautiful days
 
+# def beautifulDays(i, j, k)
+#   index = i
+#   beautifulDaysCounter = 0
+#   until index > j do
+#     day = index - index.to_s.reverse.to_i
+#     if (index - day.to_f)/k % 2
+#       beautifulDaysCounter += 1
+#     end
+#     index += 1
+#   end
+#   p beautifulDaysCounter
+# end
+
 def beautifulDays(i, j, k)
   index = i
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    if (index - day.to_f)/k % 2
+    x = ((index - day.to_f)/k).to_s
+    if x - x.to_i == 0
       beautifulDaysCounter += 1
     end
     index += 1
