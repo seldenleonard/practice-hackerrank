@@ -9,7 +9,7 @@
 
 # STEPS
 # Create a method that accepts three integers (i: the starting day number; j: the ending day number; & k: the divisor)
-# Subtract i from d to find the total number of days in the range
+# Subtract i from j to find the total number of days in the range
 # Write a loop that goes the length of the total number of days in the range
   # Within this loop, do the following actions/calculations
   # Reverse the individual values for the integer within the range that is being evaluated, and define this new integer as 'reverse'
@@ -19,14 +19,17 @@
 # Once the loop has ran its course, output the number of beautiful days
 
 def beautifulDays(i, j, k)
-  range = d - i
+  range = j - i
   index = i
-  beautifulDayCounter = 0
+  beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
     if (index - day)/k % 2
-      beautifulDayCounter += 1
+      beautifulDaysCounter += 1
     end
     index += 1
-  end    
+  end
+  p beautifulDaysCounter
 end
+
+beautifulDays(20, 23, 6)
