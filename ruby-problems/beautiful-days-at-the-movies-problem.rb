@@ -17,3 +17,10 @@
   # Then divide the result by k
   # If the resulting value is a whole number integer, then add one to a counter of beautiful days, otherwise, do not add one to this counter and simply let the loop continue
 # Once the loop has ran its course, output the number of beautiful days
+
+def beautifulDays(i, j, k)
+  range = d - i
+  range.length.times do
+    
+  end
+end
