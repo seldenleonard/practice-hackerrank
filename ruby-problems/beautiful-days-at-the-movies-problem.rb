@@ -23,7 +23,7 @@ def beautifulDays(i, j, k)
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    if (index - day)/k % 2
+    if (index - day.to_f)/k % 2
       beautifulDaysCounter += 1
     end
     index += 1
