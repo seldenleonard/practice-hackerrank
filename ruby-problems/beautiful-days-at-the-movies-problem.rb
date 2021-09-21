@@ -20,7 +20,13 @@
 
 def beautifulDays(i, j, k)
   range = d - i
-  range.length.times do
-    
-  end
+  index = i
+  beautifulDayCounter = 0
+  until index > j do
+    day = index - index.to_s.reverse.to_i
+    if (index - day)/k % 2
+      beautifulDayCounter += 1
+    end
+    index += 1
+  end    
 end
