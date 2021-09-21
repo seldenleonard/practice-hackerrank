@@ -19,7 +19,6 @@
 # Once the loop has ran its course, output the number of beautiful days
 
 def beautifulDays(i, j, k)
-  range = j - i
   index = i
   beautifulDaysCounter = 0
   until index > j do
