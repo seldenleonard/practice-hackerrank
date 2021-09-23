@@ -46,3 +46,4 @@ def beautifulDays(i, j, k)
 end
 
 beautifulDays(20, 23, 6)
+beautifulDays(12, 18, 4)
