@@ -31,19 +31,33 @@
 #   p beautifulDaysCounter
 # end
 
+# def beautifulDays(i, j, k)
+#   index = i
+#   beautifulDaysCounter = 0
+#   until index > j do
+#     day = index - index.to_s.reverse.to_i
+#     x = (index - day.to_f)/k
+#     if x - x.to_i == 0
+#       beautifulDaysCounter += 1
+#     end
+#     index += 1
+#   end
+#   p beautifulDaysCounter
+# end
+
 def beautifulDays(i, j, k)
   index = i
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    x = (index - day.to_f)/k
-    if x - x.to_i == 0
+    x = (index - day.abs.to_f)
+    if x.to_f % k.to_f
       beautifulDaysCounter += 1
     end
     index += 1
   end
-  p beautifulDaysCounter
+  beautifulDaysCounter
 end
 
-beautifulDays(20, 23, 6)
-beautifulDays(12, 18, 4)
+p beautifulDays(20, 23, 6)
+# p beautifulDays(12, 18, 4)
