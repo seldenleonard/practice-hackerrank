@@ -45,17 +45,31 @@
 #   p beautifulDaysCounter
 # end
 
+# def beautifulDays(i, j, k)
+#   index = i
+#   beautifulDaysCounter = 0
+#   until index > j do
+#     day = index - index.to_s.reverse.to_i
+#     p day
+#     x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this equation
+#     p x
+#     if x.to_f % k.to_f
+#       p x.class
+#       p x.to_f % k.to_f
+#       beautifulDaysCounter += 1
+#     end
+#     index += 1
+#   end
+#   beautifulDaysCounter
+# end
+
 def beautifulDays(i, j, k)
   index = i
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    p day
     x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this equation
-    p x
-    if x.to_f % k.to_f
-      p x.class
-      p x.to_f % k.to_f
+    if x.to_f % k.to_f == 0
       beautifulDaysCounter += 1
     end
     index += 1
