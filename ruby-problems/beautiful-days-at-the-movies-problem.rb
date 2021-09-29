@@ -51,7 +51,7 @@ def beautifulDays(i, j, k)
   until index > j do
     day = index - index.to_s.reverse.to_i
     p day
-    x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this problem
+    x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this equation
     p x
     if x.to_f % k.to_f
       p x.class
