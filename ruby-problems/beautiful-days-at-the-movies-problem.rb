@@ -91,5 +91,6 @@ def beautifulDays(i, j, k)
   beautifulDaysCounter
 end
 
-p beautifulDays(20, 23, 6)
+# p beautifulDays(20, 23, 6)
 # p beautifulDays(12, 18, 4)
+p beautifulDays(1, 200, 1000)
