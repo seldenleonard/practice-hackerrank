@@ -63,13 +63,27 @@
 #   beautifulDaysCounter
 # end
 
+# def beautifulDays(i, j, k)
+#   index = i
+#   beautifulDaysCounter = 0
+#   until index > j do
+#     day = index - index.to_s.reverse.to_i
+#     x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this equation
+#     if x.to_f % k.to_f == 0
+#       beautifulDaysCounter += 1
+#     end
+#     index += 1
+#   end
+#   beautifulDaysCounter
+# end
+
 def beautifulDays(i, j, k)
   index = i
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    x = (index - day.abs.to_f) # Consider that I may not need the absolute value of this equation
-    if x.to_f % k.to_f == 0
+    p weather = day.to_f / k.to_f
+    if weather - weather.to_i == 0
       beautifulDaysCounter += 1
     end
     index += 1
