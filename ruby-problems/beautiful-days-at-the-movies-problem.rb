@@ -82,7 +82,7 @@ def beautifulDays(i, j, k)
   beautifulDaysCounter = 0
   until index > j do
     day = index - index.to_s.reverse.to_i
-    p weather = day.to_f / k.to_f
+    weather = day.to_f / k.to_f
     if weather - weather.to_i == 0
       beautifulDaysCounter += 1
     end
@@ -91,6 +91,6 @@ def beautifulDays(i, j, k)
   beautifulDaysCounter
 end
 
-# p beautifulDays(20, 23, 6)
+p beautifulDays(20, 23, 6)
 # p beautifulDays(12, 18, 4)
-p beautifulDays(1, 200, 1000)
+# p beautifulDays(1, 200, 1000)
