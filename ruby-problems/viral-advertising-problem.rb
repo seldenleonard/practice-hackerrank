@@ -11,3 +11,17 @@
   # Within this loop, redefine the variables as follows:
     # day += 1, shared = liked * 3, liked = shared / 2, & cumulative += liked
 # Return cumulative
+
+def viralAdvertising(n)
+  day = 1
+  shared = 5
+  liked = shared / 2
+  cumulative = 2
+  until day > n
+    day += 1
+    shared = liked * 3
+    liked = shared / 2
+    cumulative += liked
+  end
+  cumulative
+end
