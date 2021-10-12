@@ -7,7 +7,7 @@
 # STEPS
 # Create a method that accepts a single integer "n", which is the number of days
 # Define four variables: day = 1, shared = 5, liked = shared / 2, & cumulative = 2
-# Create a loop that goes until day > n
+# Create a loop that goes until day == n
   # Within this loop, redefine the variables as follows:
     # day += 1, shared = liked * 3, liked = shared / 2, & cumulative += liked
 # Return cumulative
