@@ -17,7 +17,7 @@ def viralAdvertising(n)
   shared = 5
   liked = shared / 2
   cumulative = 2
-  until day > n
+  until day == n
     day += 1
     shared = liked * 3
     liked = shared / 2
@@ -25,3 +25,5 @@ def viralAdvertising(n)
   end
   cumulative
 end
+
+p viralAdvertising(5)
