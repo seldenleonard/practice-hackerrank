@@ -8,3 +8,9 @@
 
 # There is one pair of color 1 and one of color 2. There are three odd socks left, one of each color. The number of pairs is 2.
 
+
+# STEPS
+# Create a method that accepts array "ar"
+# Define variable "pairs" as equal to zero
+# Define variable 'index" as equal to zero
+# Create a loop ends that ends when "index" = "ar" - 1
