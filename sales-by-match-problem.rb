@@ -13,4 +13,9 @@
 # Create a method that accepts array "ar"
 # Define variable "pairs" as equal to zero
 # Define variable 'index" as equal to zero
+# Define variable 'index2" as equal to zero
 # Create a loop ends that ends when "index" = "ar" - 1
+  # Iterate through the loop using "index"
+  # Create another loop that ends when "index2" = "ar" - 1
+    # Inside this loop, have "index2" iterate through "ar" to find a number equal to ar[index]. If there is a number, remove both ar[index] and ar[index2] from ar, then add 1 to "pairs". If not, then just move on
+
