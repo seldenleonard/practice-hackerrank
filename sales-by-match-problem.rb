@@ -18,4 +18,23 @@
   # Iterate through the loop using "index"
   # Create another loop that ends when "index2" = "ar" - 1
     # Inside this loop, have "index2" iterate through "ar" to find a number equal to ar[index]. If there is a number, remove both ar[index] and ar[index2] from ar, then add 1 to "pairs". If not, then just move on
-
+    
+def sockMerchant(ar)
+  pairs = 0
+  index = 0
+  index2 = 0
+  while index > ar.length
+    while index2 > ar.length
+      if index2 == ar[index]
+        pairs += 1
+        ar.delete_at(index)
+        ar.delete_at(index2)
+        index2 == ar.length
+      end
+      index2 += 1
+    end
+    index += 1
+    index2 = 0
+  end
+  pairs
+end
