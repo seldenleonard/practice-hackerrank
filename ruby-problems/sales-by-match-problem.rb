@@ -38,3 +38,5 @@ def sockMerchant(ar)
   end
   pairs
 end
+
+p sockMerchant(1, 2, 1, 2, 1, 3, 2)
