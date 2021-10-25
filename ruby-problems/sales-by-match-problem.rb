@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/sock-merchant/problem
 
+# INSTRUCTIONS
 # There is a large pile of socks that must be paired by color. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
 
 # Example
@@ -18,7 +19,8 @@
   # Iterate through the loop using "index"
   # Create another loop that ends when "index2" = "ar" - 1
     # Inside this loop, have "index2" iterate through "ar" to find a number equal to ar[index]. If there is a number, remove both ar[index] and ar[index2] from ar, then add 1 to "pairs". If not, then just move on
-    
+  # Return "pairs"
+
 def sockMerchant(ar)
   pairs = 0
   index = 0
