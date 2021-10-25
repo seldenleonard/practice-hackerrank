@@ -41,4 +41,4 @@ def sockMerchant(ar)
   pairs
 end
 
-p sockMerchant(1, 2, 1, 2, 1, 3, 2)
+p sockMerchant([1, 2, 1, 2, 1, 3, 2])
