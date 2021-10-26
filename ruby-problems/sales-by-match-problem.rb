@@ -25,8 +25,9 @@ def sockMerchant(ar)
   pairs = 0
   index = 0
   index2 = 0
-  while index > ar.length
-    while index2 > ar.length
+  ar.sort
+  while index < ar.length
+    while index2 < ar.length
       if index2 == ar[index]
         pairs += 1
         ar.delete_at(index)
