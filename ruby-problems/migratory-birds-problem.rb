@@ -1,5 +1,8 @@
 # https://www.hackerrank.com/challenges/migratory-birds/problem
 
+# INSTRUCTIONS
+# Given an array of bird sightings where every element represents a bird type id, determine the id of the most frequently sighted type. If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
+
 # STEPS
 # Loop through array and print integers and set up counters
 # Write conditionals to add to counters for each bird id
