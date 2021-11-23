@@ -11,11 +11,13 @@
 def findDigits(n)
   counter = 0
   i = 0
-  while i < n.length
-    if n / n[i] == 0 # Actually I dont think I do need to use modulo operator
+  while i < n.to_s.length
+    if n[i] != 0 && n / n[i] == 0 # Actually I dont think I do need to use modulo operator
       counter += 1
     end
     i += 1
   end
   counter
 end
+
+p findDigits(12)
