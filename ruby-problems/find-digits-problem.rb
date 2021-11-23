@@ -8,11 +8,27 @@
 # Loop through each digit of the integer and if the digit in question divides evenly (use modulo operator) into the input integer, then add 1 to the counter
 # Return the counter
 
+# ATTEMPT 1
+# def findDigits(n)
+#   counter = 0
+#   i = 0
+#   while i < n.to_s.length
+#     if n[i] != 0 && n / n[i] == 0 # Actually I dont think I do need to use modulo operator
+#       counter += 1
+#     end
+#     i += 1
+#   end
+#   counter
+# end
+
+# ATTEMPT 2
 def findDigits(n)
+  n = n.to_s
   counter = 0
   i = 0
-  while i < n.to_s.length
-    if n[i] != 0 && n / n[i] == 0 # Actually I dont think I do need to use modulo operator
+  while i < n.length
+    p n[i]
+    if n[i].to_i != 0 && n.to_i % n[i].to_i == 0
       counter += 1
     end
     i += 1
@@ -21,3 +37,5 @@ def findDigits(n)
 end
 
 p findDigits(12)
+p findDigits(1012)
+p findDigits(123)
