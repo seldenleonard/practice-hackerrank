@@ -8,6 +8,15 @@
   # Return the seat number of who recieved the last candy
 
 def prisonerCandy(n, m, s)
-  
-  
+  while m > 0
+    if s == n
+      s == 0 # Might need to change to 1, depending on how i iterate through
+    else
+      s += 1
+    end
+    m -= 1
+  end
+  s
 end
+
+p prisonerCandy(7, 19, 2)
