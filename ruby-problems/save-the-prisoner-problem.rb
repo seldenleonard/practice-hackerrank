@@ -7,7 +7,7 @@
   # Inside this loop, write an if statement that resets to seat number 1 after the last seat number has recieved candy
   # Return the seat number of who recieved the last candy
 
-def prisonerCandy(n, m, s)
+def saveThePrisoner(n, m, s)
   while m > 0
     if s == n
       s == 0 # Might need to change to 1, depending on how i iterate through
@@ -19,4 +19,4 @@ def prisonerCandy(n, m, s)
   s
 end
 
-p prisonerCandy(7, 19, 2)
+p saveThePrisoner(7, 19, 2)
