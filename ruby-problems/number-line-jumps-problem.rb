@@ -18,7 +18,6 @@
 # NOTE: I will need to make sure the entire method is cascading, in that all my if statements and whatnot are nested, to that the method only returns one string as the output, even though there are several different if statements, each with several prongs, else's, and elsif's.
 # NOTE: -- Edgecase: if the two kangaroo's speeds are equal but their locations are not, then no kangaroo will ever pass the other, so need an "or" statement to account for that
 
-
 def kangaroo(x1, v1, x2, v2)
   if x1 > x2 && v1 > v2 || x2 > x1 && v2 > v1 || x1 != x2 && v1 == v2 
     return "NO"
