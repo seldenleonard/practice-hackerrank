@@ -1,5 +1,9 @@
 # https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
 
+# INSTRUCTIONS
+# We say that a string contains the word hackerrank if a subsequence of its characters spell the word hackerrank. RemeMber that a subsequence maintains the order of characters selected from a sequence.
+# More formally, let p[0], p[1],..., p[9] be the respective indices of h, a, c, k, e, r, r, a, n, k in string s. If p[0] < p[1] < p[2] < ... < p[9] is true, then s contains hackerrank.
+# For each query, print YES on a new line if the string contains hackerrank, otherwise, print NO.
 
 # STEPS
 # Create a function that accepts string 's'
