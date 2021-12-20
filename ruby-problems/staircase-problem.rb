@@ -1,13 +1,19 @@
 # https://www.hackerrank.com/challenges/staircase/problem
 
-# PROBLEM - Staircase
+# INSTRUCTIONS
+# This is a staircase of size n = 4:
+      #
+    # #
+  # # #
+# # # #
+
+# Its base and height are both equal to n. It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+
+# Write a program that prints a staircase of size n.
 
 # STEPS
 # input is a single integer 'n'
 # print n lines with n number of #s for the first, then n=n-1 for each line after that until n=0
-
-
-# WORK
 
 # def staircase(n)
 #   n.times do
