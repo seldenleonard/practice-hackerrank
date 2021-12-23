@@ -1,7 +1,6 @@
 # https://www.hackerrank.com/challenges/strange-advertising/problem
 
-
-# CHALLENGE INSTRUCTIONS
+# INSTRUCTIONS
 # HackerLand Enterprise is adopting a new viral advertising strategy. When they launch a new product, they advertise it to exactly 5 people on social media.
 
 # On the first day, half of those 5 people (i.e., floor(5/2) = 2) like the advertisement and each shares it with 3 of their friends. At the beginning of the second day, floor(5/2) * 3 = 2 * 3 = 6 people receive the advertisement.
@@ -16,7 +15,6 @@
   # Within this loop, redefine the variables as follows:
     # day += 1, shared = liked * 3, liked = shared / 2, & cumulative += liked
 # Return cumulative
-
 
 def viralAdvertising(n)
   day = 1
