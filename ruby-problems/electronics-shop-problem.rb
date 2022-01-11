@@ -10,9 +10,9 @@
     # int b: the budget
 
 # Returns
-  # int: the maximum that can be spent, or  if it is not possible to buy both items
+  # int: the maximum that can be spent, or -1 if it is not possible to buy both items
 
 # Input Format
-  # The first line contains three space-separated integers , , and , the budget, the number of keyboard models and the number of USB drive models.
-  # The second line contains  space-separated integers , the prices of each keyboard model.
-  # The third line contains  space-separated integers , the prices of the USB drives.
+  # The first line contains three space-separated integers b, n, and m, the budget, the number of keyboard models and the number of USB drive models.
+  # The second line contains n space-separated integers keyboard[i], the prices of each keyboard model.
+  # The third line contains m space-separated integers drives, the prices of the USB drives.
