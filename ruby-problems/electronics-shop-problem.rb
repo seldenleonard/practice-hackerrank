@@ -17,3 +17,10 @@
   # The first line contains three space-separated integers b, n, and m, the budget, the number of keyboard models and the number of USB drive models.
   # The second line contains n space-separated integers keyboard[i], the prices of each keyboard model.
   # The third line contains m space-separated integers drives, the prices of the USB drives.
+
+
+  # Write a method that accepts three inputs, integers b (budget), n (number of keyboard models), and m (number of USB drive models).
+  # Define an array called keyboards and set it equal to [40, 50, 60]
+  # Define an array called drives and set it equal to [5, 8, 12]
+  # Write two loops
+    # In the first loop, iterate through the arrays "keyboards" and "drives" to find the combo of most expensive keyboard and lower value the customer can purchase while still less than 
