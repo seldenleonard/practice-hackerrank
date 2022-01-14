@@ -23,4 +23,8 @@
   # Define an array called keyboards and set it equal to [40, 50, 60]
   # Define an array called drives and set it equal to [5, 8, 12]
   # Write two loops
-    # In the first loop, iterate through the arrays "keyboards" and "drives" to find the combo of most expensive keyboard and lower value the customer can purchase while still less than 
+    # In the first loop, iterate through the arrays "keyboards" and "drives" to find the combo of most expensive keyboard and lower value the customer can purchase while still less than
+
+def getMoneySpent(keyboards, drives, b)
+  
+end
