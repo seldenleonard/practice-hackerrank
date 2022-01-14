@@ -18,7 +18,7 @@
   # The second line contains n space-separated integers keyboard[i], the prices of each keyboard model.
   # The third line contains m space-separated integers drives, the prices of the USB drives.
 
-
+# STEPS
   # Write a method that accepts three inputs, integers b (budget), n (number of keyboard models), and m (number of USB drive models).
   # Define an array called keyboards and set it equal to [40, 50, 60]
   # Define an array called drives and set it equal to [5, 8, 12]
