@@ -1,7 +1,7 @@
 # https://www.hackerrank.com/challenges/electronics-shop/problem?isFullScreen=true
 
 # INSTRUCTIONS
-# A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a give budget. Given price lists for keyboards and USB drives and a budget, find the cost to buy them. If it is not possible to buy both items, return -1.
+# A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a given budget. Given price lists for keyboards and USB drives and a budget, find the cost to buy them. If it is not possible to buy both items, return -1.
 
 # Function Description
   # Complete the getMoneySpent function in the editor below.
