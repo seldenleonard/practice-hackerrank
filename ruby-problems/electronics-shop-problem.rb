@@ -45,7 +45,7 @@ def getMoneySpent(keyboards, drives, b)
   else
     while max_spending < b || index_k < keyboards.length # might consider making this less than OR EQUAL TO
       index_k += 1
-      if keyboards[index_k].to_i + drives[index_d].to_i < b
+      if keyboards[index_k] + drives[index_d] < b # For some reason, I am getting an undefined method error here for the use of "+" and "<"
         max_spending = keyboards[index_k] + drives[index_d]
         if max_spending == b
           b
@@ -53,6 +53,7 @@ def getMoneySpent(keyboards, drives, b)
       end
     end
   end
+  max_spending
 end
 
 p getMoneySpent([40, 50, 60], [5, 8, 12], 60)
