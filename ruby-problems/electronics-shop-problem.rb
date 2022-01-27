@@ -19,9 +19,15 @@
   # The third line contains m space-separated integers drives, the prices of the USB drives.
 
 # STEPS
-  # Write a method that accepts three inputs, integers b (budget), array n (number of keyboard models), and array m (number of USB drive models).
-  # Write two loops
-    # In the first loop, iterate through the arrays "keyboards" and "drives" to find the combo of most expensive keyboard and lower value the customer can purchase while still less than integer b (budget)
+  # Write a method that accepts three inputs, integer b (budget), array n (prices of keyboard models), and array m (prices of USB drive models).
+  # Order the keyboards array and USB drives array from smallest to largest
+  # Set a variable called "max_spending" equal to zero
+  # Create two indexes, both set at 0, one index for keyboards array and one for USB drives array
+  # Write an if statment saying, if n[i] + m[i] > b, then return - 1. Otherwise, go on to use the following loop:
+  # Write a loop
+    # Inside the loop iterate through array n, while remaining at index of 0 for array m. At each iteration, if n[i] + m[i] < b, then set the value of max_spending to n[i] + m[i]. if n[i] + m[i] = b, return b.
+  # Write a second loop
+    # Inside this loop iterate through array m, while remaining at index of 0 for array n. At each iteration, if n[i] + m[i] > max_spending AND n[i] + m[i] <= b, then set the value of max_spending to n[i] + m[i]. if n[i] + m[i] = b, return b.
 
 def getMoneySpent(keyboards, drives, b)
   keyboards = 
