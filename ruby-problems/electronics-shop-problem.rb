@@ -25,10 +25,13 @@
   # Create two indexes, both set at 0, one index for keyboards array and one for USB drives array
   # Write an if statment saying, if n[i] + m[i] > b, then return - 1. Otherwise, go on to use the following loop:
   # Write a loop
-    # Inside the loop iterate through array n, while remaining at index of 0 for array m. At each iteration, if n[i] + m[i] < b, then set the value of max_spending to n[i] + m[i]. if n[i] + m[i] = b, return b.
+    # Inside the loop iterate through array n, while remaining at index of 0 for array m. At each iteration, if n[i] + m[i] < b, then set the value of max_spending to n[i] + m[i]. If max_spending = b, return b.
+  # Reset keyboards index to a value of zero
   # Write a second loop
-    # Inside this loop iterate through array m, while remaining at index of 0 for array n. At each iteration, if n[i] + m[i] > max_spending AND n[i] + m[i] <= b, then set the value of max_spending to n[i] + m[i]. if n[i] + m[i] = b, return b.
+    # Inside this loop iterate through array m, while remaining at index of 0 for array n. At each iteration, if n[i] + m[i] > max_spending AND n[i] + m[i] <= b, then set the value of max_spending to n[i] + m[i]. If max_spending = b, return b.
+
+    # NOTABLY, my whiteboarding steps do not account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
 
 def getMoneySpent(keyboards, drives, b)
-  keyboards = 
+  max_spending = 0
 end
