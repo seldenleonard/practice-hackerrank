@@ -30,7 +30,7 @@
     # Write a second loop
       # Inside this loop iterate through array drives, while remaining at index of 0 for array keyboards. At each iteration, if keyboards[i] + drives[i] > max_spending AND keyboards[i] + drives[i] <= b, then set the value of max_spending to keyboards[i] + drives[i]. If max_spending = b, return b.
 
-      # NOTABLY, my whiteboarding steps do keyboardsot account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
+      # NOTABLY, my whiteboarding steps do not account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
 
 def getMoneySpent(keyboards, drives, b)
   keyboards.sort
