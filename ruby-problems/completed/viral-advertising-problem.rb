@@ -7,7 +7,6 @@
 
 # Each day, floor(recipients/2) of the recipients like the advertisement and will share it with 3 friends on the following day. Assuming nobody receives the advertisement twice, determine how many people have liked the ad by the end of a given day, beginning with launch day as day 1.
 
-
 # STEPS
 # Create a method that accepts a single integer "n", which is the number of days
 # Define four variables: day = 1, shared = 5, liked = shared / 2, & cumulative = 2
