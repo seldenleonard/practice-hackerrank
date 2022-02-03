@@ -27,7 +27,6 @@
 # The second line contains n space-separated integers s[i], the numbers on the chocolate squares where 0 <= i < n.
 # The third line contains two space-separated integers, d and m, Ron's birth day and his birth month.
 
-
 # STEPS
 # Loop that prints each number in the array
 # Loop through and add two numbers at a time using index and index + 1
