@@ -284,3 +284,5 @@ p getTotalX([3, 4], [24, 48])
 p getTotalX([20, 30], [60, 120])
 p getTotalX([2, 6], [24, 36, 50])
 p getTotalX([2, 12], [24, 48, 50])
+
+# TEST
