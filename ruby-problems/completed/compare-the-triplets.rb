@@ -14,9 +14,6 @@
 
 # Given a and b, determine their respective comparison points.
 
-# STEPS
-# 
-
 def compare_triplets(a, b)
   a_score = 0
   b_score = 0
