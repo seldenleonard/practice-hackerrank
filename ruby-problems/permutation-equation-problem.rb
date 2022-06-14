@@ -3,3 +3,7 @@
 
 # STEPS
 # 
+
+def permutationEquation(p)
+  
+end
