@@ -12,7 +12,7 @@
 # Write an if-statement, saying that if the number of students who are late exceeds the threshold, return "yes". Otherwise return "no".
 
 
-def angryProfessor(k, a)
+def angry_professor(k, a)
   i = 0
   late = 0
   a.each do |arrival|
@@ -27,5 +27,5 @@ def angryProfessor(k, a)
   end
 end
 
-angryProfessor(3, [-2, -1, 0, 1, 2])
-angryProfessor(5, [-3, 2, 6, 5, 1, 0, 7, -2, 0])
+angry_professor(3, [-2, -1, 0, 1, 2])
+angry_professor(5, [-3, 2, 6, 5, 1, 0, 7, -2, 0])
