@@ -12,69 +12,69 @@
 
 # ATTEMPT 1 - Forgot to Utilize 'width' Input
 # def service_lane(width, cases)
-#   index1 = 0
-#   while index1 < cases.length
-#     index2 = cases[index1][0]
-#     smallest_width = index2
-#     while index2 <= cases[index1][1]
-#       if smallest_width > cases[index1][index2]
-#         smallest_width = cases[index1][index2]
+#   index_1 = 0
+#   while index_1 < cases.length
+#     index_2 = cases[index_1][0]
+#     smallest_width = index_2
+#     while index_2 <= cases[index_1][1]
+#       if smallest_width > cases[index_1][index_2]
+#         smallest_width = cases[index_1][index_2]
 #       end
 #       p smallest_width
-#       index2 += 1
+#       index_2 += 1
 #     end
-#     index1 += 1
+#     index_1 += 1
 #   end
 # end
 
 # ATTEMPT 2 - Outputs Correctly 3/5 Integers Expected
 # def service_lane(width, cases)
-#   index1 = 0
-#   while index1 < cases.length
-#     index2 = cases[index1][0]
-#     smallest_width = index2
-#     while index2 <= cases[index1][1]
-#       if smallest_width > width[index2]
-#         smallest_width = width[index2]
+#   index_1 = 0
+#   while index_1 < cases.length
+#     index_2 = cases[index_1][0]
+#     smallest_width = index_2
+#     while index_2 <= cases[index_1][1]
+#       if smallest_width > width[index_2]
+#         smallest_width = width[index_2]
 #       end
-#       index2 += 1
+#       index_2 += 1
 #     end
 #     p smallest_width
-#     index1 += 1
+#     index_1 += 1
 #   end
 # end
 
 # ATTEMPT 3 - Correct -- BUT HackerRank Doesnt Like It
-#   index1 = 0
-#   while index1 < cases.length
-#     index2 = cases[index1][0]
-#     smallest_width = width[index2]
-#     while index2 <= cases[index1][1]
-#       if smallest_width > width[index2]
-#         smallest_width = width[index2]
+#   index_1 = 0
+#   while index_1 < cases.length
+#     index_2 = cases[index_1][0]
+#     smallest_width = width[index_2]
+#     while index_2 <= cases[index_1][1]
+#       if smallest_width > width[index_2]
+#         smallest_width = width[index_2]
 #       end
-#       index2 += 1
+#       index_2 += 1
 #     end
 #     p smallest_width
-#     index1 += 1
+#     index_1 += 1
 #   end
 # end
 
 # ATTEMPT 4 -- Also correct, but HackerRank does not like it
 def service_lane(width, cases)
-  index1 = 0
+  index_1 = 0
   smallest_width_array = []
-  while index1 < cases.length
-    index2 = cases[index1][0]
-    smallest_width = width[index2]
-    while index2 <= cases[index1][1]
-      if smallest_width > width[index2]
-        smallest_width = width[index2]
+  while index_1 < cases.length
+    index_2 = cases[index_1][0]
+    smallest_width = width[index_2]
+    while index_2 <= cases[index_1][1]
+      if smallest_width > width[index_2]
+        smallest_width = width[index_2]
       end
-      index2 += 1
+      index_2 += 1
     end
     smallest_width_array << smallest_width
-    index1 += 1
+    index_1 += 1
   end
   puts smallest_width_array
 end
