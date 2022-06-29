@@ -9,62 +9,62 @@
 # If the first array value does factor into each value in the second array, keep it, otherwise remove it from the first array -- so we are left with only the values in the first array that factor into all values of the secodn array 
 
 # FIRST ATTEMPT - Incomplete
-# def getTotalX(a, b)
-#   indexA = 0
-#   indexB = 0
+# def get_total_x(a, b)
+#   index_a = 0
+#   index_b = 0
 #   counter = 0
 #   factors = []
-#   while indexA < a.length
-#     while indexB < b.length
-#       if b[indexB] % a[indexA] == 0
-#         factors << a[indexA]
+#   while index_a < a.length
+#     while index_b < b.length
+#       if b[index_b] % a[index_a] == 0
+#         factors << a[index_a]
 #       end
-#       p b[indexB]
-#       p a[indexA]
+#       p b[index_b]
+#       p a[index_a]
 #       p factors
-#       indexB += 1
+#       index_b += 1
 #     end
-#     indexB = 0
-#     indexA += 1
+#     index_b = 0
+#     index_a += 1
 #   end
 #   counter = factors.uniq.count
 #   p counter
 #   factors
 # end
 
-# p getTotalX([2, 6], [24, 36])
+# p get_total_x([2, 6], [24, 36])
 
 
 
 # SECOND ATTEMPT - Incomplete
 
 # NEW STEPS
-# Set indexA = 0
-# Set indexB = 0
-# Create empty array called potentialFactors
+# Set index_a = 0
+# Set index_b = 0
+# Create empty array called potential_factors
 # Create empty array called definiteFactors
 # Loop through the values of the second array
 # For each value in the second array, evaluate whether ALL values from the first array factor into it evenly (using modulo operator)
-#   If they do, add both a[indexA] and a[indexA + 1] to potentialFactors array
+#   If they do, add both a[index_a] and a[index_a + 1] to potential_factors array
 #   If they do not, move on
-# Once the loop completes, take all values that occur in the potentialFactors array the amount of times that is equal to the length of the second array, and therefore meet the first criteria.
+# Once the loop completes, take all values that occur in the potential_factors array the amount of times that is equal to the length of the second array, and therefore meet the first criteria.
 # Now take these for the are the values which will then be used to find new integers
 
-# def getTotalX(a, b)
-#   indexA = 0
-#   indexB = 0
-#   potentialFactors = []
-#   while indexB < b.length
-#     if b[indexB] % a[indexA] == 0 && b[indexB] % a[indexA + 1] == 0
-#       potentialFactors << a[indexA]
-#       potentialFactors << a[indexA + 1]
+# def get_total_x(a, b)
+#   index_a = 0
+#   index_b = 0
+#   potential_factors = []
+#   while index_b < b.length
+#     if b[index_b] % a[index_a] == 0 && b[index_b] % a[index_a + 1] == 0
+#       potential_factors << a[index_a]
+#       potential_factors << a[index_a + 1]
 #     end
-#     indexB += 1
+#     index_b += 1
 #   end
 #   if test
     
 #   end
-#   potentialFactors
+#   potential_factors
 # end
 
 
@@ -73,89 +73,89 @@
 # end
 
 # if a[1] % a[0] == 0
-#   while indexB < b.length
-#     if b[indexB] % a[1] == 0
+#   while index_b < b.length
+#     if b[index_b] % a[1] == 0
       
 #     end
-#     indexB += 1
+#     index_b += 1
 #   end
 # end
 
 # THIRD ATTEMPT - Incomplete
 
-# def getTotalX(a, b)
-#   indexB = 0
+# def get_total_x(a, b)
+#   index_b = 0
 #   indexPF = 0
-#   potentialFactors = []
-#   testValue = 0
+#   potential_factors = []
+#   test_value = 0
 #   if a[1] % a[0] == 0
-#     until testValue >= b[0] * 0.5
-#       testValue += a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0] * 0.5
+#       test_value += a[1]
+#       potential_factors << test_value
 #     end
-#     while indexB < b.length
-#       while indexPF < potentialFactors.length
-#         if b[indexB] % potentialFactors[indexPF] != 0
+#     while index_b < b.length
+#       while indexPF < potential_factors.length
+#         if b[index_b] % potential_factors[indexPF] != 0
 
 #         end
 #         indexPF += 1
 #       end
-#       indexB += 1
+#       index_b += 1
 #     end
-#     potentialFactors
+#     potential_factors
 #   end
 # end
 
 
 # FOURTH ATTEMPT - Works and almost fully accurate
 
-# def getTotalX(a, b)
-#   indexB = 0
+# def get_total_x(a, b)
+#   index_b = 0
 #   # indexPF = 0
-#   potentialFactors = []
-#   testValue = 0
+#   potential_factors = []
+#   test_value = 0
 #   if a[1] % a[0] == 0
-#     until testValue >= b[0] * 0.5
-#       testValue += a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0] * 0.5
+#       test_value += a[1]
+#       potential_factors << test_value
 #     end
-#     while indexB < b.length
-#       potentialFactors.each do |potentialFactor|
-#         if b[indexB] % potentialFactor != 0
-#           potentialFactors.delete(potentialFactor)
+#     while index_b < b.length
+#       potential_factors.each do |potential_factor|
+#         if b[index_b] % potential_factor != 0
+#           potential_factors.delete(potential_factor)
 #         end
 #       end
-#       indexB += 1
+#       index_b += 1
 #     end
-#     potentialFactors
+#     potential_factors
 #   end
 # end
 
 
 # # FIFTH ATTEMPT - Works for 1 of 2 HackerRank Test Cases
 
-# def getTotalX(a, b)
-#   indexB = 0
+# def get_total_x(a, b)
+#   index_b = 0
 #   # indexPF = 0
-#   potentialFactors = []
-#   testValue = 0
+#   potential_factors = []
+#   test_value = 0
 #   if a[1] % a[0] == 0
-#     until testValue >= b[0]
-#       testValue += a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0]
+#       test_value += a[1]
+#       potential_factors << test_value
 #     end
-#     p potentialFactors
-#     while indexB < b.length
-#       potentialFactors.each do |potentialFactor|
-#         if b[indexB] % potentialFactor != 0
-#           potentialFactors.delete(potentialFactor)
+#     p potential_factors
+#     while index_b < b.length
+#       potential_factors.each do |potential_factor|
+#         if b[index_b] % potential_factor != 0
+#           potential_factors.delete(potential_factor)
 #         end
 #       end
-#       indexB += 1
+#       index_b += 1
 #     end
-#     # potentialFactors.each do |potentialFactor|
-#     #   return potentialFactor
-#     potentialFactors.count
+#     # potential_factors.each do |potential_factor|
+#     #   return potential_factor
+#     potential_factors.count
 #     # end
 #   end
 # end
@@ -165,124 +165,124 @@
 
 # SIXTH ATTEMPT - Solves BOTH HackerRank Test Cases
 
-# def getTotalX(a, b)
-#   indexB = 0
+# def get_total_x(a, b)
+#   index_b = 0
 #   # indexPF = 0
-#   potentialFactors = []
-#   testValue = 0
+#   potential_factors = []
+#   test_value = 0
 #   if a[1] % a[0] == 0
-#     until testValue >= b[0]
-#       testValue += a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0]
+#       test_value += a[1]
+#       potential_factors << test_value
 #     end
-#     p potentialFactors
-#     while indexB < b.length
-#       potentialFactors.each do |potentialFactor|
-#         if b[indexB] % potentialFactor != 0
-#           potentialFactors.delete(potentialFactor)
+#     p potential_factors
+#     while index_b < b.length
+#       potential_factors.each do |potential_factor|
+#         if b[index_b] % potential_factor != 0
+#           potential_factors.delete(potential_factor)
 #         end
 #       end
-#       indexB += 1
+#       index_b += 1
 #     end
-#     potentialFactors.count
+#     potential_factors.count
 #   else
-#     until testValue >= b[0]
-#       testValue += a[0] * a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0]
+#       test_value += a[0] * a[1]
+#       potential_factors << test_value
 #     end
-#     p potentialFactors
-#     while indexB < b.length
-#       potentialFactors.each do |potentialFactor|
-#         if b[indexB] % potentialFactor != 0
-#           potentialFactors.delete(potentialFactor)
+#     p potential_factors
+#     while index_b < b.length
+#       potential_factors.each do |potential_factor|
+#         if b[index_b] % potential_factor != 0
+#           potential_factors.delete(potential_factor)
 #         end
 #       end
-#       indexB += 1
+#       index_b += 1
 #     end
-#     potentialFactors.count
+#     potential_factors.count
 #   end
 # end
 
 # # SEVENTH ATTEMPT - Refactors Attempt 6, but see note on line 219 as to why my method is failing 6/9 test cases on HackerRank
 
-# def getTotalX(a, b)
-#   indexB = 0
-#   potentialFactors = []
-#   testValue = 0
+# def get_total_x(a, b)
+#   index_b = 0
+#   potential_factors = []
+#   test_value = 0
 #   if a[1] % a[0] == 0
-#     until testValue >= b[0]
-#       testValue += a[1]
-#       potentialFactors << testValue
+#     until test_value >= b[0]
+#       test_value += a[1]
+#       potential_factors << test_value
 #     end
 #   else
-#     until testValue >= b[0]
-#       testValue += a[0] * a[1] # My issue is here -- for example, the input: "p getTotalX([20, 30], [60, 120])", yields an output of zero, because im multiplying 20 by 30, which blows way past 60, even though both 20 and 30 factor into 60 and 60 factors into both 60 and 120, meaning the correct output should be 1 (or maybe 2, if 120 is also a correct answer?) Anyway, the point is that this line right here is making it so my method only works for small integers in array a, because once the integers in array a are a bit larger, the multiplication causes my method to overshoot integers that they both factor into.
-#       potentialFactors << testValue
+#     until test_value >= b[0]
+#       test_value += a[0] * a[1] # My issue is here -- for example, the input: "p get_total_x([20, 30], [60, 120])", yields an output of zero, because im multiplying 20 by 30, which blows way past 60, even though both 20 and 30 factor into 60 and 60 factors into both 60 and 120, meaning the correct output should be 1 (or maybe 2, if 120 is also a correct answer?) Anyway, the point is that this line right here is making it so my method only works for small integers in array a, because once the integers in array a are a bit larger, the multiplication causes my method to overshoot integers that they both factor into.
+#       potential_factors << test_value
 #     end
 #   end
-#   while indexB < b.length
-#     potentialFactors.each do |potentialFactor|
-#       if b[indexB] % potentialFactor != 0
-#         potentialFactors.delete(potentialFactor)
+#   while index_b < b.length
+#     potential_factors.each do |potential_factor|
+#       if b[index_b] % potential_factor != 0
+#         potential_factors.delete(potential_factor)
 #       end
 #     end
-#     indexB += 1
+#     index_b += 1
 #   end
-#   potentialFactors.count
+#   potential_factors.count
 # end
 
 
 # EIGHTH ATTEMPT
 
-def getTotalX(a, b)
-  indexB = 0
-  potentialFactors = []
-  testValue = 0
+def get_total_x(a, b)
+  index_b = 0
+  potential_factors = []
+  test_value = 0
   if a[1] % a[0] == 0
-    until testValue >= b[0]
-      testValue += a[1]
-      potentialFactors << testValue
+    until test_value >= b[0]
+      test_value += a[1]
+      potential_factors << test_value
     end
   else
-  #   until testValue >= b[0]
-  #     testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
-  #     until testValue % a[0] == 0 && testValue % a[1] == 0
-  #       potentialFactors << testValue
-  #       p testValue
+  #   until test_value >= b[0]
+  #     test_value += a[1] # May need to make this "a[1]" into "a[0]" but well see
+  #     until test_value % a[0] == 0 && test_value % a[1] == 0
+  #       potential_factors << test_value
+  #       p test_value
   #     end
   #   end
   # end
-  # while indexB < b.length
-  #   potentialFactors.each do |potentialFactor|
-  #     if b[indexB] % potentialFactor != 0
-  #       potentialFactors.delete(potentialFactor)
+  # while index_b < b.length
+  #   potential_factors.each do |potential_factor|
+  #     if b[index_b] % potential_factor != 0
+  #       potential_factors.delete(potential_factor)
   #     en
   #   end
-  #   indexB += 1
+  #   index_b += 1
   # end
-    until testValue >= b[0]
-      testValue += a[1] # May need to make this "a[1]" into "a[0]" but well see
-      if testValue % a[0] == 0 && testValue % a[1] == 0
-        potentialFactors << testValue
-        # p testValue
+    until test_value >= b[0]
+      test_value += a[1] # May need to make this "a[1]" into "a[0]" but well see
+      if test_value % a[0] == 0 && test_value % a[1] == 0
+        potential_factors << test_value
+        # p test_value
       end
     end
   end
-  while indexB < b.length
-    potentialFactors.each do |potentialFactor|
-      if b[indexB] % potentialFactor != 0
-        potentialFactors.delete(potentialFactor)
+  while index_b < b.length
+    potential_factors.each do |potential_factor|
+      if b[index_b] % potential_factor != 0
+        potential_factors.delete(potential_factor)
       end
     end
-    indexB += 1
+    index_b += 1
   end
-  potentialFactors.count
+  potential_factors.count
 end
 
-p getTotalX([2, 4], [16, 32, 96])
-p getTotalX([3, 4], [24, 48])
-p getTotalX([20, 30], [60, 120])
-p getTotalX([2, 6], [24, 36, 50])
-p getTotalX([2, 12], [24, 48, 50])
+p get_total_x([2, 4], [16, 32, 96])
+p get_total_x([3, 4], [24, 48])
+p get_total_x([20, 30], [60, 120])
+p get_total_x([2, 6], [24, 36, 50])
+p get_total_x([2, 12], [24, 48, 50])
 
 # TEST
