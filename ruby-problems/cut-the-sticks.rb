@@ -13,7 +13,7 @@
 
 def cut_the_sticks(sticks)
   sorted_sticks = sticks.sort
-  while true
+  while true # or until false
     p sorted_sticks.length
     sorted_sticks = sorted_sticks.map do |stick|
       stick -= sorted_sticks[0]
