@@ -11,7 +11,7 @@
 # Using each pair of integers in each subarray as index values for the width array, return the smallest value in the width array, inside of that index range
 
 # ATTEMPT 1 - Forgot to Utilize 'width' Input
-# def serviceLane(width, cases)
+# def service_lane(width, cases)
 #   index1 = 0
 #   while index1 < cases.length
 #     index2 = cases[index1][0]
@@ -28,7 +28,7 @@
 # end
 
 # ATTEMPT 2 - Outputs Correctly 3/5 Integers Expected
-# def serviceLane(width, cases)
+# def service_lane(width, cases)
 #   index1 = 0
 #   while index1 < cases.length
 #     index2 = cases[index1][0]
@@ -61,7 +61,7 @@
 # end
 
 # ATTEMPT 4 -- Also correct, but HackerRank does not like it
-def serviceLane(width, cases)
+def service_lane(width, cases)
   index1 = 0
   smallest_width_array = []
   while index1 < cases.length
@@ -81,4 +81,4 @@ end
 
 # NOTE: After reading comments on this problem's HackerRank discussion board, it turns out that the problem itself is written with a bug, so widths are not passed -- hence, why my solution works properly at very least for the test case I am using, but HackerRank keeps returning compiling errors.
 
-serviceLane([2, 3, 1, 2, 3, 2, 3, 3], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]])
+service_lane([2, 3, 1, 2, 3, 2, 3, 3], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]])
