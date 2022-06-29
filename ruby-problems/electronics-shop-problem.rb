@@ -4,8 +4,8 @@
 # A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a given budget. Given price lists for keyboards and USB drives and a budget, find the cost to buy them. If it is not possible to buy both items, return -1.
 
 # Function Description
-  # Complete the getMoneySpent function in the editor below.
-  # getMoneySpent has the following parameter(s):
+  # Complete the get_money_spent function in the editor below.
+  # get_money_spent has the following parameter(s):
     # int keyboards[n]: the keyboard prices
     # int drives[m]: the drive prices
     # int b: the budget

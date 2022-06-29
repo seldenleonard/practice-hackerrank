@@ -15,23 +15,23 @@
 # Write an if statement, where if the string 's' index value reaches the length of string 's' before the letters array index reaches the length of the letters array, then return no. if vice versa, return yes.
 # NOTE: Never reset either index. The index associated with string 's' can move several steps per each one step taken by the index associated with the letters array.
 
-def hackerrankInString(s)
+def hackerrank_in_a_string(s)
   letters = ["h", "a", "c", "k", "e", "r", "r", "a", "n", "k"]
-  lettersIndex = 0
-  stringIndex = 0
-    while lettersIndex > letters.length
-      while stringIndex > s.length
-        if stringIndex == letters.length - 1
+  letters_index = 0
+  string_index = 0
+    while letters_index > letters.length
+      while string_index > s.length
+        if string_index == letters.length - 1
           return "NO"
           break
-        elsif lettersIndex == letters.length - 1
+        elsif letters_index == letters.length - 1
           return "YES"
           break
         else
           
-          stringIndex += 1
+          string_index += 1
         end
-        lettersIndex += 1
+        letters_index += 1
       end
     end
 end
