@@ -49,4 +49,5 @@ def birthday(s, d, m)
   end
   p counter
 end
+
 birthday([1, 2, 1, 3, 2], 3, 2)
