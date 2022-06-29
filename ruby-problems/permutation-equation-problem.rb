@@ -4,6 +4,6 @@
 # STEPS
 # 
 
-def permutationEquation(p)
+def permutation_equation(p)
   
 end
