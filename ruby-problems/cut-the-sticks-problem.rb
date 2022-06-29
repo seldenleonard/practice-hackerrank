@@ -28,3 +28,5 @@ def cut_the_sticks(sticks)
 end
 
 cut_the_sticks([5, 4, 4, 2, 2, 8])
+
+# FOR SOME REASON -- Although I have the CORRECT output exactly, HackerRank will not accept the answer. It runs differently within the HackerRank code editor than it does in my terminal. An error that I am not getting occurs when I run it in the HackerRank code editor.
