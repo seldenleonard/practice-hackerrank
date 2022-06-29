@@ -4,7 +4,7 @@
 
 # The jailer is playing a little joke, though. The last piece of candy looks like all the others, but it tastes awful. Determine the chair number occupied by the prisoner who will receive that candy.
 
-# Complete the saveThePrisoner function in the editor below. It should return an integer representing the chair number of the prisoner to warn.
+# Complete the save_the_prisoner function in the editor below. It should return an integer representing the chair number of the prisoner to warn.
 
 # STEPS
 # Create a method that accepts 3 integers
@@ -15,7 +15,7 @@
   # Inside this loop, write an if statement that resets to seat number 1 after the last seat number has recieved candy
   # Return the seat number of who recieved the last candy
 
-def saveThePrisoner(n, m, s)
+def save_the_prisoner(n, m, s)
   while m > 0
     if s == n
       s == 0 # Might need to change to 1, depending on how i iterate through
@@ -27,4 +27,4 @@ def saveThePrisoner(n, m, s)
   s
 end
 
-p saveThePrisoner(7, 19, 2)
+p save_the_prisoner(7, 19, 2)
