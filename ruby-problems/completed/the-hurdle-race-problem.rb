@@ -12,7 +12,7 @@
 # Define the variable "doses" as max_height - k
 # Create an if statement where if k is greater than or equal to max_height, return zero. If k is less than max_height, then return the value of "doses"
 
-def hurdleRace(height, k)
+def hurdle_race(height, k)
   max_height = height[0]
   i = 1
   while i < height.length
@@ -29,5 +29,5 @@ def hurdleRace(height, k)
   end
 end
 
-hurdleRace([1, 6, 3, 5, 2], 4)
-hurdleRace([9, 10, 7, 3, 8], 12)
+hurdle_race([1, 6, 3, 5, 2], 4)
+hurdle_race([9, 10, 7, 3, 8], 12)
