@@ -10,3 +10,19 @@
   # When array.length = 0, break the loop
 
 # TRY WITH UNTIL LOOP AFTER
+
+def cut_the_sticks(sticks)
+  sorted_sticks = sticks.sort
+  while true
+    p sorted_sticks.length
+    sorted_sticks = sorted_sticks.map do |stick|
+      stick -= sorted_sticks[0]
+    end
+    sorted_sticks.delete(0)
+    if sorted_sticks.length == 0
+      break
+    end
+  end
+end
+
+cut_the_sticks([5, 4, 4, 2, 2, 8])
