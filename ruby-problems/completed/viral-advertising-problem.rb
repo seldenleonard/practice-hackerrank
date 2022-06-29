@@ -15,7 +15,7 @@
     # day += 1, shared = liked * 3, liked = shared / 2, & cumulative += liked
 # Return cumulative
 
-def viralAdvertising(n)
+def viral_advertising(n)
   day = 1
   shared = 5
   liked = shared / 2
@@ -29,4 +29,4 @@ def viralAdvertising(n)
   cumulative
 end
 
-p viralAdvertising(5)
+p viral_advertising(5)
