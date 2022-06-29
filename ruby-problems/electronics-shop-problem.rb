@@ -32,7 +32,7 @@
 
       # NOTABLY, my whiteboarding steps do not account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
 
-def getMoneySpent(keyboards, drives, b)
+def get_money_spent(keyboards, drives, b)
   keyboards.sort
   drives.sort
   index_k = 0
@@ -56,4 +56,4 @@ def getMoneySpent(keyboards, drives, b)
   max_spending
 end
 
-p getMoneySpent([40, 50, 60], [5, 8, 12], 60)
+p get_money_spent([40, 50, 60], [5, 8, 12], 60)
