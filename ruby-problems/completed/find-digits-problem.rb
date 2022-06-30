@@ -11,7 +11,7 @@
 # Return the counter
 
 # ATTEMPT 1
-# def findDigits(n)
+# def find_digits(n)
 #   counter = 0
 #   i = 0
 #   while i < n.to_s.length
@@ -24,7 +24,7 @@
 # end
 
 # ATTEMPT 2
-def findDigits(n)
+def find_digits(n)
   n = n.to_s
   counter = 0
   i = 0
@@ -38,6 +38,6 @@ def findDigits(n)
   counter
 end
 
-p findDigits(12)
-p findDigits(1012)
-p findDigits(123)
+p find_digits(12)
+p find_digits(1012)
+p find_digits(123)
