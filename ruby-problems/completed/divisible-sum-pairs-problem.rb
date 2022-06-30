@@ -24,7 +24,7 @@
 # ar = array of integers
 # k = integer
 
-def divisibleSumPairs(n, k, ar)
+def divisible_sum_pairs(n, k, ar)
   ar.sort!
   index1 = 0
   counter = 0
@@ -43,4 +43,4 @@ def divisibleSumPairs(n, k, ar)
   p counter
 end
 
-divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
+divisible_sum_pairs(6, 3, [1, 3, 2, 6, 1, 2])
