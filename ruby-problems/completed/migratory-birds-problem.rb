@@ -12,7 +12,7 @@
   # If most seen is equal, do nothing
 # print index
 
-def migratoryBirds(arr)
+def migratory_birds(arr)
   id = 1
   type = 0
   perma_count = 0
@@ -27,4 +27,4 @@ def migratoryBirds(arr)
   p type
 end
 
-migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
+migratory_birds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
