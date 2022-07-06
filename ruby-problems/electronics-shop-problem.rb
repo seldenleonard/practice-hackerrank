@@ -32,10 +32,34 @@
 
       # NOTABLY, my whiteboarding steps do not account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
 
+# def get_money_spent(keyboards, drives, b)
+#   keyboards.sort
+#   drives.sort
+#   index_k = 0
+#   index_d = 0
+#   max_spending = keyboards[index_k] + drives[index_d]
+#   if max_spending > b
+#     -1
+#   elsif max_spending == b # may not need this elsif because I cover this possibility in my loops later on
+#     b
+#   else
+#     while max_spending < b || index_k < keyboards.length # might consider making this less than OR EQUAL TO
+#       index_k += 1
+#       if keyboards[index_k] + drives[index_d] < b # For some reason, I am getting an undefined method error here for the use of "+" and "<". Interestingly, it seems that the "if" statement is causing the problem here, because when I remove the "if" statement, "keyboards[index_k] + drives[index_d] < b" causes no error 
+#         max_spending = keyboards[index_k] + drives[index_d]
+#         if max_spending == b
+#           b
+#         end
+#       end
+#     end
+#   end
+#   max_spending
+# end
+
 def get_money_spent(keyboards, drives, b)
   keyboards.sort
   drives.sort
-  index_k = 0
+  index_k = -1
   index_d = 0
   max_spending = keyboards[index_k] + drives[index_d]
   if max_spending > b
@@ -45,12 +69,15 @@ def get_money_spent(keyboards, drives, b)
   else
     while max_spending < b || index_k < keyboards.length # might consider making this less than OR EQUAL TO
       index_k += 1
-      if keyboards[index_k] + drives[index_d] < b # For some reason, I am getting an undefined method error here for the use of "+" and "<". Interestingly, it seems that the "if" statement is causing the problem here, because when I remove the "if" statement, "keyboards[index_k] + drives[index_d] < b" causes no error 
+      p current_spend = keyboards[index_k] + drives[index_d]
+        if current_spend < b && current_spend > max_spending # For some reason, I am getting an undefined method error here for the use of "+" and "<". Interestingly, it seems that the "if" statement is causing the problem here, because when I remove the "if" statement, "keyboards[index_k] + drives[index_d] < b" causes no error 
         max_spending = keyboards[index_k] + drives[index_d]
-        if max_spending == b
+        # index_d += 1
+        if max_spending < b
           b
         end
       end
+
     end
   end
   max_spending
