@@ -19,8 +19,8 @@ def hackerrank_in_a_string(s)
   letters = ["h", "a", "c", "k", "e", "r", "r", "a", "n", "k"]
   letters_index = 0
   string_index = 0
-    while letters_index > letters.length
-      while string_index > s.length
+    while letters_index < letters.length
+      while string_index < s.length
         if string_index == letters.length - 1
           return "NO"
           break
@@ -36,3 +36,6 @@ def hackerrank_in_a_string(s)
     end
 end
 
+p hackerrank_in_a_string("phackerrankly")
+p hackerrank_in_a_string("phacke")
+p hackerrank_in_a_string("hackerrank")
