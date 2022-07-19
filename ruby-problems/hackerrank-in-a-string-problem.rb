@@ -24,7 +24,8 @@ def hackerrank_in_a_string(s)
         if string_index == letters.length - 1
           return "NO"
           break
-        elsif letters_index == letters.length - 1
+        elsif s[string_index] == letters[letters_index]
+          
           return "YES"
           break
         else
