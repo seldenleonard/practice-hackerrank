@@ -15,3 +15,33 @@
 # use a counter that gets replaced when there is a count larger than it
 # starting at index zero, use a second a index to iterate forward until its value is greater than index zero + 1. The difference between index zero and the second index is our count.
 # Then we iterate the first index to the first value that is greater than index zero.
+
+def contiguous(ar)
+  index = 0
+  current_counter = 1
+  max_counter = 0
+
+  ar.sort!
+  
+  while index <= ar.length - 2
+    if (ar[index] - ar[index + 1]).abs() <= 1 
+      current_counter += 1
+
+    else
+      if current_counter > max_counter
+        max_counter = current_counter
+      end
+      current_counter = 1
+
+    end
+    index += 1
+  end
+  
+  if current_counter > max_counter
+    max_counter = current_counter
+  end
+  
+  max_counter
+end
+
+p contiguous([1, 1, 2, 2, 4, 4, 5, 5, 5])
