@@ -45,3 +45,6 @@ def contiguous(ar)
 end
 
 p contiguous([1, 1, 2, 2, 4, 4, 5, 5, 5])
+p contiguous([4, 6, 5, 3, 3, 1])
+
+# We misunderstood the problem, it should actually be evaluating the largest subarray of numbers that are only 1 integer apart from the first to last value in the subarray, as opposed to each value in the subarray being only 1 integer apart
