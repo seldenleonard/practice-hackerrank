@@ -9,14 +9,16 @@
 # Write a loop that runs k amount of times
   # Use pop() method to remove the last value in array a
   # Use insert method to add that value to the front of the array
-# Return array a values at indices specified by queries input
+# Return array a values at indices specified by queries input -- which will require another loop
+# In this loop
+  # Loop through each value in the queries array and return array a values using the values in queries array as the indices
 
 def circlular_rotation(a, k, queries)
   k.times do
     last_value = a.pop()
     a = a.insert(0, last_value)
   end
-  
+  return a[queries[0], queries[]
 end
 
 p circlular_rotation([3, 4, 5], 2, [1, 2])
