@@ -14,10 +14,25 @@
   # Loop through each value in the queries array and return array a values using the values in queries array as the indices
 
 # SUCCESSFUL SOLUTIONS - ALL TEST CASES
+# def circlular_rotation(a, k, queries)
+#   k.times do
+#     last_value = a.pop()
+#     a = a.insert(0, last_value)
+#   end
+#   i = 0
+#   b = []
+#   while i < queries.length
+#     queries
+#     b << a[queries[i]]
+#     i += 1
+#   end
+#   b
+# end
+
 def circlular_rotation(a, k, queries)
   k.times do
-    last_value = a.pop()
-    a = a.insert(0, last_value)
+    a.prepend(a.last)
+    a.pop
   end
   i = 0
   b = []
