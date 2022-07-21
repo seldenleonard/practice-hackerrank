@@ -13,52 +13,7 @@
 # In this loop
   # Loop through each value in the queries array and return array a values using the values in queries array as the indices
 
-# def circlular_rotation(a, k, queries)
-#   k.times do
-#     last_value = a.pop()
-#     a = a.insert(0, last_value)
-#   end
-#   return a[queries[0]...queries[queries.last]]
-# end
-
-# p circlular_rotation([3, 4, 5], 2, [1, 2])
-
-# def circlular_rotation(a, k, queries)
-#   k.times do
-#     last_value = a.pop()
-#     a = a.insert(0, last_value)
-#   end
-#   queries.each do |query_index|
-#     a[query_index]
-#   end
-# end
-
-# p circlular_rotation([3, 4, 5], 2, [1, 2])
-
-# def circlular_rotation(a, k, queries)
-#   k.times do
-#     last_value = a.pop()
-#     a = a.insert(0, last_value)
-#   end
-
-#   queries.each do |query|
-#     p a[query]
-#   end
-# end
-
-# SOLUTION THAT WORKED FOR FIRST TEST CASE
-# def circlular_rotation(a, k, queries)
-#   k.times do
-#     last_value = a.pop()
-#     a = a.insert(0, last_value)
-#   end
-#   b = []
-#   queries.each do |query|
-#     b << a[queries[query]]
-#   end
-#   b
-# end
-
+# SUCCESSFUL SOLUTIONS - ALL TEST CASES
 def circlular_rotation(a, k, queries)
   k.times do
     last_value = a.pop()
