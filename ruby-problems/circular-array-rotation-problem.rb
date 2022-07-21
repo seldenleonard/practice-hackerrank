@@ -46,20 +46,36 @@
 #   end
 # end
 
+# SOLUTION THAT WORKED FOR FIRST TEST CASE
+# def circlular_rotation(a, k, queries)
+#   k.times do
+#     last_value = a.pop()
+#     a = a.insert(0, last_value)
+#   end
+#   b = []
+#   queries.each do |query|
+#     b << a[queries[query]]
+#   end
+#   b
+# end
+
 def circlular_rotation(a, k, queries)
   k.times do
     last_value = a.pop()
     a = a.insert(0, last_value)
   end
+  i = 0
   b = []
-  queries.each do |query|
-    b << a[queries[query]]
+  while i < queries.length
+    queries
+    b << a[queries[i]]
+    i += 1
   end
   b
 end
 
 p circlular_rotation([1, 2, 3], 2, [0, 1, 2])
-# p circlular_rotation([3, 4, 5], 2, [1, 2])
+p circlular_rotation([3, 4, 5], 2, [1, 2])
 
 # use unshift function later to refactor
 # can also use delete(value) and prepend(value)
