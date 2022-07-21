@@ -11,4 +11,12 @@
   # Use insert method to add that value to the front of the array
 # Return array a values at indices specified by queries input
 
+def circlular_rotation(a, k, queries)
+  k.times do
+    last_value = a.pop()
+    a = a.insert(0, last_value)
+  end
+  
+end
 
+p circlular_rotation([3, 4, 5], 2, [1, 2])
