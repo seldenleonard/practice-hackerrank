@@ -13,7 +13,7 @@
 # In this loop
   # Loop through each value in the queries array and return array a values using the values in queries array as the indices
 
-# SOLUTIONS 1 - SOLVES ALL TEST CASES
+# SOLUTIONS 1 - using .pop and .insert methods - SOLVES ALL TEST CASES
 # def circlular_rotation(a, k, queries)
 #   k.times do
 #     last_value = a.pop()
@@ -29,7 +29,7 @@
 #   b
 # end
 
-# SOLUTION 2 - SOLVES ALL TEST CASES
+# SOLUTION 2 - using .prepend() and .pop methods - SOLVES ALL TEST CASES
 # def circlular_rotation(a, k, queries)
 #   k.times do
 #     a.prepend(a.last)
@@ -45,7 +45,7 @@
 #   b
 # end
 
-# SOLUTION 3
+# SOLUTION 3 - using .unshift() method - SOLVES ALL TEST CASES
 def circlular_rotation(a, k, queries)
   k.times do
     p a.unshift(a.last).pop
@@ -62,6 +62,3 @@ end
 
 p circlular_rotation([1, 2, 3], 2, [0, 1, 2])
 p circlular_rotation([3, 4, 5], 2, [1, 2])
-
-# use unshift function later to refactor
-# can also use delete(value) and prepend(value)
