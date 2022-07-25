@@ -23,30 +23,66 @@
   # Create a current_ranking variable and set it to 1
   # Create a nested loop: starting with the first value in the player array, iterate through the ranked array, comparing player[player_index] to values in the ranked array until player[player_index] is less than or equal to ranked[ranked_index].
     # If player_position > -1, delete player[player_position from the array]
-    # Then insert player[player_index] into the ranked array at ranked_index once the loop is false
-    # Set player_position = the index in player array that it was inserted at -- basically player[*Wherever the player score was inserted*]
+    # Set player_position = the index in player array that it was inserted at -- basically player[*Wherever the player score was inserted*] --> so player_position = ranked_index
     # Reset ranked_index equal to zero
-    # Create a nested loop within this nested loop, which iterates through the ranked array starting at the first value
+    # Then insert player[player_index] into the ranked array at ranked_index once the loop is false
+    # Create a nested loop within this nested loop, which iterates through the ranked array starting at the first value -- ACTUALLY MAYBE DONT NEED THIS TO BE A WHOLE LOOP, BUT RATHER CAN JUST INSERT THESE IF STATEMENTS INTO THE LAST LOOP I MADE
       # If ranked[ranked_index] == ranked[ranked_index + 1], then just increase ranked_index by 1
       # If ranked[ranked_index] > ranked[ranked_index + 1], then current_ranking += 1
       # Once the loop has reached the player_position value in the array and evaluated it with the above if statements, break the loop and return current_ranking
 
-def climbingLeaderboard(ranked, player)
+# def climbing_leaderboard(ranked, player)
+#   player_index = 0
+#   player_position = -1
+#   while player_index < player.length
+#     ranked_index = 0
+#     current_ranking = 1
+    
+#     until player[player_index] <= ranked[ranked_index].to_i
+#       if player_position > -1
+#         ranked.delete_at(player_position)
+#       end
+
+#       until ranked_index == player_position
+#         if ranked[ranked_index].to_i > ranked[ranked_index + 1].to_i
+#           current_ranking += 1
+#         end
+#         ranked_index += 1
+#       end
+#       ranked.insert(ranked_index, player[player_index])
+#       player_position = ranked_index
+#       current_ranking
+#     end
+
+
+#     player_index += 1
+#   end
+# end
+
+def climbing_leaderboard(ranked, player)
   player_index = 0
   player_position = -1
   while player_index < player.length
     ranked_index = 0
     current_ranking = 1
-    until player[player_index] <= ranked[ranked_index]
-      if player_position > -1
-        ranked.delete_at(player_position)
-      end
-      ranked_index += 1
+    if player_position > -1
+      ranked.delete_at(player_position)
     end
-    ranked.insert(ranked_index, player[player_index])
+    until player[player_index] <= ranked[ranked_index].to_i
+      until ranked_index == player_position
+        if ranked[ranked_index].to_i > ranked[ranked_index + 1].to_i
+          current_ranking += 1
+        end
+        ranked_index += 1
+      end
+      ranked.insert(ranked_index, player[player_index])
+      player_position = ranked_index
+      current_ranking
+    end
+
 
     player_index += 1
   end
 end
 
-p climbingLeaderboard([100, 90, 90, 80], [70, 80, 105])
+p climbing_leaderboard([100, 90, 90, 80], [70, 80, 105])
