@@ -19,11 +19,11 @@
 # Create a variable called player_index and set it equal to zero
 # Define a variable called player_position and set it equal to -1
 # Write a loop that iterates through each value in the player array, starting with the first
-  # Create an ranked_index variable and set it equal to zero
+  # Create a ranked_index variable and set it equal to zero
   # Create a current_ranking variable and set it to 1
-  # Create a nested loop: starting with the first value in the player array, iterate through the ranked array, comparing player[0] to values in the ranked array until player[0] is less than or equal to ranked[i].
+  # Create a nested loop: starting with the first value in the player array, iterate through the ranked array, comparing player[player_index] to values in the ranked array until player[player_index] is less than or equal to ranked[ranked_index].
     # If player_position > -1, delete player[player_position from the array]
-    # Then insert player[0] into the ranked array there
+    # Then insert player[player_index] into the ranked array at ranked_index once the loop is false
     # Set player_position = the index in player array that it was inserted at -- basically player[*Wherever the player score was inserted*]
     # Reset ranked_index equal to zero
     # Create a nested loop within this nested loop, which iterates through the ranked array starting at the first value
@@ -32,7 +32,21 @@
       # Once the loop has reached the player_position value in the array and evaluated it with the above if statements, break the loop and return current_ranking
 
 def climbingLeaderboard(ranked, player)
-  
+  player_index = 0
+  player_position = -1
+  while player_index < player.length
+    ranked_index = 0
+    current_ranking = 1
+    until player[player_index] <= ranked[ranked_index]
+      if player_position > -1
+        ranked.delete_at(player_position)
+      end
+      ranked_index += 1
+    end
+    ranked.insert(ranked_index, player[player_index])
+
+    player_index += 1
+  end
 end
 
-climbingLeaderboard([100, 90, 90, 80], [70, 80, 105])
+p climbingLeaderboard([100, 90, 90, 80], [70, 80, 105])
