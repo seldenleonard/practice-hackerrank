@@ -15,3 +15,18 @@
   # Thus if A ranks ahead of B and C (which compare equal) which are both ranked ahead of D, then A gets ranking number 1 ("first"), B gets ranking number 2 ("joint second"), C also gets ranking number 2 ("joint second") and D gets ranking number 3 ("Third").
 
 # STEPS
+# Define a method that accepts two arrays: 1) ranked - which contains the scores of players already on the leaderboard, and; 2) player - which contains the scores of the player that are to be compared to the leaderboard
+# Create a variable called player_index and set it equal to zero
+# Define a variable called player_position and set it equal to -1
+# Write a loop that iterates through each value in the player array, starting with the first
+  # Create an ranked_index variable and set it equal to zero
+  # Create a current_ranking variable and set it to 1
+  # Create a nested loop: starting with the first value in the player array, iterate through the ranked array, comparing player[0] to values in the ranked array until player[0] is less than or equal to ranked[i].
+    # If player_position > -1, delete player[player_position from the array]
+    # Then insert player[0] into the ranked array there
+    # Set player_position = the index in player array that it was inserted at -- basically player[*Wherever the player score was inserted*]
+    # Reset ranked_index equal to zero
+    # Create a nested loop within this nested loop, which iterates through the ranked array starting at the first value
+      # If ranked[ranked_index] == ranked[ranked_index + 1], then just increase ranked_index by 1
+      # If ranked[ranked_index] > ranked[ranked_index + 1], then current_ranking += 1
+      # Once the loop has reached the player_position value in the array and evaluated it with the above if statements, break the loop and return current_ranking
