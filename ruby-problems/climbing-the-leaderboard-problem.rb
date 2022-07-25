@@ -30,3 +30,9 @@
       # If ranked[ranked_index] == ranked[ranked_index + 1], then just increase ranked_index by 1
       # If ranked[ranked_index] > ranked[ranked_index + 1], then current_ranking += 1
       # Once the loop has reached the player_position value in the array and evaluated it with the above if statements, break the loop and return current_ranking
+
+def climbingLeaderboard(ranked, player)
+  
+end
+
+climbingLeaderboard([100, 90, 90, 80], [70, 80, 105])
