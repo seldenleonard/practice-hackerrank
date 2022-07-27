@@ -62,24 +62,30 @@
 def climbing_leaderboard(ranked, player)
   player_index = 0
   player_position = -1
+  
   while player_index < player.length
-    ranked_index = 0
+    ranked_index = -1
     current_ranking = 1
+    
     if player_position > -1
       ranked.delete_at(player_position)
     end
+    
     until player[player_index] <= ranked[ranked_index].to_i
+      
       until ranked_index == player_position
+        ranked_index += 1
+
         if ranked[ranked_index].to_i > ranked[ranked_index + 1].to_i
           current_ranking += 1
         end
-        ranked_index += 1
+        
       end
+      
       ranked.insert(ranked_index, player[player_index])
       player_position = ranked_index
-      current_ranking
+      p current_ranking
     end
-
 
     player_index += 1
   end
