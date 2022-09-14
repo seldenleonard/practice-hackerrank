@@ -6,7 +6,21 @@
   # Given a string representing the starting number, and a maximum number of changes allowed, create the largest palindromic string of digits possible or the string '-1' if it is not possible to create a palindrome under the contstraints.
 
 # STEPS
-# Using two indexes, loop through the input array from left and right
-  # When a left an right value do not match, change one value to make it match. Record this change and at what index using a separate array that we define as empty to start
+# Using two indexes, loop through the input array from left and right simultaneously
+  # When the left and right values do not match, change the left value to make it match. Record this change and at what index using a separate array that we define as empty to start
   # If the input array has an odd number of values, stop when the two indexes are equal. If the array has an even number of values, stop when they are 1 integer apart.
-# If the nunber of changes made to create a palindrom exceeds the number allowed, return -1. Otherwise, return the palindrome.  
+# If the nunber of changes made to create a palindrom exceeds the number allowed, return -1. Otherwise, return the palindrome.
+
+def highest_value_palindrome(ar)
+  index_left
+  index_right
+  if ar.length.odd?
+    while index_left != index_right
+      
+    end
+  else
+    until index_left + 1 == index_right
+      
+    end
+  end
+end
