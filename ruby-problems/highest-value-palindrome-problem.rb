@@ -7,9 +7,9 @@
 
 # STEPS
 # Using two indexes, loop through the input array from left and right simultaneously
+# But if the nunber of changes made to create a palindrom exceeds the number allowed, return -1. Otherwise, return the palindrome.
   # When the left and right values do not match, change the left value to make it match. Record this change and at what index using a separate array that we define as empty to start
   # If the input array has an odd number of values, stop when the two indexes are equal. If the array has an even number of values, stop when they are 1 integer apart.
-# If the nunber of changes made to create a palindrom exceeds the number allowed, return -1. Otherwise, return the palindrome.
 
 def highest_value_palindrome(ar)
   index_left
