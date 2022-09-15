@@ -7,20 +7,30 @@
 
 # STEPS
 # Using two indexes, loop through the input array from left and right simultaneously
-# But if the nunber of changes made to create a palindrom exceeds the number allowed, return -1. Otherwise, return the palindrome.
+# But if the number of changes made to create a palindrome exceeds the number allowed, return -1. Otherwise, return the palindrome.
   # When the left and right values do not match, change the left value to make it match. Record this change and at what index using a separate array that we define as empty to start
   # If the input array has an odd number of values, stop when the two indexes are equal. If the array has an even number of values, stop when they are 1 integer apart.
 
-def highest_value_palindrome(ar)
-  index_left
-  index_right
-  if ar.length.odd?
-    while index_left != index_right
-      
+def highest_value_palindrome(s, n, k)
+  index_left = 0
+  index_right = s.length 
+  changes = []
+  if s.length.odd?
+    while index_left != index_right 
+      if s[index_left] != s[index_right]
+        s[index_left] = s[index_right]
+      end
+      index_left += 1
+      index_right -= 1
     end
   else
     until index_left + 1 == index_right
       
+      index_left += 1
+      index_right -= 1
     end
+  end
+  if test
+    
   end
 end
