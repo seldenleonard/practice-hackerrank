@@ -50,7 +50,7 @@
 # Create empty array called potential_factors
 # Create empty array called definiteFactors
 # Loop through the values of the second array
-# For each value in the second array, evaluate whether ALL values from the first array factor into it evenly (using modulo operator)
+# For each value in the second array, evaluate whether ALL values from the first array factor into it evenly (using lo operator)
 #   If they do, add both a[index_a] and a[index_a + 1] to potential_factors array
 #   If they do not, move on
 # Once the loop completes, take all values that occur in the potential_factors array the amount of times that is equal to the length of the second array, and therefore meet the first criteria.
