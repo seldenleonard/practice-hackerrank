@@ -63,14 +63,16 @@
 
 def save_the_prisoner(n, m, s)
   x = (m + s - 1)
- if x <= n
-  x
- elsif x > n
-  x % n
- end
+  if x <= n
+    x
+  elsif x % n == 0
+    n
+  else
+    x % n
+  end
 end
 
 # p save_the_prisoner(5, 2, 1)
 # p save_the_prisoner(5, 2, 2)
-p save_the_prisoner(7, 19, 2)
+# p save_the_prisoner(7, 19, 2)
 p save_the_prisoner(3, 7, 3)
