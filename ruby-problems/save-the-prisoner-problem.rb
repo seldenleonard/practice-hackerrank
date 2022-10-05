@@ -62,20 +62,15 @@
 # Return the seat number of who recieved the last candy
 
 def save_the_prisoner(n, m, s)
-  x = m % n
-  if x != 0
-    until x == 1
-      if s != n
-        s += 1
-      else
-        s = 1
-      end
-      x -= 1
-    end
-  end
-  s
+  x = (m + s - 1)
+ if x <= n
+  x
+ elsif x > n
+  x % n
+ end
 end
 
-p save_the_prisoner(5, 2, 1)
-p save_the_prisoner(5, 2, 2)
+# p save_the_prisoner(5, 2, 1)
+# p save_the_prisoner(5, 2, 2)
 p save_the_prisoner(7, 19, 2)
+p save_the_prisoner(3, 7, 3)
