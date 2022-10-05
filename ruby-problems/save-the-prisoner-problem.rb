@@ -15,52 +15,6 @@
   # Inside this loop, write an if statement that resets to seat number 1 after the last seat number has recieved candy
   # Return the seat number of who recieved the last candy
 
-# def save_the_prisoner(n, m, s)
-#   while m > 0
-#     if s == n
-#       s == 0 # Might need to change to 1, depending on how i iterate through
-#     else
-#       s += 1
-#     end
-#     m -= 1
-#   end
-#   s
-# end
-
-# def save_the_prisoner(n, m, s)
-#   until m == 1
-#     if s != n
-#       s += 1
-#     else
-#       s = 1
-#     end
-#     m -= 1
-#   end
-#   s
-# end
-
-# def save_the_prisoner(n, m, s)
-#   until m == 1
-#     if s == n
-#       s = 1
-#     else
-#       s += 1
-#     end
-#     m -= 1
-#   end
-#   s
-# end
-
-# STEPS
-# Create a method that accepts 3 integers
-  # n = number of prisoners
-  # m = number of candies
-  # s = seat number that is first to recieve candy 
-# To determine what seat in the rotation will be last, I'm going to do m modulo n.
-  # If m % n = 0, then return s
-  # Else
-# Return the seat number of who recieved the last candy
-
 def save_the_prisoner(n, m, s)
   x = (m + s - 1)
   if x <= n
@@ -72,7 +26,7 @@ def save_the_prisoner(n, m, s)
   end
 end
 
-# p save_the_prisoner(5, 2, 1)
-# p save_the_prisoner(5, 2, 2)
-# p save_the_prisoner(7, 19, 2)
+p save_the_prisoner(5, 2, 1)
+p save_the_prisoner(5, 2, 2)
+p save_the_prisoner(7, 19, 2)
 p save_the_prisoner(3, 7, 3)
