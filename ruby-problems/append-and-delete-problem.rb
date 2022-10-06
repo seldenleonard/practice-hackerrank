@@ -33,9 +33,9 @@ def append_and_delete(s, t, k)
     i = 0
     until s[i] != t[i]
       ops -= 2
-      index += 1
+      i += 1
     end
-    if ops == k || ops > k && (ops % k) / 2 == 0
+    if ops == k || ops > k && (ops % k) % 2 == 0
       return "Yes"
     else
       return "No"
@@ -43,4 +43,5 @@ def append_and_delete(s, t, k)
   end
 end
 
-p append_and_delete("abc", "def", 6)
+p append_and_delete("abc", "deff", 6)
+p append_and_delete("hackerhappy", "hackerrank", 9)
