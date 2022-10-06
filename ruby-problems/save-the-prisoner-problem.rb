@@ -30,34 +30,3 @@ p save_the_prisoner(5, 2, 1)
 p save_the_prisoner(5, 2, 2)
 p save_the_prisoner(7, 19, 2)
 p save_the_prisoner(3, 7, 3)
-
-
-def save_the_prisoner(n, m, s)
-  if m + s - 1 <= n
-    return m + s - 1
-  elsif m + s - 1 > n
-    reduced_m = n - s
-    if m - reduced_m <= n
-      return m - reduced_m
-    elsif m - reduced_m > n
-      (m - reduced_m) % n
-    end
-  end
-  
-end
-
-p save_the_prisoner(3, 7, 3)
-
-  # if candies + starting point - 1 <= prisoners
-  #   return candies + starting point - 1
-  
-  # if candies + starting point > prisoners
-  #   reduced_candies = prisoners - starting point
-  # # reduced_candies is the amount of candies we have left once we start on the second round of handing them out to prisoners. so reduced_candies is the amount of candies left once we circle back to prisoner/chair 1
-  # if candies - reduced_candies <= prisoners
-  #   return candies - reduced_candies
-  # elsif candies - reduced_candies > prisoners
-  #   (candies - reduced_candies) % prisoners
-
-  # s + x = n
-  # -s
