@@ -35,7 +35,7 @@ def append_and_delete(s, t, k)
       ops -= 2
       i += 1
     end
-    if ops == k || ops > k && (ops % k) % 2 == 0
+    if ops == k || ops > k && (ops % k) % 2 == 0 # The issue is somewhere in this line of code after the || operator
       return "Yes"
     else
       return "No"
@@ -45,3 +45,4 @@ end
 
 p append_and_delete("abc", "deff", 6)
 p append_and_delete("hackerhappy", "hackerrank", 9)
+p append_and_delete("asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv", "bsdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv", 100) # This Test Case should return No
