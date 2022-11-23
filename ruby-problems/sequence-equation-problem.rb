@@ -5,6 +5,11 @@
 
 # STEPS
 # Clarified Instructions: Given a sequence of positive, distinct integers do the following: using the values in the input array, and in the act of counting from 1 to the max value in ascending order, take each index value and append it to a new array, with 1 (not 0) as the base index. Then return the array of indexes.
+
+# Addendum to Steps
+# What I was missing before is this: iterate through the input array using 1 as a base index until I get to point where my index equals the highest value in the array
+# Using my index of 1, i look at the first element in the array. Say that that my input array is [5, 2, 1, 3, 4]. So my array value at index 1 is 5. Because it's 5, I take the fifth element in the array (whatever is at index 5), which is 4, and THAT 4 is the integer I append my indices array with
+
 # Start by defining a method that accepts an array
 # Define an index and set it equal to zero
 # Define an empty array called 'indices'
@@ -20,11 +25,12 @@ def sequence_equation(p)
   i = 0
   indices = []
   counter = 1
-  while counter <= p.max
+  until counter > p.max
     until p[i] == counter
+      p p[i]
       i += 1
     end
-    indices << i + 1
+    indices.append(i + 1)
     counter += 1
     i = 0
   end
@@ -32,3 +38,4 @@ def sequence_equation(p)
 end
 
 p sequence_equation([2, 3, 1])
+p sequence_equation([4, 3, 5, 1, 2])
