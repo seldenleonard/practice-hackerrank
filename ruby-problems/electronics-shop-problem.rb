@@ -56,31 +56,54 @@
 #   max_spending
 # end
 
+# def get_money_spent(keyboards, drives, b)
+#   keyboards.sort
+#   drives.sort
+#   index_k = -1
+#   index_d = 0
+#   max_spending = keyboards[index_k] + drives[index_d]
+#   if max_spending > b
+#     -1
+#   elsif max_spending == b # may not need this elsif because I cover this possibility in my loops later on
+#     b
+#   else
+#     while max_spending < b || index_k < keyboards.length # might consider making this less than OR EQUAL TO
+#       index_k += 1
+#       p current_spend = keyboards[index_k] + drives[index_d]
+#         if current_spend < b && current_spend > max_spending # For some reason, I am getting an undefined method error here for the use of "+" and "<". Interestingly, it seems that the "if" statement is causing the problem here, because when I remove the "if" statement, "keyboards[index_k] + drives[index_d] < b" causes no error 
+#         max_spending = keyboards[index_k] + drives[index_d]
+#         # index_d += 1
+#         if max_spending < b
+#           b
+#         end
+#       end
+
+#     end
+#   end
+#   max_spending
+# end
+
+
 def get_money_spent(keyboards, drives, b)
   keyboards.sort
   drives.sort
-  index_k = -1
-  index_d = 0
-  max_spending = keyboards[index_k] + drives[index_d]
-  if max_spending > b
+  index_k = keyboards.last
+  index_d = drives.last
+  max_spending = keyboards.last + drives.last
+  min_spending = keyboards.first + drives.first
+  if max_spending <= b
+    max_spending
+  elsif min_spending > b
     -1
-  elsif max_spending == b # may not need this elsif because I cover this possibility in my loops later on
-    b
   else
-    while max_spending < b || index_k < keyboards.length # might consider making this less than OR EQUAL TO
-      index_k += 1
-      p current_spend = keyboards[index_k] + drives[index_d]
-        if current_spend < b && current_spend > max_spending # For some reason, I am getting an undefined method error here for the use of "+" and "<". Interestingly, it seems that the "if" statement is causing the problem here, because when I remove the "if" statement, "keyboards[index_k] + drives[index_d] < b" causes no error 
-        max_spending = keyboards[index_k] + drives[index_d]
-        # index_d += 1
-        if max_spending < b
-          b
-        end
-      end
-
+    until max_spending <= b || index_k == 0 || index_d == 0
+      index_k -= 1
+      index_d -= 1
+    end
+    if max_spending
+      
     end
   end
-  max_spending
 end
 
 p get_money_spent([40, 50, 60], [5, 8, 12], 60)
