@@ -109,18 +109,14 @@ def get_money_spent(keyboards, drives, b)
     next_drive_total = keyboards[index_k] + drives[index_d + 1]
 
     if next_keyboard_total <= b && next_drive_total <= b
-      max_spending = [next_keyboard_total, next_drive_total].max
+      p max_spending = [next_keyboard_total, next_drive_total].max
     elsif next_keyboard_total <= b
       max_spending = next_keyboard_total
     elsif next_drive_total <= b
       max_spending = next_drive_total
     end
 
-    # if next_keyboard_total <= b && next_keyboard_total > next_drive_total 
-    #   max_spending = next_keyboard_total
-    # elsif next_drive_total <= b && next_drive_total > next_keyboard_total
-    #   max_spending = next_drive_total
-    # end
+    # My issue, the reason why my answer doesn't solve for all test cases is because I am not accounting for keyboard-drive combinations that are not within 1 index value from eachother. Sometimes the first drive and last keyboard might be the winning combination. So what I need to do is just have two indexes, and two loops -- one for each array. I tried to be fancy and get around that here but it doesn't work. So I actually need to restructure the whole thing again.
 
     max_spending
   end
@@ -128,3 +124,4 @@ def get_money_spent(keyboards, drives, b)
 end
 
 p get_money_spent([40, 50, 60], [5, 8, 12], 60)
+p get_money_spent([40, 50, 60], [5, 8, 12], 52)
