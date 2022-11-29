@@ -91,19 +91,32 @@ def get_money_spent(keyboards, drives, b)
   index_d = drives.last
   max_spending = keyboards.last + drives.last
   min_spending = keyboards.first + drives.first
+  
   if max_spending <= b
     max_spending
+  
   elsif min_spending > b
     -1
+  
   else
     until max_spending <= b || index_k == 0 || index_d == 0
       index_k -= 1
       index_d -= 1
+      max_spending = keyboards[index_k] + drives[index_d]
     end
-    if max_spending
-      
+
+    next_keyboard_total = keyboards[index_k + 1] + drives[index_d]
+    next_drive_total = keyboards[index_k] + drives[index_d + 1]
+
+    if next_keyboard_total <= b && next_keyboard_total > next_drive_total 
+      max_spending = next_keyboard_total
+    elsif next_drive_total <= b && next_drive_total > next_keyboard_total
+      max_spending = next_drive_total
     end
+
+    max_spending
   end
+
 end
 
 p get_money_spent([40, 50, 60], [5, 8, 12], 60)
