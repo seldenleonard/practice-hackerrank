@@ -21,32 +21,6 @@
   # Increase the counter variable by 1
   # Reset index to 0
 
-# def sequence_equation(p)
-#   i = 0
-#   indices = []
-#   counter = 1
-#   until counter > p.max
-#     until p[i] == counter
-#       i += 1
-#     end
-#     indices.append(i + 1)
-#     counter += 1
-#     i = 0
-#   end
-#   indices
-# end
-
-# def sequence_equation(p)
-#   i = 0
-#   indices = []
-#   until i == p.max
-#     counter = p[i - 1]
-#     indices.append(p[counter])
-#     i = p[counter]
-#   end
-#   indices
-# end
-
 def sequence_equation(p)
   x = 1
   y_array = []
