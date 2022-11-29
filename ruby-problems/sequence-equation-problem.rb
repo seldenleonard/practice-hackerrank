@@ -36,16 +36,28 @@
 #   indices
 # end
 
+# def sequence_equation(p)
+#   i = 0
+#   indices = []
+#   until i == p.max
+#     counter = p[i - 1]
+#     indices.append(p[counter])
+#     i = p[counter]
+#   end
+#   indices
+# end
+
 def sequence_equation(p)
   i = 0
-  indices = []
-  until i == p.max
-    counter = p[i - 1]
-    indices.append(p[counter])
-    i = p[counter]
+  y_array = []
+  until i == p.length
+    p y = p[p[i] - 1]
+    y_array << y
+    i += 1
   end
-  indices
+  y_array
 end
 
+p sequence_equation([5, 2, 1, 3, 4])
 p sequence_equation([2, 3, 1])
 p sequence_equation([4, 3, 5, 1, 2])
