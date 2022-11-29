@@ -48,12 +48,12 @@
 # end
 
 def sequence_equation(p)
-  i = 0
+  x = 1
   y_array = []
-  until i == p.length
-    p y = p[p[i] - 1]
+  until x > p.length
+    p y = p.find_index(p.find_index(x) + 1) + 1
     y_array << y
-    i += 1
+    x += 1
   end
   y_array
 end
