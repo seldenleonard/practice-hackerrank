@@ -87,8 +87,8 @@
 def get_money_spent(keyboards, drives, b)
   keyboards.sort
   drives.sort
-  index_k = keyboards.last
-  index_d = drives.last
+  index_k = keyboards.length
+  index_d = drives.length
   max_spending = keyboards.last + drives.last
   min_spending = keyboards.first + drives.first
   
