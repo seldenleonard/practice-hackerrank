@@ -108,11 +108,19 @@ def get_money_spent(keyboards, drives, b)
     next_keyboard_total = keyboards[index_k + 1] + drives[index_d]
     next_drive_total = keyboards[index_k] + drives[index_d + 1]
 
-    if next_keyboard_total <= b && next_keyboard_total > next_drive_total 
+    if next_keyboard_total <= b && next_drive_total <= b
+      max_spending = [next_keyboard_total, next_drive_total].max
+    elsif next_keyboard_total <= b
       max_spending = next_keyboard_total
-    elsif next_drive_total <= b && next_drive_total > next_keyboard_total
+    elsif next_drive_total <= b
       max_spending = next_drive_total
     end
+
+    # if next_keyboard_total <= b && next_keyboard_total > next_drive_total 
+    #   max_spending = next_keyboard_total
+    # elsif next_drive_total <= b && next_drive_total > next_keyboard_total
+    #   max_spending = next_drive_total
+    # end
 
     max_spending
   end
