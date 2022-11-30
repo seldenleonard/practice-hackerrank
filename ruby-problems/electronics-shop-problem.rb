@@ -32,6 +32,45 @@
 
       # NOTABLY, my whiteboarding steps do not account for a combination of values that are in the middle of both arrays, it requires that one value is at the start of one of the arrays
 
+# def get_money_spent(keyboards, drives, b)
+#   keyboards.sort
+#   drives.sort
+#   index_k = keyboards.length
+#   index_d = drives.length
+#   max_spending = keyboards.last + drives.last
+#   min_spending = keyboards.first + drives.first
+  
+#   if max_spending <= b
+#     max_spending
+  
+#   elsif min_spending > b
+#     -1
+  
+#   else
+#     until max_spending <= b || index_k == 0 || index_d == 0
+#       index_k -= 1
+#       index_d -= 1
+#       max_spending = keyboards[index_k] + drives[index_d]
+#     end
+
+#     next_keyboard_total = keyboards[index_k + 1] + drives[index_d]
+#     next_drive_total = keyboards[index_k] + drives[index_d + 1]
+
+#     if next_keyboard_total <= b && next_drive_total <= b
+#       p max_spending = [next_keyboard_total, next_drive_total].max
+#     elsif next_keyboard_total <= b
+#       max_spending = next_keyboard_total
+#     elsif next_drive_total <= b
+#       max_spending = next_drive_total
+#     end
+
+#     # My issue, the reason why my answer doesn't solve for all test cases is because I am not accounting for keyboard-drive combinations that are not within 1 index value from eachother. Sometimes the first drive and last keyboard might be the winning combination. So what I need to do is just have two indexes, and two loops -- one for each array. I tried to be fancy and get around that here but it doesn't work. So I actually need to restructure the whole thing again.
+
+#     max_spending
+#   end
+
+# end
+
 def get_money_spent(keyboards, drives, b)
   keyboards.sort
   drives.sort
@@ -47,24 +86,28 @@ def get_money_spent(keyboards, drives, b)
     -1
   
   else
-    until max_spending <= b || index_k == 0 || index_d == 0
+    until max_spending <= b || index_k == 0
       index_k -= 1
-      index_d -= 1
       max_spending = keyboards[index_k] + drives[index_d]
     end
 
-    next_keyboard_total = keyboards[index_k + 1] + drives[index_d]
-    next_drive_total = keyboards[index_k] + drives[index_d + 1]
-
-    if next_keyboard_total <= b && next_drive_total <= b
-      p max_spending = [next_keyboard_total, next_drive_total].max
-    elsif next_keyboard_total <= b
-      max_spending = next_keyboard_total
-    elsif next_drive_total <= b
-      max_spending = next_drive_total
+    until max_spending <= b || index_d == 0
+      index_d -= 1
+      if keyboards[index_k] + drives[index_d] >= max_spending
+        max_spending = keyboards[index_k] + drives[index_d]
+      end
     end
 
-    # My issue, the reason why my answer doesn't solve for all test cases is because I am not accounting for keyboard-drive combinations that are not within 1 index value from eachother. Sometimes the first drive and last keyboard might be the winning combination. So what I need to do is just have two indexes, and two loops -- one for each array. I tried to be fancy and get around that here but it doesn't work. So I actually need to restructure the whole thing again.
+    # next_keyboard_total = keyboards[index_k + 1] + drives[index_d]
+    # next_drive_total = keyboards[index_k] + drives[index_d + 1]
+
+    # if next_keyboard_total <= b && next_drive_total <= b
+    #   p max_spending = [next_keyboard_total, next_drive_total].max
+    # elsif next_keyboard_total <= b
+    #   max_spending = next_keyboard_total
+    # elsif next_drive_total <= b
+    #   max_spending = next_drive_total
+    # end
 
     max_spending
   end
