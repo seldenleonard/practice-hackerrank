@@ -116,3 +116,4 @@ end
 
 p get_money_spent([40, 50, 60], [5, 8, 12], 60)
 p get_money_spent([40, 50, 60], [5, 8, 12], 52)
+p get_money_spent([40, 50, 60], [5, 8, 12], 52)
