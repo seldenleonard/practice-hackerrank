@@ -36,4 +36,4 @@ end
 
 p highest_value_palindrome(12321, 1)
 p highest_value_palindrome(3943, 1)
-# p highest_value_palindrome(0011, 1)
+p highest_value_palindrome(0011, 1)
