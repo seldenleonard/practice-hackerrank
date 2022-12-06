@@ -11,6 +11,9 @@
   # When the left and right values do not match, change the left value to make it match. Record this change and at what index using a separate array that we define as empty to start
   # If the input array has an odd number of values, stop when the two indexes are equal. If the array has an even number of values, stop when they are 1 integer apart.
 
+# FINAL STEP NEEDED TO SOLVE
+  # After solving for 2/3 HackerRank Test cases, my issue now is that I am NOT changing everything to 9s, but instead am simply replacing with the higher of the two values in question. The tricky part though, is that I cant just ALWAYS change both values to 9s, because that would cost me 2 changes, and there might be more changes I need to do to make it a palindrome. Like say I'm only allotted 2 changes, and my input is 2211. In this case my output should be 2222. The solution might be to keep everything I have, then depending on how many changes I'm allotted that I have left, go back and substitute in some 9s. However, the issue here arises if i end up substituting the same value ive already spent 1 change one, meaning that to make 2 numbers into 9s, I will have effectively used 3 changes.
+
 def highest_value_palindrome(s, k)
   s_string = s.to_s
   index_left = 0
