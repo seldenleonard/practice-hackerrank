@@ -12,19 +12,17 @@
   # If the input array has an odd number of values, stop when the two indexes are equal. If the array has an even number of values, stop when they are 1 integer apart.
 
 def highest_value_palindrome(s, k)
-  p s_string = s.to_s
-  p index_left = 0
-  p index_right = s_string.length - 1
+  s_string = s.to_s
+  index_left = 0
+  index_right = s_string.length - 1
   changes = 0
-  if s_string.length.odd?
-    until index_left >= index_right # Instead of two separate while/until loops I could just do an OR || statement
-      if s_string[index_left] != s_string[index_right]
-        s_string[s_string.index(index_left)].gsub(s_string[index_right])
-        changes += 1
-      end
-      index_left += 1
-      index_right -= 1
+  until index_left >= index_right
+    if s_string[index_left] != s_string[index_right]
+      s_string.sub!(s_string[index_left], s_string[index_right])
+      changes += 1
     end
+    index_left += 1
+    index_right -= 1
   end
   if changes > k
     -1
@@ -33,5 +31,5 @@ def highest_value_palindrome(s, k)
   end
 end
 
-p highest_value_palindrome(12321, 1)
+# p highest_value_palindrome(12321, 1)
 p highest_value_palindrome(3943, 1)
