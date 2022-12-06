@@ -17,19 +17,23 @@ def highest_value_palindrome(s, k)
   index_right = s_string.length - 1
   changes = 0
   until index_left >= index_right
-    if s_string[index_left] != s_string[index_right]
+    if s_string[index_left] < s_string[index_right]
       s_string.sub!(s_string[index_left], s_string[index_right])
+      changes += 1
+    elsif s_string[index_left] > s_string[index_right]
+      s_string.sub!(s_string[index_right], s_string[index_left])
       changes += 1
     end
     index_left += 1
     index_right -= 1
   end
-  if changes > k
+  if changes > k # Can add this inside the loop as a killswitch
     -1
   else
     s_string.to_i
   end
 end
 
-# p highest_value_palindrome(12321, 1)
+p highest_value_palindrome(12321, 1)
 p highest_value_palindrome(3943, 1)
+# p highest_value_palindrome(0011, 1)
