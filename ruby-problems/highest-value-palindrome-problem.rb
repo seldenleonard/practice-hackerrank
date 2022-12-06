@@ -14,7 +14,7 @@
 def highest_value_palindrome(s, k)
   s_string = s.to_s
   index_left = 0
-  index_right = s.length 
+  index_right = s_string.length 
   changes = 0
   if s_string.length.odd?
     while index_left != index_right # Instead of two separate while/until loops I could just do an OR || statement
@@ -38,7 +38,7 @@ def highest_value_palindrome(s, k)
   if changes > k
     -1
   else
-    s_string.to_i    
+    s_string.to_i
   end
 end
 
