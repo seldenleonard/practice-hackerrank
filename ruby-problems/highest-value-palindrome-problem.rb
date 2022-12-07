@@ -13,24 +13,47 @@
 
 # FINAL STEP NEEDED TO SOLVE
   # After solving for 2/3 HackerRank Test cases, my issue now is that I am NOT changing everything to 9s, but instead am simply replacing with the higher of the two values in question. The tricky part though, is that I cant just ALWAYS change both values to 9s, because that would cost me 2 changes, and there might be more changes I need to do to make it a palindrome. Like say I'm only allotted 2 changes, and my input is 2211. In this case my output should be 2222. The solution might be to keep everything I have, then depending on how many changes I'm allotted that I have left, go back and substitute in some 9s. However, the issue here arises if i end up substituting the same value ive already spent 1 change one, meaning that to make 2 numbers into 9s, I will have effectively used 3 changes.
+  # Solution: track changes NEEDED, instead of just changing the data immediately when I see that two values at opposite indexes are not equal to one another. Once I have tracked the changes I need, I can compare the amount of changes I am allotted (k), and then make appropriate determinations for what values I should change. It could also be a good idea to track which indexes need the changes, so i dont need to loop through the integer an entire second time. Once i go through and actually change the values to 9s, i will also want an 'unless' statement saying that both indexes should be changed unless i dont have enough changes alotted to make both 9s (in which case I just change one value to match the higher value of the pairing), or unless one of the values is 9 (in which case I simply make the other value a 9)
+
+# def highest_value_palindrome(s, k)
+#   s_string = s.to_s
+#   index_left = 0
+#   index_right = s_string.length - 1
+#   changes = 0
+#   until index_left >= index_right
+#     if s_string[index_left] < s_string[index_right]
+#       s_string.sub!(s_string[index_left], s_string[index_right])
+#       changes += 1
+#     elsif s_string[index_left] > s_string[index_right]
+#       s_string.sub!(s_string[index_right], s_string[index_left])
+#       changes += 1
+#     end
+#     index_left += 1
+#     index_right -= 1
+#   end
+#   if changes > k # Can add this inside the loop as a killswitch
+#     -1
+#   else
+#     s_string.to_i
+#   end
+# end
 
 def highest_value_palindrome(s, k)
   s_string = s.to_s
   index_left = 0
   index_right = s_string.length - 1
-  changes = 0
+  changes_needed = 0
+  indexes_to_change = []
   until index_left >= index_right
-    if s_string[index_left] < s_string[index_right]
-      s_string.sub!(s_string[index_left], s_string[index_right])
-      changes += 1
-    elsif s_string[index_left] > s_string[index_right]
-      s_string.sub!(s_string[index_right], s_string[index_left])
-      changes += 1
+    if s_string[index_left] != s_string[index_right]
+      # s_string.sub!(s_string[index_left], s_string[index_right])
+      changes_needed += 1
+      indexes_to_change << [s_string[index_left], s_string[index_right]]
     end
     index_left += 1
     index_right -= 1
   end
-  if changes > k # Can add this inside the loop as a killswitch
+  if changes_needed > k # Can add this inside the loop as a killswitch
     -1
   else
     s_string.to_i
