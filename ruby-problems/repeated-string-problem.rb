@@ -12,3 +12,6 @@
 # Define a variable 'counter' and set it equal to zero
 # Loop through s, n times. At each value, if the value of s[n] == "a", then counter += 1
 # Return counter
+
+# STEPS to Refactor
+# Instead of needing to loop through n values, just count how many times "a" exists in one s, then depending on how many full and partial times s is divisible by n, count how many "a"'s are present in the infinite string that way.
