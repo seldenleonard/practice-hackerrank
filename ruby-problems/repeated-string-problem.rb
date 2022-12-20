@@ -6,3 +6,9 @@
   # s = 'abcac'
   # n = 10
 # The substring we consider is abcacabcac, the first 10 characters of the infinite string. There are 4 occurrences of a in the substring.
+
+# STEPS
+# Define a method that accepts a string s and an integer n
+# Define a variable 'counter' and set it equal to zero
+# Loop through s, n times. At each value, if the value of s[n] == "a", then counter += 1
+# Return counter
