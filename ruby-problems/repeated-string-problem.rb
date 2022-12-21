@@ -43,19 +43,31 @@ def repeated_string(s, n)
       end
       i += 1
     end
-    p x = n % s.length
+    p multiplier = n / s.length
+    p leftover = n % s.length
+    counter *= multiplier
+    i = 0
+    while i < leftover
+      if s[i] == "a"
+        counter += 1
+      end
+      i += 1
+    end
 
   else
     while i < n
-      
+      if s[i] == "a"
+        counter += 1
+      end
+      i += 1
     end
   end
-
 
   counter
 end
 
 p repeated_string("aba", 10)
+# p repeated_string("aba", 2)
 
 # p 10 % 3
 # p 10 % 99
