@@ -16,26 +16,10 @@
 # STEPS to Refactor
 # Instead of needing to loop through n values, just count how many times "a" exists in one s, then depending on how many full and partial times s is divisible by n, count how many "a"'s are present in the infinite string that way.
 
-# def repeated_string(s, n)
-#   counter = 0
-#   i = 0
-#   # x = n / s.length
-#   # if x < 1
-    
-#   # end
-#   while i <= n
-#     # Could also add in here a way of just getting to the counter value by looping through s once, then by using division and multiplication, counting how many times that loop repeats
-#     if s[i] == "a"
-#       counter += 1
-#     end
-#     i += 1
-#   end
-#   counter
-# end
-
 def repeated_string(s, n)
   counter = 0
   i = 0
+
   if s.length <= n
     while i < s.length
       if s[i] == "a"
@@ -43,8 +27,9 @@ def repeated_string(s, n)
       end
       i += 1
     end
-    p multiplier = n / s.length
-    p leftover = n % s.length
+
+    multiplier = n / s.length
+    leftover = n % s.length
     counter *= multiplier
     i = 0
     while i < leftover
@@ -67,8 +52,3 @@ def repeated_string(s, n)
 end
 
 p repeated_string("aba", 10)
-# p repeated_string("aba", 2)
-
-# p 10 % 3
-# p 10 % 99
-# p 1 % 3
