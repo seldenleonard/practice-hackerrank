@@ -20,10 +20,12 @@ def repeated_string(s, n)
   counter = 0
   i = 0
   while i <= n
-    if s[n] == "a"
+    if s[i] == "a"
       counter += 1
     end
     i += 1
   end
   counter
 end
+
+p repeated_string("aba", 10)
