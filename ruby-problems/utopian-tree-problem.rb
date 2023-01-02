@@ -27,9 +27,11 @@ def utopian_tree(n)
     if n[i].odd?
       h *= 2
     else
-      
+      h += 1
     end
+    i += 1
+    h
   end
 end
 
-p utopian_tree()
+p utopian_tree([3, 0, 1, 4])
