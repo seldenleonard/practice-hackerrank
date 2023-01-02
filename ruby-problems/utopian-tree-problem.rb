@@ -21,7 +21,15 @@
 # Return "h" for each value in array "n" (so "h" must be reset for each iteration of the while loop)
 
 def utopian_tree(n)
-  
+  i = 0
+  h = 1
+  while i < n.length
+    if n[i].odd?
+      h *= 2
+    else
+      
+    end
+  end
 end
 
 p utopian_tree()
