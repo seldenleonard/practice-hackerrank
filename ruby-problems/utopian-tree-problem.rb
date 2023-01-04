@@ -22,8 +22,8 @@
 
 def utopian_tree(n)
   i = 0
-  h = 1
   while i < n.length
+    h = 1
     if n[i].odd?
       h *= 2
     else
