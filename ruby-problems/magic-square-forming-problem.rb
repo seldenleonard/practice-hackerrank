@@ -17,6 +17,7 @@
 
 # STEPS
 # Define a method that accepts three arrays
+# Define a variable: cost = 0
 # Define the following variables:
   # Define of variable: row_top = array1
   # Define of variable: row_middle = array2
@@ -26,4 +27,4 @@
   # Define of variable: column_left = array1[0],array2[0], array3[0]
   # Define of variable: column_middle = array1[1],array2[1], array3[1]
   # Define of variable: column_right = array1[2],array2[2], array3[2]
-# Define an array that includes all the variables above
+# Define an array that includes all the variables above (except cost)
