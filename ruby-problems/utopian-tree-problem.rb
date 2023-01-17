@@ -20,18 +20,38 @@
   # Within the while loop, create an if/else statement where "h" gets doubled if the n[index] value is odd, or (else) h increases by 1 if n[index] is positive
 # Return "h" for each value in array "n" (so "h" must be reset for each iteration of the while loop)
 
+# def utopian_tree(n)
+#   i = 0
+#   while i < n.length
+#     h = 1
+#     if n[i].odd?
+#       h *= 2
+#     else
+#       h += 1
+#     end
+#     i += 1
+#     h
+#   end
+# end
+
 def utopian_tree(n)
   i = 0
+  
   while i < n.length
     h = 1
-    if n[i].odd?
-      h *= 2
-    else
-      h += 1
+    if n[i].even?
+      (0.5 * n[i]).to_i.times do
+        h *= 2
+        h += 1
+      end
+  #  elsif n[i].odd?
+    
     end
+
     i += 1
     h
   end
 end
 
-p utopian_tree([3, 0, 1, 4])
+p utopian_tree([0])
+# p utopian_tree([3, 0, 1, 4])
