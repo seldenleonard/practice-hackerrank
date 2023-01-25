@@ -11,3 +11,5 @@
 def jumping_clouds
   
 end
+
+p jumping_clouds([0, 0, 1, 0])
