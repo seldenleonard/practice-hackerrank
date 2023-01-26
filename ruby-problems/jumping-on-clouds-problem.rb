@@ -6,7 +6,7 @@
 # Given the values of n, k, and the configuration of the clouds as an array c, determine the final value of e after the game ends.
 
 # STEPS
-# 
+# Define a method that accepts an array 
 
 def jumping_clouds
   
