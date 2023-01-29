@@ -43,6 +43,6 @@ def append_and_delete(s, t, k)
   end
 end
 
-# p append_and_delete("abc", "deff", 6)
-# p append_and_delete("hackerhappy", "hackerrank", 9)
+p append_and_delete("abc", "deff", 6)
+p append_and_delete("hackerhappy", "hackerrank", 9)
 p append_and_delete("asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv", "bsdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv", 100) # This Test Case should return No
