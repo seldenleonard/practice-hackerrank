@@ -56,4 +56,3 @@ def utopian_tree(n)
 end
 
 p utopian_tree([3, 0, 1, 4])
-p utopian_tree([3, 0, 1, 4])
