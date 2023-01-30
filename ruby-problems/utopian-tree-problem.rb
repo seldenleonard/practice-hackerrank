@@ -39,7 +39,7 @@ def utopian_tree(n)
   
   while i < n.length
     h = 1
-    if n == 0
+    if n[i] == 0
       h
     elsif n[i].even?
       (0.5 * n[i]).to_i.times do
@@ -55,4 +55,5 @@ def utopian_tree(n)
   end
 end
 
+p utopian_tree([3, 0, 1, 4])
 p utopian_tree([3, 0, 1, 4])
