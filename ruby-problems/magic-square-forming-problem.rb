@@ -32,3 +32,5 @@ def magic_square(s)
   cost = 0
   
 end
+
+p magic_square[1, 2, 3]
