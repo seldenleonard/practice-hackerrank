@@ -34,3 +34,4 @@ def magic_square(s)
 end
 
 p magic_square[1, 2, 3]
+p magic_square[3, 4, 3]
