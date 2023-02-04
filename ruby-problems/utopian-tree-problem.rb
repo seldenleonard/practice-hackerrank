@@ -47,7 +47,11 @@ def utopian_tree(n)
         h += 1
       end
     elsif n[i].odd?
-      
+      (0.5 * n[i]).to_i.times do
+        h *= 2
+        h += 1
+      end
+      h += 1
     end
 
     i += 1
