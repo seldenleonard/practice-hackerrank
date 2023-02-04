@@ -46,8 +46,8 @@ def utopian_tree(n)
         h *= 2
         h += 1
       end
-  #  elsif n[i].odd?
-    
+    elsif n[i].odd?
+      
     end
 
     i += 1
