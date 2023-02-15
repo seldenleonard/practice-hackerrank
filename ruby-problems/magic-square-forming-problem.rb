@@ -30,7 +30,19 @@
 
 def magic_square(s)
   cost = 0
-  
+  row_top = array1
+  row_middle = array2
+  row_botton = array3
+  diagonal_lr = array1[0],array2[1], array3[2]
+  diagonal_rl = array1[2],array2[1], array3[0]
+  column_left = array1[0],array2[0], array3[0]
+  column_middle = array1[1],array2[1], array3[1]
+  column_right = array1[2],array2[2], array3[2]
+  all_variables = [
+    row_top, row_middle, row_botton,
+    diagonal_lr, diagonal_rl,
+    column_left, column_middle, column_right
+  ]
 end
 
 p magic_square[1, 2, 3]
