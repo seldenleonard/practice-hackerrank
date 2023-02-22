@@ -27,6 +27,7 @@
   # Define of variable: column_middle = array1[1],array2[1], array3[1]
   # Define of variable: column_right = array1[2],array2[2], array3[2]
 # Define an array that includes all the variables above (except cost)
+# Compare each variable defined above, and separate into 2 arrays - based on whether or not they are equal to the magic number
 
 def magic_square(s)
   cost = 0
