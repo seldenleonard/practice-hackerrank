@@ -46,6 +46,8 @@ def magic_square(s)
     diagonal_lr, diagonal_rl,
     column_left, column_middle, column_right
   ]
+  magic_threes = []
+  not_magic_threes = []
 end
 
 p magic_square[1, 2, 3]
