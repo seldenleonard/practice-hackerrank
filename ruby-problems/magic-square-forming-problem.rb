@@ -50,5 +50,4 @@ def magic_square(s)
   not_magic_threes = []
 end
 
-p magic_square[1, 2, 3]
-p magic_square[3, 4, 3]
+p magic_square[[1, 2, 3], [3, 4, 3], [2, 3, 3]]
