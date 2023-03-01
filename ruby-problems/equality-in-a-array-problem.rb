@@ -32,3 +32,11 @@
       # current_value = sorted_arr[i]
       # current_count = 0
 # Return sorted_arr.length - max_count
+
+# REFACTORING IDEA
+# Get rid of the .sort function and either sort it manually or solve without sorting -- one way could possibly be through converting to a hash that counts occurences
+
+def equalize_array(arr)
+  sorted_arr = arr.sort
+
+end
