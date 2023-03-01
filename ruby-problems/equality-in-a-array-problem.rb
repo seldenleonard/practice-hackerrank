@@ -29,8 +29,8 @@
     # If current_count > max_count
       # max_value = current_value
       # max_count = current_count
-      # current_value = sorted_arr[i]
-      # current_count = 0
+    # current_value = sorted_arr[i]
+    # current_count = 1
 # Return sorted_arr.length - max_count
 
 # REFACTORING IDEA
@@ -47,9 +47,17 @@ def equalize_array(arr)
   while i < sorted_arr.length - 1
     if sorted_arr[i] == current_value
       current_count += 1
-
+    else
+      if current_count > max_count
+        max_value = current_value
+        max_count = current_count
+      end
+      current_value = sorted_arr[i]
+      current_count = 1
     end
+    i += 1
   end
+  sorted_arr.length - max_count
 end
 
-p [1, 2, 3].length
+p equalize_array([1, 2, 2, 3])
