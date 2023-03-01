@@ -23,7 +23,7 @@
 # Define a variable called max_count, set it equal to 1
 # Define an index variable i, set it equal to 1
 # Loop through the values in sorted_arr starting at sorted_arr[i]
-  # If sorted_arr[1] == current_value
+  # If sorted_arr[i] == current_value
     # current_count += 1
   # Else
     # If current_count > max_count
@@ -35,6 +35,7 @@
 
 # REFACTORING IDEA
 # Get rid of the .sort function and either sort it manually or solve without sorting -- one way could possibly be through converting to a hash that counts occurences
+# Technically to solve this algorithm my max_value variable is unnecessary, but I kind of like it in my initial attempt to solve because it provides some useful insight into how the method is functioning and could be neccessary for extending this method beyond the initial prompt (and does so without significant extraneous code)
 
 def equalize_array(arr)
   sorted_arr = arr.sort
@@ -43,5 +44,12 @@ def equalize_array(arr)
   max_value = sorted_arr[0]
   max_count = 1
   i = 1
-  
+  while i < sorted_arr.length - 1
+    if sorted_arr[i] == current_value
+      current_count += 1
+
+    end
+  end
 end
+
+p [1, 2, 3].length
