@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true
 
+# INSTRUCTIONS
 # Given an array of integers, determine the minimum number of elements to delete to leave only elements of equal value.
   # Example
   # arr = [1, 2, 2, 3]
