@@ -38,5 +38,10 @@
 
 def equalize_array(arr)
   sorted_arr = arr.sort
-
+  current_value = sorted_arr[0]
+  current_count = 1
+  max_value = sorted_arr[0]
+  max_count = 1
+  i = 1
+  
 end
