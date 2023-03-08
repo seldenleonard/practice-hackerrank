@@ -60,5 +60,4 @@ def equalize_array(arr)
   sorted_arr.length - max_count
 end
 
-p equalize_array([1, 2, 2, 3])
 p equalize_array([4, 7, 9, 3, 2, 5, 5, 7, 4, 7])
