@@ -31,34 +31,6 @@
       # If ranked[ranked_index] > ranked[ranked_index + 1], then current_ranking += 1
       # Once the loop has reached the player_position value in the array and evaluated it with the above if statements, break the loop and return current_ranking
 
-# def climbing_leaderboard(ranked, player)
-#   player_index = 0
-#   player_position = -1
-#   while player_index < player.length
-#     ranked_index = 0
-#     current_ranking = 1
-    
-#     until player[player_index] <= ranked[ranked_index].to_i
-#       if player_position > -1
-#         ranked.delete_at(player_position)
-#       end
-
-#       until ranked_index == player_position
-#         if ranked[ranked_index].to_i > ranked[ranked_index + 1].to_i
-#           current_ranking += 1
-#         end
-#         ranked_index += 1
-#       end
-#       ranked.insert(ranked_index, player[player_index])
-#       player_position = ranked_index
-#       current_ranking
-#     end
-
-
-#     player_index += 1
-#   end
-# end
-
 def climbing_leaderboard(ranked, player)
   player_index = 0
   player_position = -1
