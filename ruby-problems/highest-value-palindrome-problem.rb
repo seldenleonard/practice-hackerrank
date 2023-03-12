@@ -22,29 +22,6 @@
     # k >= changes_needed * 2 ---> change all
     # k >= changes_needed && k < changes_needed * 2 ---> 
 
-# def highest_value_palindrome(s, k)
-#   s_string = s.to_s
-#   index_left = 0
-#   index_right = s_string.length - 1
-#   changes = 0
-#   until index_left >= index_right
-#     if s_string[index_left] < s_string[index_right]
-#       s_string.sub!(s_string[index_left], s_string[index_right])
-#       changes += 1
-#     elsif s_string[index_left] > s_string[index_right]
-#       s_string.sub!(s_string[index_right], s_string[index_left])
-#       changes += 1
-#     end
-#     index_left += 1
-#     index_right -= 1
-#   end
-#   if changes > k # Can add this inside the loop as a killswitch
-#     -1
-#   else
-#     s_string.to_i
-#   end
-# end
-
 def highest_value_palindrome(s, k)
   s_string = s.to_s
   index_left = 0
