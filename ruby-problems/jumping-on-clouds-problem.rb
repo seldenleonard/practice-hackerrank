@@ -7,7 +7,6 @@
 
 # STEPS
 # Define a method that accepts an array c and an integer k
-# Define a variable called final_value and set it equal to 0
 # Define a variable called energy_level and set it equal to 100
 # Create an index variable i and set it equal to 0
 # Write a loop that concludes when c[i] is equal to 0
@@ -18,8 +17,8 @@
 # Return e
 
 
-def jumping_clouds
+def jumping_clouds(c, k)
   
 end
 
-p jumping_clouds([0, 0, 1, 0])
+p jumping_clouds([0, 0, 1, 0], 2)
