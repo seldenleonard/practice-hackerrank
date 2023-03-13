@@ -6,8 +6,17 @@
 # Given the values of n, k, and the configuration of the clouds as an array c, determine the final value of e after the game ends.
 
 # STEPS
-# Define a method that accepts an array
+# Define a method that accepts an array c and an integer k
 # Define a variable called final_value and set it equal to 0
+# Define a variable called energy_level and set it equal to 100
+# Create an index variable i and set it equal to 0
+# Write a loop that concludes when c[i] is equal to 0
+  # Set i equal to (i + k) % n
+  # If c[i] = 1
+    # e -= 2
+  # i -= 1
+# Return e
+
 
 def jumping_clouds
   
