@@ -18,6 +18,8 @@
 
 
 def jumping_clouds(c, k)
+  energy_level = 100
+  i = 0
   
 end
 
