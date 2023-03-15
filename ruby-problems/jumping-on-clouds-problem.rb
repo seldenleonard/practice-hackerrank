@@ -20,7 +20,13 @@
 def jumping_clouds(c, k)
   energy_level = 100
   i = 0
-  
+  until c[i] == 0
+    if c[i] = 1
+      e -= 2
+    end
+    i -= 1
+  end
+  e
 end
 
 p jumping_clouds([0, 0, 1, 0], 2)
